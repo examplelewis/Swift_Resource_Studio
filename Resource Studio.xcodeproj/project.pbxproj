@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92C9D1CE5A038F292150475F /* Pods_Resource_Studio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F24121A3FE890F4DA7B4688 /* Pods_Resource_Studio.framework */; };
 		AC0CA1BB28225D8500C1268F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1BA28225D8500C1268F /* AppDelegate.swift */; };
 		AC0CA1BD28225D8500C1268F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1BC28225D8500C1268F /* ViewController.swift */; };
 		AC0CA1BF28225D8600C1268F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC0CA1BE28225D8600C1268F /* Assets.xcassets */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AC62D478385B6F6517E148D /* Pods-Resource Studio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resource Studio.debug.xcconfig"; path = "Target Support Files/Pods-Resource Studio/Pods-Resource Studio.debug.xcconfig"; sourceTree = "<group>"; };
+		0F24121A3FE890F4DA7B4688 /* Pods_Resource_Studio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resource_Studio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC0CA1B728225D8500C1268F /* Resource Studio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Resource Studio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC0CA1BA28225D8500C1268F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC0CA1BC28225D8500C1268F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 		AC0CA1D228225D8600C1268F /* Resource StudioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Resource StudioUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC0CA1D628225D8600C1268F /* Resource_StudioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource_StudioUITests.swift; sourceTree = "<group>"; };
 		AC0CA1D828225D8600C1268F /* Resource_StudioUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource_StudioUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E02790C597E955320F765940 /* Pods-Resource Studio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resource Studio.release.xcconfig"; path = "Target Support Files/Pods-Resource Studio/Pods-Resource Studio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92C9D1CE5A038F292150475F /* Pods_Resource_Studio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		876D055322CDC34B35173BB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F24121A3FE890F4DA7B4688 /* Pods_Resource_Studio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AC0CA1AE28225D8500C1268F = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +92,8 @@
 				AC0CA1CB28225D8600C1268F /* Resource StudioTests */,
 				AC0CA1D528225D8600C1268F /* Resource StudioUITests */,
 				AC0CA1B828225D8500C1268F /* Products */,
+				C5685BCE40C8708AB7D6AC04 /* Pods */,
+				876D055322CDC34B35173BB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +136,16 @@
 			path = "Resource StudioUITests";
 			sourceTree = "<group>";
 		};
+		C5685BCE40C8708AB7D6AC04 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0AC62D478385B6F6517E148D /* Pods-Resource Studio.debug.xcconfig */,
+				E02790C597E955320F765940 /* Pods-Resource Studio.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC0CA1DC28225D8600C1268F /* Build configuration list for PBXNativeTarget "Resource Studio" */;
 			buildPhases = (
+				2D3011EDDA464697411BF028 /* [CP] Check Pods Manifest.lock */,
 				AC0CA1B328225D8500C1268F /* Sources */,
 				AC0CA1B428225D8500C1268F /* Frameworks */,
 				AC0CA1B528225D8500C1268F /* Resources */,
+				28135723B4C78B97102B65CD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -245,6 +272,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28135723B4C78B97102B65CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Resource Studio/Pods-Resource Studio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Resource Studio/Pods-Resource Studio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Resource Studio/Pods-Resource Studio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D3011EDDA464697411BF028 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Resource Studio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AC0CA1B328225D8500C1268F /* Sources */ = {
@@ -415,6 +484,7 @@
 		};
 		AC0CA1DD28225D8600C1268F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AC62D478385B6F6517E148D /* Pods-Resource Studio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -442,6 +512,7 @@
 		};
 		AC0CA1DE28225D8600C1268F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E02790C597E955320F765940 /* Pods-Resource Studio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
