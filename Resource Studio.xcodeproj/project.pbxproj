@@ -15,6 +15,30 @@
 		AC0CA1CD28225D8600C1268F /* Resource_StudioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1CC28225D8600C1268F /* Resource_StudioTests.swift */; };
 		AC0CA1D728225D8600C1268F /* Resource_StudioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1D628225D8600C1268F /* Resource_StudioUITests.swift */; };
 		AC0CA1D928225D8600C1268F /* Resource_StudioUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1D828225D8600C1268F /* Resource_StudioUITestsLaunchTests.swift */; };
+		AC0CA20628225F2100C1268F /* GYLogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1E828225F2100C1268F /* GYLogManager.swift */; };
+		AC0CA20728225F2100C1268F /* GYLogFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1E928225F2100C1268F /* GYLogFormatters.swift */; };
+		AC0CA20828225F2100C1268F /* GYLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1EA28225F2100C1268F /* GYLog.swift */; };
+		AC0CA20928225F2100C1268F /* GYFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1EB28225F2100C1268F /* GYFoundation.swift */; };
+		AC0CA20A28225F2100C1268F /* GYFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1ED28225F2100C1268F /* GYFileManager.swift */; };
+		AC0CA20B28225F2100C1268F /* GYAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1EF28225F2100C1268F /* GYAlamofire.swift */; };
+		AC0CA20C28225F2100C1268F /* GYHTTPServerTrustManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1F128225F2100C1268F /* GYHTTPServerTrustManager.swift */; };
+		AC0CA20D28225F2100C1268F /* GYHTTPEventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1F228225F2100C1268F /* GYHTTPEventMonitor.swift */; };
+		AC0CA20E28225F2100C1268F /* GYHTTPRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1F328225F2100C1268F /* GYHTTPRequestAdapter.swift */; };
+		AC0CA20F28225F2100C1268F /* GYHTTPPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1F428225F2100C1268F /* GYHTTPPrinter.swift */; };
+		AC0CA21028225F2100C1268F /* GYHTTPProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1F528225F2100C1268F /* GYHTTPProtocols.swift */; };
+		AC0CA21128225F2100C1268F /* GYHTTPBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1F728225F2100C1268F /* GYHTTPBaseResponse.swift */; };
+		AC0CA21228225F2100C1268F /* GYHTTPBaseTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1F828225F2100C1268F /* GYHTTPBaseTasks.swift */; };
+		AC0CA21328225F2100C1268F /* GYHTTPDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1F928225F2100C1268F /* GYHTTPDataTask.swift */; };
+		AC0CA21428225F2100C1268F /* GYHTTPBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1FA28225F2100C1268F /* GYHTTPBaseRequest.swift */; };
+		AC0CA21528225F2100C1268F /* GYHTTPBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1FB28225F2100C1268F /* GYHTTPBaseModel.swift */; };
+		AC0CA21628225F2100C1268F /* GYConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1FC28225F2100C1268F /* GYConst.swift */; };
+		AC0CA21728225F2100C1268F /* Dictionary+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1FE28225F2100C1268F /* Dictionary+GYCommon.swift */; };
+		AC0CA21828225F2100C1268F /* String+GYSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1FF28225F2100C1268F /* String+GYSubscript.swift */; };
+		AC0CA21928225F2100C1268F /* String+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20028225F2100C1268F /* String+GYCommon.swift */; };
+		AC0CA21A28225F2100C1268F /* Date+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20128225F2100C1268F /* Date+GYCommon.swift */; };
+		AC0CA21B28225F2100C1268F /* Character+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20228225F2100C1268F /* Character+GYCommon.swift */; };
+		AC0CA21C28225F2100C1268F /* Array+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20328225F2100C1268F /* Array+GYCommon.swift */; };
+		AC0CA21D28225F2100C1268F /* NSError+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20428225F2100C1268F /* NSError+GYCommon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +72,30 @@
 		AC0CA1D228225D8600C1268F /* Resource StudioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Resource StudioUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC0CA1D628225D8600C1268F /* Resource_StudioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource_StudioUITests.swift; sourceTree = "<group>"; };
 		AC0CA1D828225D8600C1268F /* Resource_StudioUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource_StudioUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AC0CA1E828225F2100C1268F /* GYLogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYLogManager.swift; sourceTree = "<group>"; };
+		AC0CA1E928225F2100C1268F /* GYLogFormatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYLogFormatters.swift; sourceTree = "<group>"; };
+		AC0CA1EA28225F2100C1268F /* GYLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYLog.swift; sourceTree = "<group>"; };
+		AC0CA1EB28225F2100C1268F /* GYFoundation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYFoundation.swift; sourceTree = "<group>"; };
+		AC0CA1ED28225F2100C1268F /* GYFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYFileManager.swift; sourceTree = "<group>"; };
+		AC0CA1EF28225F2100C1268F /* GYAlamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYAlamofire.swift; sourceTree = "<group>"; };
+		AC0CA1F128225F2100C1268F /* GYHTTPServerTrustManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYHTTPServerTrustManager.swift; sourceTree = "<group>"; };
+		AC0CA1F228225F2100C1268F /* GYHTTPEventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYHTTPEventMonitor.swift; sourceTree = "<group>"; };
+		AC0CA1F328225F2100C1268F /* GYHTTPRequestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYHTTPRequestAdapter.swift; sourceTree = "<group>"; };
+		AC0CA1F428225F2100C1268F /* GYHTTPPrinter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYHTTPPrinter.swift; sourceTree = "<group>"; };
+		AC0CA1F528225F2100C1268F /* GYHTTPProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYHTTPProtocols.swift; sourceTree = "<group>"; };
+		AC0CA1F728225F2100C1268F /* GYHTTPBaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYHTTPBaseResponse.swift; sourceTree = "<group>"; };
+		AC0CA1F828225F2100C1268F /* GYHTTPBaseTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYHTTPBaseTasks.swift; sourceTree = "<group>"; };
+		AC0CA1F928225F2100C1268F /* GYHTTPDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYHTTPDataTask.swift; sourceTree = "<group>"; };
+		AC0CA1FA28225F2100C1268F /* GYHTTPBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYHTTPBaseRequest.swift; sourceTree = "<group>"; };
+		AC0CA1FB28225F2100C1268F /* GYHTTPBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYHTTPBaseModel.swift; sourceTree = "<group>"; };
+		AC0CA1FC28225F2100C1268F /* GYConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYConst.swift; sourceTree = "<group>"; };
+		AC0CA1FE28225F2100C1268F /* Dictionary+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+GYCommon.swift"; sourceTree = "<group>"; };
+		AC0CA1FF28225F2100C1268F /* String+GYSubscript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+GYSubscript.swift"; sourceTree = "<group>"; };
+		AC0CA20028225F2100C1268F /* String+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+GYCommon.swift"; sourceTree = "<group>"; };
+		AC0CA20128225F2100C1268F /* Date+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+GYCommon.swift"; sourceTree = "<group>"; };
+		AC0CA20228225F2100C1268F /* Character+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Character+GYCommon.swift"; sourceTree = "<group>"; };
+		AC0CA20328225F2100C1268F /* Array+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+GYCommon.swift"; sourceTree = "<group>"; };
+		AC0CA20428225F2100C1268F /* NSError+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+GYCommon.swift"; sourceTree = "<group>"; };
 		E02790C597E955320F765940 /* Pods-Resource Studio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resource Studio.release.xcconfig"; path = "Target Support Files/Pods-Resource Studio/Pods-Resource Studio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +163,7 @@
 				AC0CA1BE28225D8600C1268F /* Assets.xcassets */,
 				AC0CA1C028225D8600C1268F /* Main.storyboard */,
 				AC0CA1C328225D8600C1268F /* Resource_Studio.entitlements */,
+				AC0CA1E528225F2100C1268F /* Common */,
 			);
 			path = "Resource Studio";
 			sourceTree = "<group>";
@@ -136,13 +185,107 @@
 			path = "Resource StudioUITests";
 			sourceTree = "<group>";
 		};
+		AC0CA1E528225F2100C1268F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AC0CA1FC28225F2100C1268F /* GYConst.swift */,
+				AC0CA1EB28225F2100C1268F /* GYFoundation.swift */,
+				AC0CA20528225F2100C1268F /* Base */,
+				AC0CA1E628225F2100C1268F /* Base Services */,
+				AC0CA1FD28225F2100C1268F /* Extensions */,
+				AC0CA1EC28225F2100C1268F /* Managers */,
+				AC0CA1EE28225F2100C1268F /* Network */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		AC0CA1E628225F2100C1268F /* Base Services */ = {
+			isa = PBXGroup;
+			children = (
+				AC0CA1E728225F2100C1268F /* Log */,
+			);
+			path = "Base Services";
+			sourceTree = "<group>";
+		};
+		AC0CA1E728225F2100C1268F /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				AC0CA1EA28225F2100C1268F /* GYLog.swift */,
+				AC0CA1E928225F2100C1268F /* GYLogFormatters.swift */,
+				AC0CA1E828225F2100C1268F /* GYLogManager.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		AC0CA1EC28225F2100C1268F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AC0CA1ED28225F2100C1268F /* GYFileManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		AC0CA1EE28225F2100C1268F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AC0CA1F528225F2100C1268F /* GYHTTPProtocols.swift */,
+				AC0CA1EF28225F2100C1268F /* GYAlamofire.swift */,
+				AC0CA1F628225F2100C1268F /* Data */,
+				AC0CA1F028225F2100C1268F /* Logical */,
+				AC0CA1F428225F2100C1268F /* GYHTTPPrinter.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AC0CA1F028225F2100C1268F /* Logical */ = {
+			isa = PBXGroup;
+			children = (
+				AC0CA1F228225F2100C1268F /* GYHTTPEventMonitor.swift */,
+				AC0CA1F328225F2100C1268F /* GYHTTPRequestAdapter.swift */,
+				AC0CA1F128225F2100C1268F /* GYHTTPServerTrustManager.swift */,
+			);
+			path = Logical;
+			sourceTree = "<group>";
+		};
+		AC0CA1F628225F2100C1268F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AC0CA1FB28225F2100C1268F /* GYHTTPBaseModel.swift */,
+				AC0CA1FA28225F2100C1268F /* GYHTTPBaseRequest.swift */,
+				AC0CA1F728225F2100C1268F /* GYHTTPBaseResponse.swift */,
+				AC0CA1F928225F2100C1268F /* GYHTTPDataTask.swift */,
+				AC0CA1F828225F2100C1268F /* GYHTTPBaseTasks.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AC0CA1FD28225F2100C1268F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC0CA20328225F2100C1268F /* Array+GYCommon.swift */,
+				AC0CA20228225F2100C1268F /* Character+GYCommon.swift */,
+				AC0CA20128225F2100C1268F /* Date+GYCommon.swift */,
+				AC0CA1FE28225F2100C1268F /* Dictionary+GYCommon.swift */,
+				AC0CA20428225F2100C1268F /* NSError+GYCommon.swift */,
+				AC0CA20028225F2100C1268F /* String+GYCommon.swift */,
+				AC0CA1FF28225F2100C1268F /* String+GYSubscript.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AC0CA20528225F2100C1268F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		C5685BCE40C8708AB7D6AC04 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				0AC62D478385B6F6517E148D /* Pods-Resource Studio.debug.xcconfig */,
 				E02790C597E955320F765940 /* Pods-Resource Studio.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -320,8 +463,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC0CA21528225F2100C1268F /* GYHTTPBaseModel.swift in Sources */,
+				AC0CA21228225F2100C1268F /* GYHTTPBaseTasks.swift in Sources */,
+				AC0CA21628225F2100C1268F /* GYConst.swift in Sources */,
+				AC0CA20928225F2100C1268F /* GYFoundation.swift in Sources */,
+				AC0CA20628225F2100C1268F /* GYLogManager.swift in Sources */,
+				AC0CA20E28225F2100C1268F /* GYHTTPRequestAdapter.swift in Sources */,
+				AC0CA21728225F2100C1268F /* Dictionary+GYCommon.swift in Sources */,
+				AC0CA20828225F2100C1268F /* GYLog.swift in Sources */,
+				AC0CA20A28225F2100C1268F /* GYFileManager.swift in Sources */,
+				AC0CA20B28225F2100C1268F /* GYAlamofire.swift in Sources */,
+				AC0CA20728225F2100C1268F /* GYLogFormatters.swift in Sources */,
+				AC0CA21128225F2100C1268F /* GYHTTPBaseResponse.swift in Sources */,
+				AC0CA21C28225F2100C1268F /* Array+GYCommon.swift in Sources */,
+				AC0CA21028225F2100C1268F /* GYHTTPProtocols.swift in Sources */,
+				AC0CA21928225F2100C1268F /* String+GYCommon.swift in Sources */,
+				AC0CA20C28225F2100C1268F /* GYHTTPServerTrustManager.swift in Sources */,
+				AC0CA21828225F2100C1268F /* String+GYSubscript.swift in Sources */,
+				AC0CA21428225F2100C1268F /* GYHTTPBaseRequest.swift in Sources */,
 				AC0CA1BD28225D8500C1268F /* ViewController.swift in Sources */,
+				AC0CA21328225F2100C1268F /* GYHTTPDataTask.swift in Sources */,
 				AC0CA1BB28225D8500C1268F /* AppDelegate.swift in Sources */,
+				AC0CA21B28225F2100C1268F /* Character+GYCommon.swift in Sources */,
+				AC0CA21D28225F2100C1268F /* NSError+GYCommon.swift in Sources */,
+				AC0CA21A28225F2100C1268F /* Date+GYCommon.swift in Sources */,
+				AC0CA20F28225F2100C1268F /* GYHTTPPrinter.swift in Sources */,
+				AC0CA20D28225F2100C1268F /* GYHTTPEventMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
