@@ -163,7 +163,7 @@
 				AC0CA1BE28225D8600C1268F /* Assets.xcassets */,
 				AC0CA1C028225D8600C1268F /* Main.storyboard */,
 				AC0CA1C328225D8600C1268F /* Resource_Studio.entitlements */,
-				AC0CA1E528225F2100C1268F /* Common */,
+				AC0CA1E528225F2100C1268F /* common */,
 			);
 			path = "Resource Studio";
 			sourceTree = "<group>";
@@ -185,7 +185,7 @@
 			path = "Resource StudioUITests";
 			sourceTree = "<group>";
 		};
-		AC0CA1E528225F2100C1268F /* Common */ = {
+		AC0CA1E528225F2100C1268F /* common */ = {
 			isa = PBXGroup;
 			children = (
 				AC0CA1FC28225F2100C1268F /* GYConst.swift */,
@@ -196,7 +196,7 @@
 				AC0CA1EC28225F2100C1268F /* Managers */,
 				AC0CA1EE28225F2100C1268F /* Network */,
 			);
-			path = Common;
+			path = common;
 			sourceTree = "<group>";
 		};
 		AC0CA1E628225F2100C1268F /* Base Services */ = {
