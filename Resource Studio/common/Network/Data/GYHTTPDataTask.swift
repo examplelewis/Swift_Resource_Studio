@@ -16,7 +16,7 @@ typealias GYHTTPFailureBlock = (GYHTTPRequestProtocol, Error) -> Void
 typealias GYHTTPCancelBlock = (GYHTTPRequestProtocol) -> Void
 
 class GYHTTPDataTask: Comparable {
-    var invalid = false
+    var invalid = false // task 是否不可用；默认为 false，调用 cancel() 后变为 true
     
     let request: GYHTTPRequestProtocol
     var response: GYHTTPResponseProtocol?
@@ -26,6 +26,9 @@ class GYHTTPDataTask: Comparable {
     var cancelBlock: GYHTTPCancelBlock?
     
     weak var delegate: GYHTTPDataDaskDelegate?
+    
+    var rspCode: String?
+    var rspHeader: [String: Any]?
     
     // MARK: Initial
     init(request: GYHTTPRequestProtocol, success: GYHTTPSuccessBlock? = nil, failure: GYHTTPFailureBlock? = nil, cancel: GYHTTPCancelBlock? = nil) {
@@ -40,11 +43,13 @@ class GYHTTPDataTask: Comparable {
         invalid = true
     }
     
-    // MARK: Comparable
+    // MARK: Equatble
     static func == (lhs: GYHTTPDataTask, rhs: GYHTTPDataTask) -> Bool {
-        return lhs.request.url() == lhs.request.url()
+        return lhs.request.url() == rhs.request.url() && lhs.request.method() == rhs.request.method() && lhs.request.headers() == rhs.request.headers()
     }
+    
+    // MARK: Comparable
     static func < (lhs: GYHTTPDataTask, rhs: GYHTTPDataTask) -> Bool {
-        return lhs.request.url() < lhs.request.url()
+        return lhs.request.url() < rhs.request.url()
     }
 }
