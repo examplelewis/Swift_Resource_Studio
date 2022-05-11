@@ -39,6 +39,7 @@
 		AC0CA21B28225F2100C1268F /* Character+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20228225F2100C1268F /* Character+GYCommon.swift */; };
 		AC0CA21C28225F2100C1268F /* Array+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20328225F2100C1268F /* Array+GYCommon.swift */; };
 		AC0CA21D28225F2100C1268F /* NSError+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20428225F2100C1268F /* NSError+GYCommon.swift */; };
+		ACDFA306282BDB5500B0D010 /* GYHTTPDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0607DB2829406600E642AF /* GYHTTPDataRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -465,10 +466,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACDFA306282BDB5500B0D010 /* GYHTTPDataRequest.swift in Sources */,
 				AC0CA21528225F2100C1268F /* GYHTTPBaseModel.swift in Sources */,
 				AC0CA21228225F2100C1268F /* GYHTTPBaseTasks.swift in Sources */,
 				AC0CA21628225F2100C1268F /* GYConst.swift in Sources */,
-				AC0607DC2829406600E642AF /* GYHTTPDataRequest.swift in Sources */,
 				AC0CA20928225F2100C1268F /* GYFoundation.swift in Sources */,
 				AC0CA20628225F2100C1268F /* GYLogManager.swift in Sources */,
 				AC0CA20E28225F2100C1268F /* GYHTTPRequestAdapter.swift in Sources */,

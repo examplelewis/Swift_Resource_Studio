@@ -15,6 +15,7 @@ typealias GYHTTPSuccessBlock = (GYHTTPRequestProtocol, GYHTTPResponseProtocol) -
 typealias GYHTTPFailureBlock = (GYHTTPRequestProtocol, Error) -> Void
 typealias GYHTTPCancelBlock = (GYHTTPRequestProtocol) -> Void
 
+// 遵循 Comparable 协议是为了可以在数组中调用 .contains() 之类的方法
 class GYHTTPDataTask: Comparable {
     var invalid = false // task 是否不可用；默认为 false，调用 cancel() 后变为 true
     
@@ -27,7 +28,7 @@ class GYHTTPDataTask: Comparable {
     
     weak var delegate: GYHTTPDataDaskDelegate?
     
-    var rspCode: String?
+    var rspError: Error?
     var rspHeader: [String: Any]?
     
     // MARK: Initial
