@@ -72,6 +72,6 @@ extension String {
             }
         }
         
-        GYFoundation.export(toPath: path, string: self, continueWhenExist: behavior.contains(.continueWhenExists), showSuccessLog: behavior.contains(.showSuccessLog))
+        GYExport(toPath: path, string: self, continueWhenExist: behavior.contains(.continueWhenExists), showSuccessLog: behavior.contains(.showSuccessLog))
     }
 }

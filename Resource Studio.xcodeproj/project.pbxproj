@@ -40,6 +40,7 @@
 		AC0CA21C28225F2100C1268F /* Array+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20328225F2100C1268F /* Array+GYCommon.swift */; };
 		AC0CA21D28225F2100C1268F /* NSError+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20428225F2100C1268F /* NSError+GYCommon.swift */; };
 		ACDFA306282BDB5500B0D010 /* GYHTTPDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0607DB2829406600E642AF /* GYHTTPDataRequest.swift */; };
+		ACFC6CA0282C0AC400AC0EE8 /* GYOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFC6C9F282C0AC400AC0EE8 /* GYOperators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		AC0CA20228225F2100C1268F /* Character+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Character+GYCommon.swift"; sourceTree = "<group>"; };
 		AC0CA20328225F2100C1268F /* Array+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+GYCommon.swift"; sourceTree = "<group>"; };
 		AC0CA20428225F2100C1268F /* NSError+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+GYCommon.swift"; sourceTree = "<group>"; };
+		ACFC6C9F282C0AC400AC0EE8 /* GYOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYOperators.swift; sourceTree = "<group>"; };
 		E02790C597E955320F765940 /* Pods-Resource Studio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resource Studio.release.xcconfig"; path = "Target Support Files/Pods-Resource Studio/Pods-Resource Studio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,8 +192,6 @@
 		AC0CA1E528225F2100C1268F /* common */ = {
 			isa = PBXGroup;
 			children = (
-				AC0CA1FC28225F2100C1268F /* GYConst.swift */,
-				AC0CA1EB28225F2100C1268F /* GYFoundation.swift */,
 				AC0CA20528225F2100C1268F /* Base */,
 				AC0CA1E628225F2100C1268F /* Base Services */,
 				AC0CA1FD28225F2100C1268F /* Extensions */,
@@ -279,6 +279,9 @@
 		AC0CA20528225F2100C1268F /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				AC0CA1FC28225F2100C1268F /* GYConst.swift */,
+				AC0CA1EB28225F2100C1268F /* GYFoundation.swift */,
+				ACFC6C9F282C0AC400AC0EE8 /* GYOperators.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				AC0CA21328225F2100C1268F /* GYHTTPDataTask.swift in Sources */,
 				AC0CA1BB28225D8500C1268F /* AppDelegate.swift in Sources */,
 				AC0CA21B28225F2100C1268F /* Character+GYCommon.swift in Sources */,
+				ACFC6CA0282C0AC400AC0EE8 /* GYOperators.swift in Sources */,
 				AC0CA21D28225F2100C1268F /* NSError+GYCommon.swift in Sources */,
 				AC0CA21A28225F2100C1268F /* Date+GYCommon.swift in Sources */,
 				AC0CA20F28225F2100C1268F /* GYHTTPPrinter.swift in Sources */,

@@ -62,7 +62,7 @@ extension Array {
             }
         }
         
-        GYFoundation.export(toPath: path, string: stringValue, continueWhenExist: behavior.contains(.continueWhenExists), showSuccessLog: behavior.contains(.showSuccessLog))
+        GYExport(toPath: path, string: stringValue, continueWhenExist: behavior.contains(.continueWhenExists), showSuccessLog: behavior.contains(.showSuccessLog))
     }
     func export(toPlistPath path: String) {
         export(toPlistPath: path, behavior: .none)
@@ -79,7 +79,7 @@ extension Array {
         
         do {
             let data = try PropertyListSerialization.data(fromPropertyList: self, format: .binary, options: 0)
-            GYFoundation.export(toPlistPath: path, data: data, continueWhenExist: behavior.contains(.continueWhenExists), showSuccessLog: behavior.contains(.showSuccessLog))
+            GYExport(toPlistPath: path, data: data, continueWhenExist: behavior.contains(.continueWhenExists), showSuccessLog: behavior.contains(.showSuccessLog))
         } catch {
             GYLogManager.shared.addErrorLog(format: "导出结果文件出错：%@", error.localizedDescription)
         }
