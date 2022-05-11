@@ -26,6 +26,15 @@ extension String {
         }
     }
     
+    // MARK: Date
+    func dateWith(format: String, locale: String = "zh_CN") -> Date? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format
+        formatter.locale = Locale(identifier: locale)
+        
+        return formatter.date(from: self)
+    }
+    
     // MARK: Emoji
     var isSingleEmoji: Bool { count == 1 && containsEmoji }
     var containsEmoji: Bool { contains { $0.isEmoji } }

@@ -135,14 +135,14 @@ class GYLogManager {
         if behavior.contains(.showTime) {
             if current != nil {
                 let interval = Date.current().timeIntervalSince(current!)
-                logString = logString.appendingFormat("%@ | %@\t\t", Date.current().string(withFormat: GYTimeFormatyMdHmsS), GYFoundation.humanReadableTime(fromInterval: interval))
+                logString = logString.appendingFormat("%@ | %@\t\t", Date.current().stringWith(format: GYTimeFormatyMdHmsS), GYFoundation.humanReadableTime(fromInterval: interval))
                 
                 let logsSize = (logString as NSString).size(withAttributes: [.font: font])
                 if logsSize.width < 250 {
                     logString.append("\t")
                 }
             } else {
-                logString = logString.appendingFormat("%@\t\t", Date.current().string(withFormat: GYTimeFormatyMdHmsS))
+                logString = logString.appendingFormat("%@\t\t", Date.current().stringWith(format: GYTimeFormatyMdHmsS))
             }
         }
         
