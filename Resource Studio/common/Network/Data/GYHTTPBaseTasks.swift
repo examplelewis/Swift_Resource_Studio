@@ -31,9 +31,9 @@ class GYHTTPBaseTasks: GYHTTPDataDaskDelegate {
         }
         
         _cancelTasks(dataTasks)
-//        GYLock {
+        GYSynchronized(self) {
             dataTasks.removeAll()
-//        }
+        }
     }
     func cancelTasksByReqName(_ name: String) {
         guard dataTasks.count > 0 else {
@@ -42,9 +42,9 @@ class GYHTTPBaseTasks: GYHTTPDataDaskDelegate {
         
         let tasks = dataTasks.filter({ String(describing: $0.request) == name })
         _cancelTasks(tasks)
-//        GYLock {
+        GYSynchronized(self) {
             
-//        }
+        }
     }
     func _cancelTasks(_ tasks: [GYHTTPDataTask]) {
         
