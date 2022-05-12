@@ -39,6 +39,7 @@
 		AC0CA21B28225F2100C1268F /* Character+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20228225F2100C1268F /* Character+GYCommon.swift */; };
 		AC0CA21C28225F2100C1268F /* Array+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20328225F2100C1268F /* Array+GYCommon.swift */; };
 		AC0CA21D28225F2100C1268F /* NSError+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20428225F2100C1268F /* NSError+GYCommon.swift */; };
+		ACDAE639282D49CE0042F54E /* GYHTTPRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */; };
 		ACDFA306282BDB5500B0D010 /* GYHTTPDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0607DB2829406600E642AF /* GYHTTPDataRequest.swift */; };
 		ACFC6CA0282C0AC400AC0EE8 /* GYOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFC6C9F282C0AC400AC0EE8 /* GYOperators.swift */; };
 /* End PBXBuildFile section */
@@ -99,6 +100,7 @@
 		AC0CA20228225F2100C1268F /* Character+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Character+GYCommon.swift"; sourceTree = "<group>"; };
 		AC0CA20328225F2100C1268F /* Array+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+GYCommon.swift"; sourceTree = "<group>"; };
 		AC0CA20428225F2100C1268F /* NSError+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+GYCommon.swift"; sourceTree = "<group>"; };
+		ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPRequestRetrier.swift; sourceTree = "<group>"; };
 		ACFC6C9F282C0AC400AC0EE8 /* GYOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYOperators.swift; sourceTree = "<group>"; };
 		E02790C597E955320F765940 /* Pods-Resource Studio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resource Studio.release.xcconfig"; path = "Target Support Files/Pods-Resource Studio/Pods-Resource Studio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +170,7 @@
 				AC0CA1C028225D8600C1268F /* Main.storyboard */,
 				AC0CA1C328225D8600C1268F /* Resource_Studio.entitlements */,
 				AC0CA1E528225F2100C1268F /* common */,
+				ACFF138B282809C9003B7118 /* macOS */,
 			);
 			path = "Resource Studio";
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			children = (
 				AC0CA1F228225F2100C1268F /* GYHTTPEventMonitor.swift */,
 				AC0CA1F328225F2100C1268F /* GYHTTPRequestAdapter.swift */,
+				ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */,
 				AC0CA1F128225F2100C1268F /* GYHTTPServerTrustManager.swift */,
 			);
 			path = Logical;
@@ -284,6 +288,61 @@
 				ACFC6C9F282C0AC400AC0EE8 /* GYOperators.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		ACFF138B282809C9003B7118 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				ACFF138C282809DE003B7118 /* Base Services */,
+				ACFF138D282809F0003B7118 /* Extensions */,
+				ACFF138E282809FA003B7118 /* Managers */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		ACFF138C282809DE003B7118 /* Base Services */ = {
+			isa = PBXGroup;
+			children = (
+				ACFF138F28280A1B003B7118 /* Alert */,
+				ACFF139028280A21003B7118 /* Open Panel */,
+				ACFF139128280A28003B7118 /* Window */,
+			);
+			path = "Base Services";
+			sourceTree = "<group>";
+		};
+		ACFF138D282809F0003B7118 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ACFF138E282809FA003B7118 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		ACFF138F28280A1B003B7118 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		ACFF139028280A21003B7118 /* Open Panel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Open Panel";
+			sourceTree = "<group>";
+		};
+		ACFF139128280A28003B7118 /* Window */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Window;
 			sourceTree = "<group>";
 		};
 		C5685BCE40C8708AB7D6AC04 /* Pods */ = {
@@ -476,6 +535,7 @@
 				AC0CA20928225F2100C1268F /* GYFoundation.swift in Sources */,
 				AC0CA20628225F2100C1268F /* GYLogManager.swift in Sources */,
 				AC0CA20E28225F2100C1268F /* GYHTTPRequestAdapter.swift in Sources */,
+				ACDAE639282D49CE0042F54E /* GYHTTPRequestRetrier.swift in Sources */,
 				AC0CA21728225F2100C1268F /* Dictionary+GYCommon.swift in Sources */,
 				AC0CA20828225F2100C1268F /* GYLog.swift in Sources */,
 				AC0CA20A28225F2100C1268F /* GYFileManager.swift in Sources */,
@@ -677,6 +737,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gongyu.Resource-Studio";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -705,6 +766,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gongyu.Resource-Studio";
 				PRODUCT_NAME = "$(TARGET_NAME)";

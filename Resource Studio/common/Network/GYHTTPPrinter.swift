@@ -16,6 +16,10 @@ class GYHTTPPrinter {
         
     }
     
+    static func printError() {
+        
+    }
+    
     static func printCancel() {
         
     }
