@@ -13,6 +13,7 @@ target 'Resource Studio' do
 	pod 'SnapKit'
 end
 
+# 以下内容用于解决编译警告: The macOS deployment target 'MACOSX_DEPLOYMENT_TARGET' is set to 10.7, but the range of supported deployment target versions is 10.9 to 12.3.99.
 post_install do |installer|
     installer.pods_project.build_configurations.each do |config|
         config.build_settings['MACOSX_DEPLOYMENT_TARGET'] = '10.15'
