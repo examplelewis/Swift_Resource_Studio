@@ -8,6 +8,7 @@ PODS:
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
   - HandyJSON (5.0.2)
+  - hpple (0.2.0)
   - SDWebImage (5.12.5):
     - SDWebImage/Core (= 5.12.5)
   - SDWebImage/Core (5.12.5)
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - DateTools
   - FMDB
   - HandyJSON
+  - hpple
   - SDWebImage
   - SnapKit
 
@@ -29,6 +31,7 @@ SPEC REPOS:
     - DateTools
     - FMDB
     - HandyJSON
+    - hpple
     - SDWebImage
     - SnapKit
 
@@ -38,9 +41,10 @@ SPEC CHECKSUMS:
   DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
   SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 9d967ce38062fdf9728bcbd49056e5ed6e42f0e3
+PODFILE CHECKSUM: 36ee2bc36e742948eaf5cb110da0155fb9ea19a2
 
 COCOAPODS: 1.11.3
