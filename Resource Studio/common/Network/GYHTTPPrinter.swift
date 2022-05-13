@@ -6,9 +6,14 @@
 //
 
 import Foundation
+import Alamofire
 
 class GYHTTPPrinter {
     static func printRequest(_ request: URLRequest) {
+        
+    }
+    
+    static func printAFDataResponse(_ response: AFDataResponse<Data>) {
         
     }
     

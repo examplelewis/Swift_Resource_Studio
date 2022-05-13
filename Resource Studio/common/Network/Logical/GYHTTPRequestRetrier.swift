@@ -19,9 +19,22 @@ class GYHTTPRequestRetrier: RequestRetrier {
     // MARK: RequestRetrier
     func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
         GYHTTPPrinter.printError()
-    }
-    private func _shouldRetry() -> Bool {
         
+        if let responseCode = request.response?.statusCode {
+            if _shouldRetry(retryCount: request.retryCount, errorCode: responseCode) {
+                completion(.retry)
+            }
+        }
+        
+        completion(.doNotRetry)
+    }
+    private func _shouldRetry(retryCount: Int, errorCode: Int) -> Bool {
+        if retryHTTPCodes.contains(errorCode) {
+            return retryCount <= retryLimit
+        }
+        if retryErrorCodes.contains(errorCode) {
+            return retryCount <= retryLimit
+        }
         
         return true
     }

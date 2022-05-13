@@ -43,15 +43,28 @@ class GYHTTPBaseTasks: GYHTTPDataDaskDelegate {
         let tasks = dataTasks.filter({ String(describing: $0.request) == name })
         _cancelTasks(tasks)
         GYSynchronized(self) {
-            
+            dataTasks.removeAll(where: { tasks.contains($0) })
         }
     }
     func _cancelTasks(_ tasks: [GYHTTPDataTask]) {
-        
+        for task in tasks {
+            task.cancel()
+            task.cancelBlock?(task.request)
+        }
     }
     
     // MARK: GYHTTPDataDaskDelegate
     func dataTaskDidFinished(_ dataTask: GYHTTPDataTask) {
+        if let rspError = dataTask.rspError {
+            dataTask.failureBlock?(dataTask.request, rspError)
+        } else if let response = dataTask.response {
+            dataTask.successBlock?(dataTask.request, response)
+        }
         
+        GYSynchronized(self) {
+            if let index = dataTasks.firstIndex(of: dataTask) {
+                dataTasks.remove(at: index)
+            }
+        }
     }
 }
