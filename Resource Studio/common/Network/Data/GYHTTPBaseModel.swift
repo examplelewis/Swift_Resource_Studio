@@ -13,7 +13,13 @@ class GYHTTPBaseModel: HandyJSON, GYHTTPPackageProtocol {
     
     // MARK: GYHTTPPackageProtocol
     func pack() -> [String : Any]? { toJSON() }
-    static func unpack(data: Data?) -> Self? { self.deserialize(from: "") }
+    static func unpack(data: Data?) -> Self? {
+        if data == nil {
+            return nil
+        } else {
+            return self.deserialize(from: String(decoding: data!, as: UTF8.self))
+        }
+    }
     
     // MARK: HandyJSON
     func mapping(mapper: HelpingMapper) {}

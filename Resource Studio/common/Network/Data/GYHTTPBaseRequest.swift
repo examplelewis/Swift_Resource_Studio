@@ -24,7 +24,8 @@ class GYHTTPBaseRequest: GYHTTPBaseModel, GYHTTPRequestProtocol {
             rspName.append("Rsp")
         }
         
-        let namespace = Bundle.main.infoDictionary!["CFBundleExcutable"] as! String
+        var namespace = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
+        namespace = namespace.replacingOccurrences(of: " ", with: "_")
         let responseClass: AnyClass = NSClassFromString("\(namespace).\(rspName)")!
         
         return responseClass as! GYHTTPBaseResponse.Type
@@ -32,4 +33,7 @@ class GYHTTPBaseRequest: GYHTTPBaseModel, GYHTTPRequestProtocol {
     func method() -> HTTPMethod { .get }
     func headers() -> [String : String] { [:] }
     func needUniversalToast() -> Bool { true }
+    
+    // 是否是HTML格式，如果是直接转成String
+    func isHtml() -> Bool { true }
 }

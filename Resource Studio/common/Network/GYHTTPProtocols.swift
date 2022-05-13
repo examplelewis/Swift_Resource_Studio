@@ -19,6 +19,9 @@ protocol GYHTTPRequestProtocol {
     func method() -> HTTPMethod
     func headers() -> [String: String]
     func needUniversalToast() -> Bool
+    
+    // 是否是 HTML 格式，是的话，直接转成 String 即可
+    func isHtml() -> Bool
 }
 
 protocol GYHTTPResponseProtocol {

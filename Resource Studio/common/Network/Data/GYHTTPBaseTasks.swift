@@ -21,7 +21,11 @@ class GYHTTPBaseTasks: GYHTTPDataDaskDelegate {
         dataTask.delegate = self
         
         dataTasks.append(dataTask)
-//        GYAlamofire.shared.send(dataTask)
+        if request.isHtml() {
+            GYAlamofire.shared.sendHTMLTask(dataTask)
+        } else {
+            GYAlamofire.shared.sendTask(dataTask)
+        }
     }
     
     // MARK: Cancel
