@@ -103,6 +103,7 @@
 		AC0CA20428225F2100C1268F /* NSError+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+GYCommon.swift"; sourceTree = "<group>"; };
 		ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPRequestRetrier.swift; sourceTree = "<group>"; };
 		ACDAE63A282D4ED20042F54E /* GYMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMacros.swift; sourceTree = "<group>"; };
+		ACDDE652282E9D3A00EDA877 /* Resource-Studio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Resource-Studio-Info.plist"; sourceTree = SOURCE_ROOT; };
 		ACFC6C9F282C0AC400AC0EE8 /* GYOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYOperators.swift; sourceTree = "<group>"; };
 		E02790C597E955320F765940 /* Pods-Resource Studio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resource Studio.release.xcconfig"; path = "Target Support Files/Pods-Resource Studio/Pods-Resource Studio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +172,7 @@
 				AC0CA1BE28225D8600C1268F /* Assets.xcassets */,
 				AC0CA1C028225D8600C1268F /* Main.storyboard */,
 				AC0CA1C328225D8600C1268F /* Resource_Studio.entitlements */,
+				ACDDE652282E9D3A00EDA877 /* Resource-Studio-Info.plist */,
 				AC0CA1E528225F2100C1268F /* common */,
 				ACFF138B282809C9003B7118 /* macOS */,
 			);
@@ -734,6 +736,7 @@
 				DEVELOPMENT_TEAM = 2G352K7NR7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Resource-Studio-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -763,6 +766,7 @@
 				DEVELOPMENT_TEAM = 2G352K7NR7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Resource-Studio-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
