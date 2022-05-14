@@ -8,12 +8,12 @@
 import Foundation
 import Alamofire
 
-protocol GYDownloadDelegate {
+protocol GYDownloadDelegate: AnyObject {
     func downloadManagerDidFinish(_ manager: GYDownloadManager)
 }
 
 class GYDownloadManager {
-    var delegate: GYDownloadDelegate?
+    weak var delegate: GYDownloadDelegate?
     
     private let setting: GYDownloadSetting
     private var URLs: [String] // 输入的链接, 不会变
