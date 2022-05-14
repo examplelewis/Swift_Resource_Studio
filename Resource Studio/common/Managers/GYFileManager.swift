@@ -35,13 +35,16 @@ class GYFileManager {
     }
     
     // MARK: Trash
+    @discardableResult
     static func trashItem(atPath itemPath: String) -> Bool {
        return trashItem(atURL: GYFileManager.itemURL(fromPath: itemPath))
     }
+    @discardableResult
     static func trashItem(atURL itemURL: URL) -> Bool {
         var nsURL: NSURL?
         return trashItem(atURL: itemURL, resultItemURL: &nsURL)
     }
+    @discardableResult
     static func trashItem(atURL itemURL: URL, resultItemURL: inout NSURL?) -> Bool {
         var desc: String?
         do {

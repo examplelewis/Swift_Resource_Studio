@@ -22,9 +22,10 @@ class GYLogManager {
     private var current: Date?
     private var lock = NSLock()
     
-    // MARK: Logs Directory
-    static func setupLogger(byLogsDirectory logsDirectory: String) {
-        let managerDefault = DDLogFileManagerDefault(logsDirectory: logsDirectory)
+    // MARK: Initial
+    init() {
+        // Setup Logger
+        let managerDefault = DDLogFileManagerDefault(logsDirectory: GYBase.shared.logFolderPath)
         let fileLogger = DDFileLogger(logFileManager: managerDefault)
         fileLogger.logFormatter = GYFileLogFormatter()
         fileLogger.rollingFrequency = 60 * 60 * 24 * 7
