@@ -9,41 +9,16 @@ import Cocoa
 import hpple
 
 class RSGigaTasks: GYHTTPBaseTasks {
-    func fetchTagBy(id: Int) {
+    func fetchTagBy(tagID: Int, page: Int, callback: ((_ success: Bool, _ parser: TFHpple?) -> Void)?) {
         let req = RSGigaTagReq()
-        req.id = id
-        
-//        GYHTTPCookieManager.setupGigaCookie()
+        req.tagID = tagID
+        req.page = page
         
         send(req) { request, response in
             let aRsp = response as! RSGigaTagRsp
-            
-            guard let parser = aRsp.parser else {
-                return
-            }
-            
-            var divArray = parser.search(withXPathQuery: "//div") as? [TFHppleElement]
-            divArray = divArray?.filter({
-                if let classObj = $0.attributes["class"], let classString = classObj as? String {
-//                    print(classString)
-                    return classString == "col s12 m12 l10 center"
-                } else {
-                    return false
-                }
-            })
-            
-//            print(divArray)
-            
-            guard divArray != nil, divArray!.count > 0 else {
-                return
-            }
-            
-            
-            
+            callback?(aRsp.success, aRsp.parser)
         } failure: { request, error in
-            
+            callback?(false, nil)
         }
     }
 }
-
-//fileprivate let gigaHTTPCookieProperties: [HTTPCookiePropertyKey: Any] = [.name: "old_check", .path: "/", .value: "yes", .secure: false, .domain: ".www.giga-web.jp"]
