@@ -8,6 +8,30 @@
 import Foundation
 import Alamofire
 
+fileprivate func cookieProperty(from model: GYHTTPCookie) -> [HTTPCookiePropertyKey: Any] {
+    return [.name: model.name!, .path: model.path!, .value: model.value!, .secure: model.secure!, .domain: model.domain!, .originURL: model.domain!]
+}
+fileprivate func updateCookies(_ configuration: URLSessionConfiguration) {
+    guard GYFileManager.itemExists(atPath: GYBase.shared.cookieFolderPath) else {
+        return
+    }
+    let cookieFiles = GYFileManager.filePaths(inFolder: GYBase.shared.cookieFolderPath)
+    guard cookieFiles.count > 0 else {
+        return
+    }
+    
+    configuration.httpCookieStorage?.cookieAcceptPolicy = .always
+    for cookieFile in cookieFiles {
+        if let string = try? String(contentsOfFile: cookieFile) {
+            let cookies = [GYHTTPCookie].deserialize(from: string)!
+            for cookie in cookies {
+                let gigaCookie = HTTPCookie(properties: cookieProperty(from: cookie!))
+                configuration.httpCookieStorage?.setCookie(gigaCookie!)
+            }
+        }
+    }
+}
+
 class GYAlamofire {
     static let shared = GYAlamofire()
     
@@ -20,8 +44,9 @@ class GYAlamofire {
         configuration.allowsCellularAccess = true
         configuration.waitsForConnectivity = true
         configuration.headers = HTTPHeaders([:])
+        updateCookies(configuration)
         
-        let interceptor = Interceptor(adapters: [GYHTTPRequestAdapter()], retriers: [], interceptors: [])
+        let interceptor = Interceptor(adapter: GYHTTPRequestAdapter(), retrier: GYHTTPRequestRetrier())
         session = Session(configuration: configuration, interceptor: interceptor, serverTrustManager: GYHTTPServerTrustManager(evaluators: [:]), eventMonitors: [GYHTTPEventMonitor()])
     }
     
