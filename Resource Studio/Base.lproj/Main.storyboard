@@ -48,72 +48,32 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit Resource Studio" keyEquivalent="q" id="4sb-4s-VLi">
-                                            <connections>
-                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
-                                            </connections>
-                                        </menuItem>
-                                    </items>
-                                </menu>
-                            </menuItem>
-                            <menuItem title="File" id="dMs-cI-mzQ">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="File" id="bib-Uj-vzu">
-                                    <items>
-                                        <menuItem title="New" keyEquivalent="n" id="Was-JA-tGl">
-                                            <connections>
-                                                <action selector="newDocument:" target="Ady-hI-5gd" id="4Si-XN-c54"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
-                                            <connections>
-                                                <action selector="openDocument:" target="Ady-hI-5gd" id="bVn-NM-KNZ"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Open Recent" id="tXI-mr-wws">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" title="Open Recent" systemMenu="recentDocuments" id="oas-Oc-fiZ">
-                                                <items>
-                                                    <menuItem title="Clear Menu" id="vNY-rz-j42">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="clearRecentDocuments:" target="Ady-hI-5gd" id="Daa-9d-B3U"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                </items>
-                                            </menu>
-                                        </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="m54-Is-iLE"/>
                                         <menuItem title="Close" keyEquivalent="w" id="DVo-aG-piG">
                                             <connections>
                                                 <action selector="performClose:" target="Ady-hI-5gd" id="HmO-Ls-i7Q"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Save…" keyEquivalent="s" id="pxx-59-PXV">
+                                        <menuItem title="Minimize" keyEquivalent="m" id="OY7-WF-poV">
                                             <connections>
-                                                <action selector="saveDocument:" target="Ady-hI-5gd" id="teZ-XB-qJY"/>
+                                                <action selector="performMiniaturize:" target="Ady-hI-5gd" id="VwT-WD-YPe"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Save As…" keyEquivalent="S" id="Bw7-FT-i3A">
+                                        <menuItem title="Bring All to Front" id="LE2-aR-0XJ">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="saveDocumentAs:" target="Ady-hI-5gd" id="mDf-zr-I0C"/>
+                                                <action selector="arrangeInFront:" target="Ady-hI-5gd" id="DRN-fu-gQh"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Revert to Saved" keyEquivalent="r" id="KaW-ft-85H">
+                                        <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
+                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                             <connections>
-                                                <action selector="revertDocumentToSaved:" target="Ady-hI-5gd" id="iJ3-Pv-kwq"/>
+                                                <action selector="toggleFullScreen:" target="Ady-hI-5gd" id="dU3-MA-1Rq"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="aJh-i4-bef"/>
-                                        <menuItem title="Page Setup…" keyEquivalent="P" id="qIS-W8-SiK">
-                                            <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
+                                        <menuItem isSeparatorItem="YES" id="epC-z7-Lxe"/>
+                                        <menuItem title="Quit Resource Studio" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
-                                                <action selector="runPageLayout:" target="Ady-hI-5gd" id="Din-rz-gC5"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Print…" keyEquivalent="p" id="aTl-1u-JFS">
-                                            <connections>
-                                                <action selector="print:" target="Ady-hI-5gd" id="qaZ-4w-aoO"/>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -600,62 +560,269 @@
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="View" id="H8h-7b-M4v">
+                            <menuItem title="资源" tag="1000000" id="wuR-na-dws">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="View" id="HyV-fh-RgO">
+                                <menu key="submenu" title="资源" id="xN9-xO-yAr">
                                     <items>
-                                        <menuItem title="Show Toolbar" keyEquivalent="t" id="snW-S8-Cw5">
-                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                        <menuItem title="从输入框中解析" tag="1000001" keyEquivalent="1" id="uCq-IN-1TU">
                                             <connections>
-                                                <action selector="toggleToolbarShown:" target="Ady-hI-5gd" id="BXY-wc-z0C"/>
+                                                <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="ZVx-V1-mtT"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Customize Toolbar…" id="1UK-8n-QPP">
+                                        <menuItem title="从文件中解析" tag="1000002" keyEquivalent="2" id="xxf-vp-knl">
+                                            <connections>
+                                                <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="FyZ-r3-2t4"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="VTP-yE-SXW"/>
+                                        <menuItem title="绝对领域" tag="1020000" id="SqF-vk-Hog">
                                             <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="runToolbarCustomizationPalette:" target="Ady-hI-5gd" id="pQI-g3-MTW"/>
-                                            </connections>
+                                            <menu key="submenu" title="绝对领域" id="Q3w-JF-L4I">
+                                                <items>
+                                                    <menuItem title="下载多个页面的图片 [页面地址]" tag="1020001" hidden="YES" id="Jz9-kb-UKW">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="整理下载好的图片" tag="1020099" hidden="YES" id="YAv-8U-1sX">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
                                         </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="hB3-LF-h0Y"/>
-                                        <menuItem title="Show Sidebar" keyEquivalent="s" id="kIP-vf-haE">
-                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
-                                            <connections>
-                                                <action selector="toggleSidebar:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
-                                            </connections>
+                                        <menuItem title="微博" tag="1030000" id="cR7-Ur-Khq">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="微博" id="Nwn-37-VMZ">
+                                                <items>
+                                                    <menuItem title="下载微博收藏的图片(全部)" tag="1030001" id="VeJ-mb-crJ">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="下载微博收藏的图片(输入数量 &lt; 50)" tag="1030002" alternate="YES" id="rlr-WC-HHR">
+                                                        <modifierMask key="keyEquivalentModifierMask" option="YES"/>
+                                                    </menuItem>
+                                                    <menuItem title="根据微博内容生成文件夹的名称" tag="1030098" id="3HK-az-FH1">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="整理下载好的图片" tag="1030099" id="Urh-2Q-rcf">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem isSeparatorItem="YES" id="ije-wh-TVS"/>
+                                                    <menuItem title="获取重复收藏的微博ID" tag="1030101" id="P8P-OY-F7I">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="获取少于9张图片的微博ID" tag="1030102" id="Z9F-pW-YPd">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="取消多个重复收藏的微博 [微博ID]" tag="1030199" id="TEn-3n-FLW">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem isSeparatorItem="YES" id="Vq1-bd-EAE"/>
+                                                    <menuItem title="获取微博用户推荐的画师" tag="1030201" hidden="YES" id="sn2-hR-8fH">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="手动存储多个推荐的画师 [格式化的字符串]" tag="1030202" hidden="YES" id="2cI-FR-YPn">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem isSeparatorItem="YES" id="ve4-Pu-Xgr"/>
+                                                    <menuItem title="打开网页请求授权" tag="1030301" hidden="YES" id="I8F-PU-7F5">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="显示授权详细信息" tag="1030302" hidden="YES" id="wnO-Wi-UsJ">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem isSeparatorItem="YES" id="zG5-PP-EuH"/>
+                                                    <menuItem title="通过内容获取边界" tag="1030401" hidden="YES" id="Tyb-rX-gYy">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="把最新的收藏标记为边界" tag="1030402" id="hpQ-RM-P3G">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem isSeparatorItem="YES" id="fRG-lf-jQw"/>
+                                                    <menuItem title="存储 未筛选 的用户" tag="1030501" hidden="YES" id="PSe-zQ-4UN">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
                                         </menuItem>
-                                        <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
-                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
-                                            <connections>
-                                                <action selector="toggleFullScreen:" target="Ady-hI-5gd" id="dU3-MA-1Rq"/>
-                                            </connections>
+                                        <menuItem title="Deviantart" tag="1040000" id="OGU-b8-RnS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Deviantart" id="OWi-Wd-sZg">
+                                                <items>
+                                                    <menuItem title="获取时间线的图片" tag="1040001" hidden="YES" id="Sx3-mi-LVZ">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem isSeparatorItem="YES" id="y4e-Ol-ndm"/>
+                                                    <menuItem title="获取单个用户的图片 [用户ID]" tag="1040101" hidden="YES" id="fwp-bv-XPT">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </menuItem>
+                                        <menuItem title="ExHentai" tag="1050000" id="rPh-yj-CWh">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="ExHentai" id="o7D-fp-TmC">
+                                                <items>
+                                                    <menuItem title="下载单个图包的图片 [图包页面地址]" tag="1050001" id="vni-Av-rot">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="vqa-AF-hgk"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="下载单个图包的图片 [图包页面地址] [不走数据库]" tag="1050002" id="LF6-31-Aeb">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="Fnt-OE-MJp"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="下载多个图片 [图片页面地址]" tag="1050003" id="X34-yU-y2Q">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="L0P-NM-LnR"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="获取多个图包的种子文件 [图包页面地址]" tag="1050004" id="sN6-tF-odr">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="ozG-UI-79E"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="解析多个图包评论中的Pixiv地址 [图包页面地址]" tag="1050005" id="5HJ-bC-KLD">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="Jhy-bW-fi3"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </menuItem>
+                                        <menuItem title="Pixiv" tag="1060000" id="Mux-u6-heC">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Pixiv" id="Vpr-Wh-B4u">
+                                                <items>
+                                                    <menuItem title="更新一页已关注的用户(和黑名单一样解析页面复制的文字，不走接口) [关注页面复制的文字]" tag="1060001" hidden="YES" id="YCb-j9-IYI">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="更新一页已关注的用户 - 示例" tag="1060002" hidden="YES" alternate="YES" id="Fsg-nc-vio">
+                                                        <modifierMask key="keyEquivalentModifierMask" option="YES"/>
+                                                    </menuItem>
+                                                    <menuItem title="更新一页已拉黑的用户 [黑名单页面复制的文字]" tag="1060003" hidden="YES" id="OPn-11-DWO">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="更新一页已拉黑的用户 - 示例" tag="1060004" hidden="YES" alternate="YES" id="Lao-jC-oBU">
+                                                        <modifierMask key="keyEquivalentModifierMask" option="YES"/>
+                                                    </menuItem>
+                                                    <menuItem title="更新多个确定拉黑的用户 [用户ID / 用户页面地址]" tag="1060005" id="NP0-OT-0I8">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="WdA-2F-dDy"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="更新多个不确定拉黑的用户 [用户ID / 用户页面地址]" tag="1060006" id="pSB-IN-hQ0">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="JQN-kr-Dfp"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="取消多个拉黑的用户 [用户ID / 用户页面地址]" tag="1060007" id="Jaj-gn-vro">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="c6k-N3-ReG"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem isSeparatorItem="YES" id="urw-ab-f9T"/>
+                                                    <menuItem title="查询多个用户的关注状态 [用户ID / 用户页面地址]" tag="1060101" id="FAM-Pp-6kd">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="dLA-2V-Fvc"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="查询多个用户的拉黑状态 [用户ID / 用户页面地址]" tag="1060102" id="7ro-VI-Lf7">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="90d-mB-QO1"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="查询多个用户的抓取状态 [用户ID / 用户页面地址]" tag="1060103" id="LZW-HV-Us6">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="gYe-Y8-rDl"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem isSeparatorItem="YES" id="Vkc-kD-a8E"/>
+                                                    <menuItem title="查询多个用户的状态 [用户ID / 用户页面地址]" tag="1060201" id="cfF-Ru-Jv4">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="yCg-F0-XD2"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="导出多个用户的状态 [用户ID / 用户页面地址]" tag="1060202" id="V42-V1-1cV">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="uCa-nj-J2r"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="导出既关注又被拉黑的用户名单" tag="1060203" id="Hde-QH-TzB">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="ZFN-8t-3FB"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem isSeparatorItem="YES" id="1Q9-Lj-8TV"/>
+                                                    <menuItem title="根据多个图片的文件名称生成对应作品的地址 [选择图片]" tag="1060301" id="d8J-Nz-Ova">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="AQZ-XH-hQY"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem isSeparatorItem="YES" id="mts-K2-Ipb"/>
+                                                    <menuItem title="删除多个用户PixivUtil的下载记录" tag="1060401" id="yRI-YU-RzM">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="qIz-kn-fVt"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem isSeparatorItem="YES" id="0ir-bI-RQy"/>
+                                                    <menuItem title="将相同Image ID的图片移动到同一个文件夹中 [递归] [包含Pixiv图片的根文件夹地址]" tag="1060501" id="ZCh-TI-y71">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="qCt-oZ-UDm"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem isSeparatorItem="YES" id="dkA-ak-W0t"/>
+                                                    <menuItem title="获取多个用户的图片地址" tag="1060601" enabled="NO" id="vx5-JY-VEd">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="获取图片页面上的图片地址" tag="1060602" enabled="NO" id="aJj-aF-Zig">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="下载已获取到的图片" tag="1060603" enabled="NO" id="eim-dQ-L6D">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </menuItem>
+                                        <menuItem title="Torrents" id="SPL-De-4i5">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Torrents" id="OJc-ha-at5">
+                                                <items>
+                                                    <menuItem title="获得Sukebei上特定关键字的磁力链接" tag="1080001" id="IBH-9W-pKN">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="q6t-1a-Jyw"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="解析Sukebei HTML网页中的磁力链接" tag="1080002" id="OzW-YU-05w">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="UjQ-c8-g7h"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
                                         </menuItem>
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="Window" id="aUF-d1-5bR">
+                            <menuItem title="下载" tag="4000000" id="jZy-EV-mNH">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
-                                    <items>
-                                        <menuItem title="Minimize" keyEquivalent="m" id="OY7-WF-poV">
-                                            <connections>
-                                                <action selector="performMiniaturize:" target="Ady-hI-5gd" id="VwT-WD-YPe"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Zoom" id="R4o-n2-Eq4">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="performZoom:" target="Ady-hI-5gd" id="DIl-cC-cCs"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
-                                        <menuItem title="Bring All to Front" id="LE2-aR-0XJ">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="arrangeInFront:" target="Ady-hI-5gd" id="DRN-fu-gQh"/>
-                                            </connections>
-                                        </menuItem>
-                                    </items>
-                                </menu>
                             </menuItem>
                             <menuItem title="Help" id="wpr-3q-Mcd">
                                 <modifierMask key="keyEquivalentModifierMask"/>
@@ -663,8 +830,32 @@
                                     <items>
                                         <menuItem title="Resource Studio Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
-                                                <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
+                                                <action selector="helpMenuItemDidPress:" target="Voe-Tx-rLC" id="tW1-mH-i5Y"/>
                                             </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="b7Y-6M-GcQ"/>
+                                        <menuItem title="查看最新的日志文件" id="tRs-t6-6ec">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="openLogMenuItemDidPress:" target="Voe-Tx-rLC" id="SBA-6E-524"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="打开参数配置文件" id="Lgs-gd-JmD">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="openPreferenceMenuItemDidPress:" target="Voe-Tx-rLC" id="Zv5-Bf-TSj"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="Vie-tF-UbI"/>
+                                        <menuItem title="备份所有数据库" id="RPE-ch-c7u">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="backupDatabasesMenuItemDidPress:" target="Voe-Tx-rLC" id="1rF-pC-ykP"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="vTq-TJ-lQw"/>
+                                        <menuItem title="最近编译：" id="oEH-we-Lio">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
                                     </items>
                                 </menu>
@@ -675,7 +866,12 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Resource_Studio" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Resource_Studio" customModuleProvider="target">
+                    <connections>
+                        <outlet property="buildTimeMenuItem" destination="oEH-we-Lio" id="8gz-Pc-QWl"/>
+                        <outlet property="downloadRootMenuItem" destination="jZy-EV-mNH" id="oim-n3-QdV"/>
+                    </connections>
+                </customObject>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -711,10 +907,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7dA-9K-knN">
-                                <rect key="frame" x="210" y="118" width="60" height="32"/>
+                                <rect key="frame" x="210" y="118" width="61" height="32"/>
                                 <buttonCell key="cell" type="push" title="临时" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3a8-QC-Otb">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                    <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="tempButtonDidPress:" target="XfG-lQ-9wD" id="4vh-vc-znE"/>
