@@ -23,7 +23,7 @@ class RSGigaTasks: GYHTTPBaseTasks {
             }
             
             var divArray = parser.search(withXPathQuery: "//div") as? [TFHppleElement]
-            divArray = try? divArray?.filter({
+            divArray = divArray?.filter({
                 if let classObj = $0.attributes["class"], let classString = classObj as? String {
 //                    print(classString)
                     return classString == "col s12 m12 l10 center"
