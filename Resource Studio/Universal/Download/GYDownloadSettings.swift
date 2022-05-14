@@ -51,6 +51,6 @@ class GYDownloadSettings {
         RSUIManager.shared.appDelegate.downloadRootMenuItem.submenu = menu
     }
     @objc private func downloadMenuItemDidPress(_ sender: NSMenuItem) {
-        
+        GYDispatchDownloadMenuItem(sender)
     }
 }

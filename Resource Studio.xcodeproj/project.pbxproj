@@ -54,6 +54,7 @@
 		ACD328A1282FF049008F6D7E /* GYOpenPanelConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD328A0282FF049008F6D7E /* GYOpenPanelConfigure.swift */; };
 		ACD328A3282FF1B3008F6D7E /* GYOpenPanelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD328A2282FF1B3008F6D7E /* GYOpenPanelManager.swift */; };
 		ACD328A5282FF6C4008F6D7E /* GYDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD328A4282FF6C4008F6D7E /* GYDownloadManager.swift */; };
+		ACD328A7282FFDE1008F6D7E /* GYDownloadHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD328A6282FFDE1008F6D7E /* GYDownloadHolder.swift */; };
 		ACDAE639282D49CE0042F54E /* GYHTTPRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */; };
 		ACDAE63B282D4ED20042F54E /* GYMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE63A282D4ED20042F54E /* GYMacros.swift */; };
 		ACDDE654282E9EB600EDA877 /* RSGigaTagRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE653282E9EB600EDA877 /* RSGigaTagRsp.swift */; };
@@ -139,6 +140,7 @@
 		ACD328A0282FF049008F6D7E /* GYOpenPanelConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYOpenPanelConfigure.swift; sourceTree = "<group>"; };
 		ACD328A2282FF1B3008F6D7E /* GYOpenPanelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYOpenPanelManager.swift; sourceTree = "<group>"; };
 		ACD328A4282FF6C4008F6D7E /* GYDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYDownloadManager.swift; sourceTree = "<group>"; };
+		ACD328A6282FFDE1008F6D7E /* GYDownloadHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYDownloadHolder.swift; sourceTree = "<group>"; };
 		ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPRequestRetrier.swift; sourceTree = "<group>"; };
 		ACDAE63A282D4ED20042F54E /* GYMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMacros.swift; sourceTree = "<group>"; };
 		ACDDE652282E9D3A00EDA877 /* Resource-Studio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Resource-Studio-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -365,6 +367,7 @@
 				ACD32889282F577A008F6D7E /* GYDownloadSetting.swift */,
 				ACD3288D282F80BE008F6D7E /* GYDownloadSettings.swift */,
 				ACD328A4282FF6C4008F6D7E /* GYDownloadManager.swift */,
+				ACD328A6282FFDE1008F6D7E /* GYDownloadHolder.swift */,
 			);
 			path = Download;
 			sourceTree = "<group>";
@@ -696,6 +699,7 @@
 				AC0CA1BD28225D8500C1268F /* ViewController.swift in Sources */,
 				AC0CA21328225F2100C1268F /* GYHTTPDataTask.swift in Sources */,
 				ACD328A5282FF6C4008F6D7E /* GYDownloadManager.swift in Sources */,
+				ACD328A7282FFDE1008F6D7E /* GYDownloadHolder.swift in Sources */,
 				AC0CA1BB28225D8500C1268F /* AppDelegate.swift in Sources */,
 				AC0CA21B28225F2100C1268F /* Character+GYCommon.swift in Sources */,
 				ACD3289E282FF025008F6D7E /* GYBase+macOS.swift in Sources */,

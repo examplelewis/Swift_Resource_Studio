@@ -44,8 +44,12 @@ fileprivate func _dispatchBy(setting: GYDownloadSetting, URLString: String, txtF
     let URLs = URLString.components(separatedBy: "\n")
     let downloader = GYDownloader(setting: setting, URLs: URLs, txtFilePath: txtFilePath)
     downloader.start()
+    
+    GYDownloadHolder.shared.add(downloader: downloader)
 }
 fileprivate func _dispatchBy(setting: GYDownloadSetting, itemPaths: [String]) {
     let manager = GYDownloadManager(baseSetting: setting, itemPaths: itemPaths)
     manager.start()
+    
+    GYDownloadHolder.shared.add(manager: manager)
 }

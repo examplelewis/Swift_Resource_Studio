@@ -92,6 +92,7 @@ class GYDownloader: Equatable {
                     if let renameInfo = self!.setting.renameInfo, let rename = renameInfo[url] {
                         fileName = rename
                     }
+                    
                     var filePath = (self!.setting.folderPath as NSString).appendingPathComponent(fileName!)
                     filePath = GYFileManager.nonConflictItemPath(from: filePath)
                     let fileURL = URL(fileURLWithPath: filePath)
@@ -150,7 +151,7 @@ class GYDownloader: Equatable {
                 GYFileManager.trashItem(atPath: txtFilePath)
             }
             
-            GYLogManager.shared.addDefaultLog(format: "下载流程结束")
+            GYLogManager.shared.addSuccessLog(format: "下载流程结束")
             if setting.showFinishAlert {
                 // TODO: Show Alert
             }

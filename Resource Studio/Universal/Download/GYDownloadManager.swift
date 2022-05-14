@@ -8,10 +8,10 @@
 import Foundation
 
 protocol GYDownloadManagerDelegate: AnyObject {
-    func downloadManagerDidFinish()
+    func downloadManagerDidFinish(_ manager: GYDownloadManager)
 }
 
-class GYDownloadManager: GYDownloaderDelegate {
+class GYDownloadManager: Equatable, GYDownloaderDelegate {
     weak var delegate: GYDownloadManagerDelegate?
     
     var source: GYDownloadSource = .input
@@ -44,17 +44,20 @@ class GYDownloadManager: GYDownloaderDelegate {
             txtFilePaths = []
             downloaders = []
             
-            GYLogManager.shared.addDefaultLog(format: "所有 txt 文件内的资源已全部下载完成")
-            GYLogManager.shared.addDefaultLog(format: "批量下载 txt 文件内资源，流程结束")
+            GYLogManager.shared.addSuccessLog(format: "所有 txt 文件内的资源已全部下载完成")
+            GYLogManager.shared.addSuccessLog(format: "批量下载 txt 文件内资源，流程结束")
             
-            delegate?.downloadManagerDidFinish()
+            delegate?.downloadManagerDidFinish(self)
         } else {
+            RSUIManager.shared.resetProgressIndicator() // 每新读取一个 txt 文件，就需要重置进度条
+            
             let newSetting = baseSetting
             let txtFilePath = txtFilePaths!.removeFirst()
             
             // 更新下载文件夹的路径
             let txtFileName = ((txtFilePath as NSString).lastPathComponent as NSString).deletingPathExtension
             newSetting.folderPath = (GYBase.shared.downloadFolderPath as NSString).appendingPathComponent(txtFileName)
+            newSetting.showFinishAlert = false // 批量下载一律不显示弹窗
             
             // 获取 txt 文件里的内容并开始下载；若无法获取，获取下一个
             do {
@@ -64,6 +67,9 @@ class GYDownloadManager: GYDownloaderDelegate {
                     
                     startPanel(isFirst: false)
                 } else {
+                    let txtFileName = ((txtFilePath as NSString).lastPathComponent as NSString).deletingPathExtension
+                    GYLogManager.shared.addDefaultLog(format: "即将开始下载: %@", txtFileName)
+                    
                     let URLs = URLString.components(separatedBy: "\n")
                     let downloader = GYDownloader(setting: newSetting, URLs: URLs, txtFilePath: txtFilePath)
                     downloader.delegate = self
@@ -89,5 +95,10 @@ class GYDownloadManager: GYDownloaderDelegate {
         }
         
         startPanel(isFirst: false)
+    }
+    
+    // MARK: Equatable
+    static func == (lhs: GYDownloadManager, rhs: GYDownloadManager) -> Bool {
+        return lhs === rhs
     }
 }
