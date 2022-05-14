@@ -55,6 +55,7 @@
 		ACD328A3282FF1B3008F6D7E /* GYOpenPanelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD328A2282FF1B3008F6D7E /* GYOpenPanelManager.swift */; };
 		ACD328A5282FF6C4008F6D7E /* GYDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD328A4282FF6C4008F6D7E /* GYDownloadManager.swift */; };
 		ACD328A7282FFDE1008F6D7E /* GYDownloadHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD328A6282FFDE1008F6D7E /* GYDownloadHolder.swift */; };
+		ACD328A928300109008F6D7E /* RSGigaTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD328A828300109008F6D7E /* RSGigaTool.swift */; };
 		ACDAE639282D49CE0042F54E /* GYHTTPRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */; };
 		ACDAE63B282D4ED20042F54E /* GYMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE63A282D4ED20042F54E /* GYMacros.swift */; };
 		ACDDE654282E9EB600EDA877 /* RSGigaTagRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE653282E9EB600EDA877 /* RSGigaTagRsp.swift */; };
@@ -141,6 +142,7 @@
 		ACD328A2282FF1B3008F6D7E /* GYOpenPanelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYOpenPanelManager.swift; sourceTree = "<group>"; };
 		ACD328A4282FF6C4008F6D7E /* GYDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYDownloadManager.swift; sourceTree = "<group>"; };
 		ACD328A6282FFDE1008F6D7E /* GYDownloadHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYDownloadHolder.swift; sourceTree = "<group>"; };
+		ACD328A828300109008F6D7E /* RSGigaTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSGigaTool.swift; sourceTree = "<group>"; };
 		ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPRequestRetrier.swift; sourceTree = "<group>"; };
 		ACDAE63A282D4ED20042F54E /* GYMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMacros.swift; sourceTree = "<group>"; };
 		ACDDE652282E9D3A00EDA877 /* Resource-Studio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Resource-Studio-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -414,6 +416,7 @@
 				ACDDE657282E9ED900EDA877 /* RSGigaTasks.swift */,
 				ACDDE655282E9EC800EDA877 /* RSGigaTagReq.swift */,
 				ACDDE653282E9EB600EDA877 /* RSGigaTagRsp.swift */,
+				ACD328A828300109008F6D7E /* RSGigaTool.swift */,
 			);
 			path = GIGA;
 			sourceTree = "<group>";
@@ -711,6 +714,7 @@
 				ACD32886282F570E008F6D7E /* GYDownloladConst.swift in Sources */,
 				ACD32896282FADAE008F6D7E /* RSMenuItemDispatcher.swift in Sources */,
 				ACD3288E282F80BE008F6D7E /* GYDownloadSettings.swift in Sources */,
+				ACD328A928300109008F6D7E /* RSGigaTool.swift in Sources */,
 				AC0CA20D28225F2100C1268F /* GYHTTPEventMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
