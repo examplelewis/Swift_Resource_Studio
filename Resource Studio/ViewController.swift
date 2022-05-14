@@ -6,21 +6,19 @@
 //
 
 import Cocoa
+import Alamofire
 
 class ViewController: NSViewController {
+    let gigaTasks = GYGigaTasks()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
+    
+    @IBAction func tempButtonDidPress(_ sender: NSButton) {
+        gigaTasks.fetchTagBy(id: 31720)
     }
-
-
 }
 
