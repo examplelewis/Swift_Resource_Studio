@@ -279,9 +279,9 @@
 			children = (
 				AC0CA1F528225F2100C1268F /* GYHTTPProtocols.swift */,
 				AC0CA1EF28225F2100C1268F /* GYAlamofire.swift */,
+				AC0CA1F428225F2100C1268F /* GYHTTPPrinter.swift */,
 				AC0CA1F628225F2100C1268F /* Data */,
 				AC0CA1F028225F2100C1268F /* Logical */,
-				AC0CA1F428225F2100C1268F /* GYHTTPPrinter.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
