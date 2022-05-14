@@ -42,7 +42,9 @@
 		ACD32880282F4947008F6D7E /* GYBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3287F282F4947008F6D7E /* GYBase.swift */; };
 		ACDAE639282D49CE0042F54E /* GYHTTPRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */; };
 		ACDAE63B282D4ED20042F54E /* GYMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE63A282D4ED20042F54E /* GYMacros.swift */; };
+		ACDDE65A282EA45A00EDA877 /* GYHTTPBaseHTMLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE659282EA45A00EDA877 /* GYHTTPBaseHTMLResponse.swift */; };
 		ACDDE65C282EB4EC00EDA877 /* RSAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE65B282EB4EC00EDA877 /* RSAppManager.swift */; };
+		ACDDE660282EC1E300EDA877 /* GYHTTPCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE65F282EC1E300EDA877 /* GYHTTPCookie.swift */; };
 		ACDFA306282BDB5500B0D010 /* GYHTTPDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0607DB2829406600E642AF /* GYHTTPDataRequest.swift */; };
 		ACFC6CA0282C0AC400AC0EE8 /* GYOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFC6C9F282C0AC400AC0EE8 /* GYOperators.swift */; };
 /* End PBXBuildFile section */
@@ -107,7 +109,9 @@
 		ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPRequestRetrier.swift; sourceTree = "<group>"; };
 		ACDAE63A282D4ED20042F54E /* GYMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMacros.swift; sourceTree = "<group>"; };
 		ACDDE652282E9D3A00EDA877 /* Resource-Studio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Resource-Studio-Info.plist"; sourceTree = SOURCE_ROOT; };
+		ACDDE659282EA45A00EDA877 /* GYHTTPBaseHTMLResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPBaseHTMLResponse.swift; sourceTree = "<group>"; };
 		ACDDE65B282EB4EC00EDA877 /* RSAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAppManager.swift; sourceTree = "<group>"; };
+		ACDDE65F282EC1E300EDA877 /* GYHTTPCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPCookie.swift; sourceTree = "<group>"; };
 		ACFC6C9F282C0AC400AC0EE8 /* GYOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYOperators.swift; sourceTree = "<group>"; };
 		E02790C597E955320F765940 /* Pods-Resource Studio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resource Studio.release.xcconfig"; path = "Target Support Files/Pods-Resource Studio/Pods-Resource Studio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -268,9 +272,11 @@
 				AC0CA1FB28225F2100C1268F /* GYHTTPBaseModel.swift */,
 				AC0CA1FA28225F2100C1268F /* GYHTTPBaseRequest.swift */,
 				AC0CA1F728225F2100C1268F /* GYHTTPBaseResponse.swift */,
+				ACDDE659282EA45A00EDA877 /* GYHTTPBaseHTMLResponse.swift */,
 				AC0607DB2829406600E642AF /* GYHTTPDataRequest.swift */,
 				AC0CA1F928225F2100C1268F /* GYHTTPDataTask.swift */,
 				AC0CA1F828225F2100C1268F /* GYHTTPBaseTasks.swift */,
+				ACDDE65F282EC1E300EDA877 /* GYHTTPCookie.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -541,6 +547,8 @@
 			files = (
 				ACDFA306282BDB5500B0D010 /* GYHTTPDataRequest.swift in Sources */,
 				AC0CA21528225F2100C1268F /* GYHTTPBaseModel.swift in Sources */,
+				ACDDE660282EC1E300EDA877 /* GYHTTPCookie.swift in Sources */,
+				ACDDE65A282EA45A00EDA877 /* GYHTTPBaseHTMLResponse.swift in Sources */,
 				ACD32880282F4947008F6D7E /* GYBase.swift in Sources */,
 				ACDAE63B282D4ED20042F54E /* GYMacros.swift in Sources */,
 				AC0CA21228225F2100C1268F /* GYHTTPBaseTasks.swift in Sources */,

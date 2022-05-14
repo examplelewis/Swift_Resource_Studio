@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import hpple
 
 fileprivate func cookieProperty(from model: GYHTTPCookie) -> [HTTPCookiePropertyKey: Any] {
     return [.name: model.name!, .path: model.path!, .value: model.value!, .secure: model.secure!, .domain: model.domain!, .originURL: model.domain!]
@@ -50,6 +51,38 @@ class GYAlamofire {
         session = Session(configuration: configuration, interceptor: interceptor, serverTrustManager: GYHTTPServerTrustManager(evaluators: [:]), eventMonitors: [GYHTTPEventMonitor()])
     }
     
+    func sendHTMLTask(_ task: GYHTTPDataTask) {
+        let request = task.request
+        let dataRequest = GYHTTPDataRequest(url: request.url(), method: request.method(), headers: request.headers(), parameters: request.pack())
+        
+        session.request(dataRequest).responseData { (dataResponse: AFDataResponse<Data>) in
+            GYHTTPPrinter.printAFDataResponse(dataResponse)
+
+            if dataResponse.error != nil {
+                task.rspError = dataResponse.error
+            } else if let urlRequest = dataResponse.request, let _ = urlRequest.url, let urlResponse = dataResponse.response {
+                task.rspHeader = urlResponse.allHeaderFields as? [String: Any]
+
+                if let dataValue = dataResponse.value, let baseResponse = request.rspType().init() as? GYHTTPBaseHTMLResponse {
+                    print("data3: \(dataValue.count)")
+                    baseResponse.parser = TFHpple(htmlData: dataValue)
+                    baseResponse.headers = task.rspHeader
+
+                    task.response = baseResponse
+                } else {
+                    // 如果baseResponse为nil，那么说明服务器反回的JSON字符串解析错误
+                    task.rspError = URLError(.cannotDecodeContentData)
+                }
+            } else {
+                task.rspError = URLError(.cannotParseResponse)
+            }
+
+            if !task.invalid {
+                task.delegate?.dataTaskDidFinished(task)
+            }
+        }
+    }
+    
     func sendTask(_ task: GYHTTPDataTask) {
         let request = task.request
         let dataRequest = GYHTTPDataRequest(url: request.url(), method: request.method(), headers: request.headers(), parameters: request.pack())
@@ -62,14 +95,13 @@ class GYAlamofire {
             } else if let urlRequest = dataResponse.request, let _ = urlRequest.url, let urlResponse = dataResponse.response {
                 task.rspHeader = urlResponse.allHeaderFields as? [String: Any]
                 
-                let baseResponse: GYHTTPBaseResponse? = request.rspType().unpack(data: dataResponse.value)
-                baseResponse?.headers = task.rspHeader
-                
-                // 如果baseResponse为nil，那么说明服务器反回的JSON字符串解析错误
-                if baseResponse == nil {
-                    task.rspError = URLError(.cannotDecodeContentData)
-                } else {
+                if let baseResponse = request.rspType().unpack(data: dataResponse.value) {
+                    baseResponse.headers = task.rspHeader
+                    
                     task.response = baseResponse
+                } else {
+                    // 如果baseResponse为nil，那么说明服务器反回的JSON字符串解析错误
+                    task.rspError = URLError(.cannotDecodeContentData)
                 }
             } else {
                 task.rspError = URLError(.cannotParseResponse)
