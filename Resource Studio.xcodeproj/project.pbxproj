@@ -50,6 +50,9 @@
 		ACD32898282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32897282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift */; };
 		ACD3289A282FB33F008F6D7E /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32899282FB33F008F6D7E /* WindowController.swift */; };
 		ACD3289C282FCA2A008F6D7E /* RSGigaTagInfoFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3289B282FCA2A008F6D7E /* RSGigaTagInfoFetcher.swift */; };
+		ACD3289E282FF025008F6D7E /* GYBase+macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3289D282FF025008F6D7E /* GYBase+macOS.swift */; };
+		ACD328A1282FF049008F6D7E /* GYOpenPanelConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD328A0282FF049008F6D7E /* GYOpenPanelConfigure.swift */; };
+		ACD328A3282FF1B3008F6D7E /* GYOpenPanelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD328A2282FF1B3008F6D7E /* GYOpenPanelManager.swift */; };
 		ACDAE639282D49CE0042F54E /* GYHTTPRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */; };
 		ACDAE63B282D4ED20042F54E /* GYMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE63A282D4ED20042F54E /* GYMacros.swift */; };
 		ACDDE654282E9EB600EDA877 /* RSGigaTagRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE653282E9EB600EDA877 /* RSGigaTagRsp.swift */; };
@@ -131,6 +134,9 @@
 		ACD32897282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMenuItemDownloadDispatcher.swift; sourceTree = "<group>"; };
 		ACD32899282FB33F008F6D7E /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		ACD3289B282FCA2A008F6D7E /* RSGigaTagInfoFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSGigaTagInfoFetcher.swift; sourceTree = "<group>"; };
+		ACD3289D282FF025008F6D7E /* GYBase+macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GYBase+macOS.swift"; sourceTree = "<group>"; };
+		ACD328A0282FF049008F6D7E /* GYOpenPanelConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYOpenPanelConfigure.swift; sourceTree = "<group>"; };
+		ACD328A2282FF1B3008F6D7E /* GYOpenPanelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYOpenPanelManager.swift; sourceTree = "<group>"; };
 		ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPRequestRetrier.swift; sourceTree = "<group>"; };
 		ACDAE63A282D4ED20042F54E /* GYMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMacros.swift; sourceTree = "<group>"; };
 		ACDDE652282E9D3A00EDA877 /* Resource-Studio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Resource-Studio-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -379,6 +385,14 @@
 			path = MenuItem;
 			sourceTree = "<group>";
 		};
+		ACD3289F282FF029008F6D7E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				ACD3289D282FF025008F6D7E /* GYBase+macOS.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		ACDDE64A282E9AED00EDA877 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +415,7 @@
 		ACFF138B282809C9003B7118 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
+				ACD3289F282FF029008F6D7E /* Base */,
 				ACFF138C282809DE003B7118 /* Base Services */,
 				ACFF138D282809F0003B7118 /* Extensions */,
 				ACFF138E282809FA003B7118 /* Managers */,
@@ -442,6 +457,8 @@
 		ACFF139028280A21003B7118 /* Open Panel */ = {
 			isa = PBXGroup;
 			children = (
+				ACD328A0282FF049008F6D7E /* GYOpenPanelConfigure.swift */,
+				ACD328A2282FF1B3008F6D7E /* GYOpenPanelManager.swift */,
 			);
 			path = "Open Panel";
 			sourceTree = "<group>";
@@ -639,6 +656,7 @@
 			files = (
 				ACDFA306282BDB5500B0D010 /* GYHTTPDataRequest.swift in Sources */,
 				AC0CA21528225F2100C1268F /* GYHTTPBaseModel.swift in Sources */,
+				ACD328A3282FF1B3008F6D7E /* GYOpenPanelManager.swift in Sources */,
 				ACDDE660282EC1E300EDA877 /* GYHTTPCookie.swift in Sources */,
 				ACDDE65A282EA45A00EDA877 /* GYHTTPBaseHTMLResponse.swift in Sources */,
 				ACD32880282F4947008F6D7E /* GYBase.swift in Sources */,
@@ -668,6 +686,7 @@
 				ACD3289C282FCA2A008F6D7E /* RSGigaTagInfoFetcher.swift in Sources */,
 				ACD3288C282F5B08008F6D7E /* RSUIManager.swift in Sources */,
 				AC0CA21928225F2100C1268F /* String+GYCommon.swift in Sources */,
+				ACD328A1282FF049008F6D7E /* GYOpenPanelConfigure.swift in Sources */,
 				AC0CA20C28225F2100C1268F /* GYHTTPServerTrustManager.swift in Sources */,
 				AC0CA21828225F2100C1268F /* String+GYSubscript.swift in Sources */,
 				AC0CA21428225F2100C1268F /* GYHTTPBaseRequest.swift in Sources */,
@@ -675,6 +694,7 @@
 				AC0CA21328225F2100C1268F /* GYHTTPDataTask.swift in Sources */,
 				AC0CA1BB28225D8500C1268F /* AppDelegate.swift in Sources */,
 				AC0CA21B28225F2100C1268F /* Character+GYCommon.swift in Sources */,
+				ACD3289E282FF025008F6D7E /* GYBase+macOS.swift in Sources */,
 				ACFC6CA0282C0AC400AC0EE8 /* GYOperators.swift in Sources */,
 				AC0CA21D28225F2100C1268F /* NSError+GYCommon.swift in Sources */,
 				AC0CA21A28225F2100C1268F /* Date+GYCommon.swift in Sources */,
