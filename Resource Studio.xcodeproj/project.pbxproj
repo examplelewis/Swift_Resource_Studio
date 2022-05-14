@@ -40,6 +40,7 @@
 		AC0CA21C28225F2100C1268F /* Array+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20328225F2100C1268F /* Array+GYCommon.swift */; };
 		AC0CA21D28225F2100C1268F /* NSError+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20428225F2100C1268F /* NSError+GYCommon.swift */; };
 		ACD32880282F4947008F6D7E /* GYBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3287F282F4947008F6D7E /* GYBase.swift */; };
+		ACD32892282FA629008F6D7E /* RSBaseBridging.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD32891282FA629008F6D7E /* RSBaseBridging.m */; };
 		ACDAE639282D49CE0042F54E /* GYHTTPRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */; };
 		ACDAE63B282D4ED20042F54E /* GYMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE63A282D4ED20042F54E /* GYMacros.swift */; };
 		ACDDE654282E9EB600EDA877 /* RSGigaTagRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE653282E9EB600EDA877 /* RSGigaTagRsp.swift */; };
@@ -109,6 +110,8 @@
 		AC0CA20328225F2100C1268F /* Array+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+GYCommon.swift"; sourceTree = "<group>"; };
 		AC0CA20428225F2100C1268F /* NSError+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+GYCommon.swift"; sourceTree = "<group>"; };
 		ACD3287F282F4947008F6D7E /* GYBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYBase.swift; sourceTree = "<group>"; };
+		ACD32891282FA629008F6D7E /* RSBaseBridging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSBaseBridging.m; sourceTree = "<group>"; };
+		ACD32893282FA640008F6D7E /* RSBaseBridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSBaseBridging.h; sourceTree = "<group>"; };
 		ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPRequestRetrier.swift; sourceTree = "<group>"; };
 		ACDAE63A282D4ED20042F54E /* GYMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMacros.swift; sourceTree = "<group>"; };
 		ACDDE652282E9D3A00EDA877 /* Resource-Studio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Resource-Studio-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -191,6 +194,7 @@
 				ACDDE64A282E9AED00EDA877 /* Main */,
 				AC0CA1E528225F2100C1268F /* common */,
 				ACFF138B282809C9003B7118 /* macOS */,
+				ACD3288F282FA5EB008F6D7E /* Objective-C Bridging */,
 			);
 			path = "Resource Studio";
 			sourceTree = "<group>";
@@ -312,6 +316,16 @@
 				ACDAE63A282D4ED20042F54E /* GYMacros.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		ACD3288F282FA5EB008F6D7E /* Objective-C Bridging */ = {
+			isa = PBXGroup;
+			children = (
+				ACD32890282FA629008F6D7E /* Resource Studio-Bridging-Header.h */,
+				ACD32893282FA640008F6D7E /* RSBaseBridging.h */,
+				ACD32891282FA629008F6D7E /* RSBaseBridging.m */,
+			);
+			path = "Objective-C Bridging";
 			sourceTree = "<group>";
 		};
 		ACDDE64A282E9AED00EDA877 /* Main */ = {
@@ -466,6 +480,7 @@
 				TargetAttributes = {
 					AC0CA1B628225D8500C1268F = {
 						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 1330;
 					};
 					AC0CA1C728225D8600C1268F = {
 						CreatedOnToolsVersion = 13.3.1;
@@ -580,6 +595,7 @@
 				AC0CA21228225F2100C1268F /* GYHTTPBaseTasks.swift in Sources */,
 				AC0CA21628225F2100C1268F /* GYConst.swift in Sources */,
 				AC0CA20928225F2100C1268F /* GYFoundation.swift in Sources */,
+				ACD32892282FA629008F6D7E /* RSBaseBridging.m in Sources */,
 				AC0CA20628225F2100C1268F /* GYLogManager.swift in Sources */,
 				AC0CA20E28225F2100C1268F /* GYHTTPRequestAdapter.swift in Sources */,
 				ACDAE639282D49CE0042F54E /* GYHTTPRequestRetrier.swift in Sources */,
@@ -773,6 +789,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Resource Studio/Resource_Studio.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -793,6 +810,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gongyu.Resource-Studio";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Resource Studio/Objective-C Bridging/Resource Studio-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -803,6 +822,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Resource Studio/Resource_Studio.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -823,6 +843,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gongyu.Resource-Studio";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Resource Studio/Objective-C Bridging/Resource Studio-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
