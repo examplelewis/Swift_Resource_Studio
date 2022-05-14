@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 import hpple
+import DateTools
 
 fileprivate func cookieProperty(from model: GYHTTPCookie) -> [HTTPCookiePropertyKey: Any] {
     return [.name: model.name!, .path: model.path!, .value: model.value!, .secure: model.secure!, .domain: model.domain!, .originURL: model.domain!]
@@ -26,8 +27,15 @@ fileprivate func updateCookies(_ configuration: URLSessionConfiguration) {
         if let string = try? String(contentsOfFile: cookieFile) {
             let cookies = [GYHTTPCookie].deserialize(from: string)!
             for cookie in cookies {
-                let gigaCookie = HTTPCookie(properties: cookieProperty(from: cookie!))
-                configuration.httpCookieStorage?.setCookie(gigaCookie!)
+                let httpCookie = HTTPCookie(properties: cookieProperty(from: cookie!))
+                if let expiresDate = httpCookie?.expiresDate, (expiresDate as NSDate).isEarlierThan(Date.current()) {
+                    let fileName = ((cookieFile as NSString).lastPathComponent as NSString).deletingPathExtension
+                    let cookieName = httpCookie!.name
+                    
+                    GYLogManager.shared.addWarningLog(format: "%@ 的 %@ 已过期，需要使用 Chrome 再次获取 Cookie", fileName, cookieName)
+                }
+                
+                configuration.httpCookieStorage?.setCookie(httpCookie!)
             }
         }
     }
