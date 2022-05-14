@@ -46,6 +46,9 @@
 		ACD3288C282F5B08008F6D7E /* RSUIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3288B282F5B08008F6D7E /* RSUIManager.swift */; };
 		ACD3288E282F80BE008F6D7E /* GYDownloadSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3288D282F80BE008F6D7E /* GYDownloadSettings.swift */; };
 		ACD32892282FA629008F6D7E /* RSBaseBridging.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD32891282FA629008F6D7E /* RSBaseBridging.m */; };
+		ACD32896282FADAE008F6D7E /* RSMenuItemDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32895282FADAE008F6D7E /* RSMenuItemDispatcher.swift */; };
+		ACD32898282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32897282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift */; };
+		ACD3289A282FB33F008F6D7E /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32899282FB33F008F6D7E /* WindowController.swift */; };
 		ACDAE639282D49CE0042F54E /* GYHTTPRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */; };
 		ACDAE63B282D4ED20042F54E /* GYMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE63A282D4ED20042F54E /* GYMacros.swift */; };
 		ACDDE654282E9EB600EDA877 /* RSGigaTagRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE653282E9EB600EDA877 /* RSGigaTagRsp.swift */; };
@@ -123,6 +126,9 @@
 		ACD32890282FA629008F6D7E /* Resource Studio-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Resource Studio-Bridging-Header.h"; sourceTree = "<group>"; };
 		ACD32891282FA629008F6D7E /* RSBaseBridging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSBaseBridging.m; sourceTree = "<group>"; };
 		ACD32893282FA640008F6D7E /* RSBaseBridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSBaseBridging.h; sourceTree = "<group>"; };
+		ACD32895282FADAE008F6D7E /* RSMenuItemDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMenuItemDispatcher.swift; sourceTree = "<group>"; };
+		ACD32897282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMenuItemDownloadDispatcher.swift; sourceTree = "<group>"; };
+		ACD32899282FB33F008F6D7E /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPRequestRetrier.swift; sourceTree = "<group>"; };
 		ACDAE63A282D4ED20042F54E /* GYMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMacros.swift; sourceTree = "<group>"; };
 		ACDDE652282E9D3A00EDA877 /* Resource-Studio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Resource-Studio-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -196,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				AC0CA1BA28225D8500C1268F /* AppDelegate.swift */,
+				ACD32899282FB33F008F6D7E /* WindowController.swift */,
 				AC0CA1BC28225D8500C1268F /* ViewController.swift */,
 				AC0CA1BE28225D8600C1268F /* Assets.xcassets */,
 				AC0CA1C028225D8600C1268F /* Main.storyboard */,
@@ -335,6 +342,7 @@
 				ACDDE65B282EB4EC00EDA877 /* RSAppManager.swift */,
 				ACD3288B282F5B08008F6D7E /* RSUIManager.swift */,
 				ACD32882282F53C1008F6D7E /* Download */,
+				ACD32894282FABE6008F6D7E /* MenuItem */,
 			);
 			path = Universal;
 			sourceTree = "<group>";
@@ -358,6 +366,15 @@
 				ACD32891282FA629008F6D7E /* RSBaseBridging.m */,
 			);
 			path = "Objective-C Bridging";
+			sourceTree = "<group>";
+		};
+		ACD32894282FABE6008F6D7E /* MenuItem */ = {
+			isa = PBXGroup;
+			children = (
+				ACD32895282FADAE008F6D7E /* RSMenuItemDispatcher.swift */,
+				ACD32897282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift */,
+			);
+			path = MenuItem;
 			sourceTree = "<group>";
 		};
 		ACDDE64A282E9AED00EDA877 /* Main */ = {
@@ -633,8 +650,10 @@
 				AC0CA20E28225F2100C1268F /* GYHTTPRequestAdapter.swift in Sources */,
 				ACDAE639282D49CE0042F54E /* GYHTTPRequestRetrier.swift in Sources */,
 				ACDDE656282E9EC800EDA877 /* RSGigaTagReq.swift in Sources */,
+				ACD32898282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift in Sources */,
 				AC0CA21728225F2100C1268F /* Dictionary+GYCommon.swift in Sources */,
 				AC0CA20828225F2100C1268F /* GYLog.swift in Sources */,
+				ACD3289A282FB33F008F6D7E /* WindowController.swift in Sources */,
 				AC0CA20A28225F2100C1268F /* GYFileManager.swift in Sources */,
 				ACDDE654282E9EB600EDA877 /* RSGigaTagRsp.swift in Sources */,
 				AC0CA20B28225F2100C1268F /* GYAlamofire.swift in Sources */,
@@ -658,6 +677,7 @@
 				AC0CA20F28225F2100C1268F /* GYHTTPPrinter.swift in Sources */,
 				ACD32888282F5756008F6D7E /* GYDownloadManager.swift in Sources */,
 				ACD32886282F570E008F6D7E /* GYDownloladConst.swift in Sources */,
+				ACD32896282FADAE008F6D7E /* RSMenuItemDispatcher.swift in Sources */,
 				ACD3288E282F80BE008F6D7E /* GYDownloadSettings.swift in Sources */,
 				AC0CA20D28225F2100C1268F /* GYHTTPEventMonitor.swift in Sources */,
 			);

@@ -41,7 +41,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         customMenuItemDidPress(sender)
     }
     @IBAction func customMenuItemDidPress(_ sender: NSMenuItem) {
-        
+        GYDispatchMenuItem(sender)
     }
     @IBAction func helpMenuItemDidPress(_ sender: NSMenuItem) {
         

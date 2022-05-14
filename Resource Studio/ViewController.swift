@@ -14,7 +14,7 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        RSUIManager.shared.viewController = self
     }
     
     @IBAction func tempButtonDidPress(_ sender: NSButton) {

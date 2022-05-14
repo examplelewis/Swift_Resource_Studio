@@ -11,7 +11,7 @@ class RSUIManager {
     static let shared = RSUIManager()
     
     var appDelegate = AppDelegate()
-//    var WindowController =
+    var windowController = WindowController()
     var viewController = ViewController()
     
     private var progressIndicatorMaxValue: Double = 1.0
