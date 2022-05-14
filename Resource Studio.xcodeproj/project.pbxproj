@@ -42,9 +42,9 @@
 		ACD32880282F4947008F6D7E /* GYBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3287F282F4947008F6D7E /* GYBase.swift */; };
 		ACDAE639282D49CE0042F54E /* GYHTTPRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */; };
 		ACDAE63B282D4ED20042F54E /* GYMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE63A282D4ED20042F54E /* GYMacros.swift */; };
-		ACDDE654282E9EB600EDA877 /* GYGigaTagRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE653282E9EB600EDA877 /* GYGigaTagRsp.swift */; };
-		ACDDE656282E9EC800EDA877 /* GYGigaTagReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE655282E9EC800EDA877 /* GYGigaTagReq.swift */; };
-		ACDDE658282E9ED900EDA877 /* GYGigaTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE657282E9ED900EDA877 /* GYGigaTasks.swift */; };
+		ACDDE654282E9EB600EDA877 /* RSGigaTagRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE653282E9EB600EDA877 /* RSGigaTagRsp.swift */; };
+		ACDDE656282E9EC800EDA877 /* RSGigaTagReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE655282E9EC800EDA877 /* RSGigaTagReq.swift */; };
+		ACDDE658282E9ED900EDA877 /* RSGigaTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE657282E9ED900EDA877 /* RSGigaTasks.swift */; };
 		ACDDE65A282EA45A00EDA877 /* GYHTTPBaseHTMLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE659282EA45A00EDA877 /* GYHTTPBaseHTMLResponse.swift */; };
 		ACDDE65C282EB4EC00EDA877 /* RSAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE65B282EB4EC00EDA877 /* RSAppManager.swift */; };
 		ACDDE660282EC1E300EDA877 /* GYHTTPCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE65F282EC1E300EDA877 /* GYHTTPCookie.swift */; };
@@ -112,9 +112,9 @@
 		ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPRequestRetrier.swift; sourceTree = "<group>"; };
 		ACDAE63A282D4ED20042F54E /* GYMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMacros.swift; sourceTree = "<group>"; };
 		ACDDE652282E9D3A00EDA877 /* Resource-Studio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Resource-Studio-Info.plist"; sourceTree = SOURCE_ROOT; };
-		ACDDE653282E9EB600EDA877 /* GYGigaTagRsp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYGigaTagRsp.swift; sourceTree = "<group>"; };
-		ACDDE655282E9EC800EDA877 /* GYGigaTagReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYGigaTagReq.swift; sourceTree = "<group>"; };
-		ACDDE657282E9ED900EDA877 /* GYGigaTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYGigaTasks.swift; sourceTree = "<group>"; };
+		ACDDE653282E9EB600EDA877 /* RSGigaTagRsp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSGigaTagRsp.swift; sourceTree = "<group>"; };
+		ACDDE655282E9EC800EDA877 /* RSGigaTagReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSGigaTagReq.swift; sourceTree = "<group>"; };
+		ACDDE657282E9ED900EDA877 /* RSGigaTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSGigaTasks.swift; sourceTree = "<group>"; };
 		ACDDE659282EA45A00EDA877 /* GYHTTPBaseHTMLResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPBaseHTMLResponse.swift; sourceTree = "<group>"; };
 		ACDDE65B282EB4EC00EDA877 /* RSAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAppManager.swift; sourceTree = "<group>"; };
 		ACDDE65F282EC1E300EDA877 /* GYHTTPCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPCookie.swift; sourceTree = "<group>"; };
@@ -325,9 +325,9 @@
 		ACDDE64B282E9B0100EDA877 /* GIGA */ = {
 			isa = PBXGroup;
 			children = (
-				ACDDE657282E9ED900EDA877 /* GYGigaTasks.swift */,
-				ACDDE655282E9EC800EDA877 /* GYGigaTagReq.swift */,
-				ACDDE653282E9EB600EDA877 /* GYGigaTagRsp.swift */,
+				ACDDE657282E9ED900EDA877 /* RSGigaTasks.swift */,
+				ACDDE655282E9EC800EDA877 /* RSGigaTagReq.swift */,
+				ACDDE653282E9EB600EDA877 /* RSGigaTagRsp.swift */,
 			);
 			path = GIGA;
 			sourceTree = "<group>";
@@ -576,18 +576,18 @@
 				ACDDE65A282EA45A00EDA877 /* GYHTTPBaseHTMLResponse.swift in Sources */,
 				ACD32880282F4947008F6D7E /* GYBase.swift in Sources */,
 				ACDAE63B282D4ED20042F54E /* GYMacros.swift in Sources */,
-				ACDDE658282E9ED900EDA877 /* GYGigaTasks.swift in Sources */,
+				ACDDE658282E9ED900EDA877 /* RSGigaTasks.swift in Sources */,
 				AC0CA21228225F2100C1268F /* GYHTTPBaseTasks.swift in Sources */,
 				AC0CA21628225F2100C1268F /* GYConst.swift in Sources */,
 				AC0CA20928225F2100C1268F /* GYFoundation.swift in Sources */,
 				AC0CA20628225F2100C1268F /* GYLogManager.swift in Sources */,
 				AC0CA20E28225F2100C1268F /* GYHTTPRequestAdapter.swift in Sources */,
 				ACDAE639282D49CE0042F54E /* GYHTTPRequestRetrier.swift in Sources */,
-				ACDDE656282E9EC800EDA877 /* GYGigaTagReq.swift in Sources */,
+				ACDDE656282E9EC800EDA877 /* RSGigaTagReq.swift in Sources */,
 				AC0CA21728225F2100C1268F /* Dictionary+GYCommon.swift in Sources */,
 				AC0CA20828225F2100C1268F /* GYLog.swift in Sources */,
 				AC0CA20A28225F2100C1268F /* GYFileManager.swift in Sources */,
-				ACDDE654282E9EB600EDA877 /* GYGigaTagRsp.swift in Sources */,
+				ACDDE654282E9EB600EDA877 /* RSGigaTagRsp.swift in Sources */,
 				AC0CA20B28225F2100C1268F /* GYAlamofire.swift in Sources */,
 				ACDDE65C282EB4EC00EDA877 /* RSAppManager.swift in Sources */,
 				AC0CA20728225F2100C1268F /* GYLogFormatters.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  GYGigaTasks.swift
+//  RSGigaTasks.swift
 //  Resource Studio
 //
 //  Created by 龚宇 on 22/05/13.
@@ -8,15 +8,15 @@
 import Cocoa
 import hpple
 
-class GYGigaTasks: GYHTTPBaseTasks {
+class RSGigaTasks: GYHTTPBaseTasks {
     func fetchTagBy(id: Int) {
-        let req = GYGigaTagReq()
+        let req = RSGigaTagReq()
         req.id = id
         
 //        GYHTTPCookieManager.setupGigaCookie()
         
         send(req) { request, response in
-            let aRsp = response as! GYGigaTagRsp
+            let aRsp = response as! RSGigaTagRsp
             
             guard let parser = aRsp.parser else {
                 return

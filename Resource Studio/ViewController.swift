@@ -9,7 +9,7 @@ import Cocoa
 import Alamofire
 
 class ViewController: NSViewController {
-    let gigaTasks = GYGigaTasks()
+    let gigaTasks = RSGigaTasks()
 
     override func viewDidLoad() {
         super.viewDidLoad()

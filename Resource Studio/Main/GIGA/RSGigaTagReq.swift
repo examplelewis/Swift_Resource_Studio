@@ -1,5 +1,5 @@
 //
-//  GYGigaTagReq.swift
+//  RSGigaTagReq.swift
 //  Resource Studio
 //
 //  Created by 龚宇 on 22/05/13.
@@ -7,7 +7,7 @@
 
 import Cocoa
 
-class GYGigaTagReq: GYHTTPBaseRequest {
+class RSGigaTagReq: GYHTTPBaseRequest {
     var id = 0
     
     // MARK: GYHTTPRequestProtocol
