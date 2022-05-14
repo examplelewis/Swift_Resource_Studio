@@ -22,6 +22,14 @@ func GYDispatchDownloadMenuItem(_ menuItem: NSMenuItem) {
         
         break
     case .panel:
+        let configure = GYOpenPanelConfigure.mainWindowConfigureWith(behaivor: .multipleFile, message: "请选择包含下载链接的文件，目前只支持多个 txt 文件")
+        configure.allowedFileTypes = ["txt"]
+        
+        GYOpenPanelManager.showOpenPanelWith(configure: configure) { itemPaths in
+            DispatchQueue.main.async {
+                _dispatchBy(setting: setting!, itemPaths: itemPaths)
+            }
+        }
         
         break
     }
@@ -34,6 +42,10 @@ fileprivate func _dispatchBy(setting: GYDownloadSetting, URLString: String, txtF
     }
     
     let URLs = URLString.components(separatedBy: "\n")
-    let manager = GYDownloadManager(setting: setting, URLs: URLs, txtFilePath: txtFilePath)
+    let downloader = GYDownloader(setting: setting, URLs: URLs, txtFilePath: txtFilePath)
+    downloader.start()
+}
+fileprivate func _dispatchBy(setting: GYDownloadSetting, itemPaths: [String]) {
+    let manager = GYDownloadManager(baseSetting: setting, itemPaths: itemPaths)
     manager.start()
 }

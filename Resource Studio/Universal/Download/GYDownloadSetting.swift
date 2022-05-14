@@ -13,15 +13,15 @@ enum GYDownloadSource: Int {
 }
 
 class GYDownloadSetting {
-    let menuItemTitle: String
+    var menuItemTitle: String
     var menuItemTag: Int
     
-    let folderPath: String // 下载的根文件夹地址
-    let source: GYDownloadSource // 下载地址的来源
-    let showFinishAlert: Bool // 下载完成后是否显示警告
-    let maxConcurrentCount: Int // 并发数
-    let maxRedownloadTimes: Int // 最大的重新下载次数
-    let timeoutInterval: TimeInterval // 超时时间
+    var folderPath: String // 下载的根文件夹地址
+    var source: GYDownloadSource // 下载地址的来源
+    var showFinishAlert: Bool // 下载完成后是否显示警告
+    var maxConcurrentCount: Int // 并发数
+    var maxRedownloadTimes: Int // 最大的重新下载次数
+    var timeoutInterval: TimeInterval // 超时时间
     
     var headers: [String: String]? // 下载的请求头
     var renameInfo: [String: String]? // 文件重命名的记录

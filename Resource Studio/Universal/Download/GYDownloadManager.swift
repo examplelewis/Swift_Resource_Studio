@@ -6,156 +6,88 @@
 //
 
 import Foundation
-import Alamofire
 
-protocol GYDownloadDelegate: AnyObject {
-    func downloadManagerDidFinish(_ manager: GYDownloadManager)
+protocol GYDownloadManagerDelegate: AnyObject {
+    func downloadManagerDidFinish()
 }
 
-class GYDownloadManager {
-    weak var delegate: GYDownloadDelegate?
+class GYDownloadManager: GYDownloaderDelegate {
+    weak var delegate: GYDownloadManagerDelegate?
     
-    private let setting: GYDownloadSetting
-    private var URLs: [String] // 输入的链接, 不会变
-    private let txtFilePath: String? // 包含下载地址的 txt 文件路径
+    var source: GYDownloadSource = .input
+    var baseSetting: GYDownloadSetting
+    var txtFilePaths: [String]? // 批量下载，获取到的 txt 文件路径
+    var downloaders: [GYDownloader] = [] // 下载器
     
-    private var redoTimes = 0 // 重新下载次数
-    private var remainURLsFilePath = ""
-    
-    private var remains: [String] // 还未下载的链接
-    private var successes: [String] // 下载成功的链接
-    // URLs.count = successURLs.count + remainURLs.count;
-    
-    private let opQueue = OperationQueue()
-    
-    // MARK: Initial
-    init(setting: GYDownloadSetting, URLs: [String], txtFilePath: String?) {
-        self.setting = setting
-        self.URLs = URLs
-        self.txtFilePath = txtFilePath
-        
-        self.remains = URLs
-        self.successes = []
-        
-        if self.setting.folderPath == GYBase.shared.downloadFolderPath {
-            remainURLsFilePath = GYBase.shared.pathOfItemInDownloadFolder(GYDownloadRemainURLsFile)
-        } else {
-            var downloadSuffix = setting.folderPath.replacingOccurrences(of: GYBase.shared.downloadFolderPath, with: "")
-            downloadSuffix = downloadSuffix.replacingOccurrences(of: "/", with: "-")
-            let remainURLsFile = String(format: "GYDownloadRemainURLs %@.txt", downloadSuffix)
-            remainURLsFilePath = GYBase.shared.pathOfItemInDownloadFolder(remainURLsFile)
-        }
-        
-        opQueue.maxConcurrentOperationCount = setting.maxConcurrentCount
+    init(baseSetting: GYDownloadSetting, itemPaths: [String]) {
+        self.source = .panel
+        self.baseSetting = baseSetting
+        self.txtFilePaths = itemPaths
     }
     
     func start() {
-        // 创建下载文件夹
-        if GYFileManager.createFolder(atPath: setting.folderPath) {
-            _start(isFirstTime: true)
+        if source == .input {
+            startInput()
         } else {
-            GYLogManager.shared.addErrorLog(format: "%@ 文件夹不存在且创建失败, 下载流程结束", setting.folderPath)
+            startPanel(isFirst: true)
+        }
+    }
+    private func startInput() {
+        
+    }
+    private func startPanel(isFirst: Bool) {
+        if isFirst {
+            GYLogManager.shared.addDefaultLog(format: "批量下载 txt 文件内资源，流程开始")
+        }
+        
+        if txtFilePaths!.count == 0 {
+            txtFilePaths = []
+            downloaders = []
+            
+            GYLogManager.shared.addDefaultLog(format: "所有 txt 文件内的资源已全部下载完成")
+            GYLogManager.shared.addDefaultLog(format: "批量下载 txt 文件内资源，流程结束")
+            
+            delegate?.downloadManagerDidFinish()
+        } else {
+            let newSetting = baseSetting
+            let txtFilePath = txtFilePaths!.removeFirst()
+            
+            // 更新下载文件夹的路径
+            let txtFileName = ((txtFilePath as NSString).lastPathComponent as NSString).deletingPathExtension
+            newSetting.folderPath = (GYBase.shared.downloadFolderPath as NSString).appendingPathComponent(txtFileName)
+            
+            // 获取 txt 文件里的内容并开始下载；若无法获取，获取下一个
+            do {
+                let URLString = try String(contentsOfFile: txtFilePath, encoding: .utf8)
+                if URLString.count == 0 {
+                    GYLogManager.shared.addWarningLog(format: "未读取到可用的下载链接, 读取下一个文件")
+                    
+                    startPanel(isFirst: false)
+                } else {
+                    let URLs = URLString.components(separatedBy: "\n")
+                    let downloader = GYDownloader(setting: newSetting, URLs: URLs, txtFilePath: txtFilePath)
+                    downloader.delegate = self
+                    downloader.start()
+                    
+                    downloaders.append(downloader)
+                }
+            } catch {
+                GYLogManager.shared.addWarningLog(format: "读取TXT文件失败: %@, 读取下一个文件", error.localizedDescription)
+                
+                startPanel(isFirst: false)
+            }
         }
     }
     
-    private func _start(isFirstTime: Bool) {
-        if isFirstTime {
-            RSUIManager.shared.updateProgressIndicatorMaxValue(Double(URLs.count))
-            GYLogManager.shared.addDefaultLog(format: "下载流程开始，共 %ld 个文件", URLs.count)
-        } else {
-            GYLogManager.shared.addNewLineLog()
-            GYLogManager.shared.addDefaultLog(format: "第 %ld 次重新下载未成功的文件，共 %ld 个", redoTimes, URLs.count)
+    // MARK: GYDownloaderDelegate
+    func downloaderDidFinish(_ downloader: GYDownloader) {
+        let txtFileName = (((downloader.txtFilePath ?? "") as NSString).lastPathComponent as NSString).deletingPathExtension
+        GYLogManager.shared.addDefaultLog(format: "%@ 已经下载完成", txtFileName)
+        
+        if let index = downloaders.firstIndex(of: downloader) {
+            downloaders.remove(at: index)
         }
         
-        let completionOp = BlockOperation { [weak self] in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
-                self?._finishAllOperations()
-            }
-        }
-        
-        for url in URLs {
-            let op = BlockOperation { [weak self] in
-                // Semaphore
-                let s = DispatchSemaphore(value: 0)
-                
-                // Headers
-                var httpHeaders: HTTPHeaders?
-                if let headers = self!.setting.headers, headers.count > 0 {
-                    httpHeaders = HTTPHeaders(headers)
-                }
-                
-                // Download
-                AF.download(url, headers: httpHeaders, requestModifier: { [weak self] (request) in
-                    request.timeoutInterval = self!.setting.timeoutInterval
-                }, to: { [weak self] (temporaryURL, response) in
-                    var fileName = response.suggestedFilename
-                    if let renameInfo = self!.setting.renameInfo, let rename = renameInfo[url] {
-                        fileName = rename
-                    }
-                    var filePath = (self!.setting.folderPath as NSString).appendingPathComponent(fileName!)
-                    filePath = GYFileManager.nonConflictItemPath(from: filePath)
-                    let fileURL = URL(fileURLWithPath: filePath)
-                    
-                    return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
-                }).response { [weak self] (response) in
-                    if response.error == nil {
-                        GYSynchronized(self!) {
-                            self!.successes.append(url)
-                            if let index = self!.remains.firstIndex(of: url) {
-                                self!.remains.remove(at: index)
-                            }
-                            self!.remains.export(toPath: self!.remainURLsFilePath, behavior: .exportNoneLog)
-                            
-                            RSUIManager.shared.updateProgressIndicatorValue(Double(self!.successes.count))
-                        }
-                    } else {
-                        GYLogManager.shared.addErrorLog(format: "链接: %@, 下载失败: %@，等待重新下载", url, response.error!.localizedDescription)
-                    }
-                    
-                    // Signal
-                    s.signal()
-                }
-                
-                // Wait
-                let _ = s.wait(timeout: .now() + self!.setting.timeoutInterval)
-            }
-            
-            completionOp.addDependency(op)
-            opQueue.addOperation(op)
-        }
-        
-        opQueue.addOperation(completionOp)
-    }
-    
-    private func _finishAllOperations() {
-        if remains.count > 0 && redoTimes < setting.maxRedownloadTimes {
-            GYLogManager.shared.addDefaultLog(format: "1秒后重新下载未成功的文件")
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
-                self!.redoTimes += 1
-                self!.URLs = self!.remains
-                
-                self!._start(isFirstTime: false)
-            }
-        } else {
-            if remains.count == 0 {
-                if GYFileManager.itemExists(atPath: remainURLsFilePath) {
-                    GYFileManager.trashItem(atPath: remainURLsFilePath)
-                }
-            } else {
-                GYLogManager.shared.addWarningLog(format: "有 %ld 个文件仍然无法下载，列表已导出到下载文件夹中的 %@ 文件中", remains.count, (remainURLsFilePath as NSString).lastPathComponent)
-            }
-            
-            // 删除包含下载路径的 txt 文件
-            if let txtFilePath = txtFilePath, GYFileManager.itemExists(atPath: txtFilePath) {
-                GYFileManager.trashItem(atPath: txtFilePath)
-            }
-            
-            GYLogManager.shared.addDefaultLog(format: "下载流程结束")
-            if setting.showFinishAlert {
-                // TODO: Show Alert
-            }
-            
-            delegate?.downloadManagerDidFinish(self)
-        }
+        startPanel(isFirst: false)
     }
 }

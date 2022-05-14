@@ -41,7 +41,7 @@
 		AC0CA21D28225F2100C1268F /* NSError+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20428225F2100C1268F /* NSError+GYCommon.swift */; };
 		ACD32880282F4947008F6D7E /* GYBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3287F282F4947008F6D7E /* GYBase.swift */; };
 		ACD32886282F570E008F6D7E /* GYDownloladConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32885282F570E008F6D7E /* GYDownloladConst.swift */; };
-		ACD32888282F5756008F6D7E /* GYDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32887282F5756008F6D7E /* GYDownloadManager.swift */; };
+		ACD32888282F5756008F6D7E /* GYDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32887282F5756008F6D7E /* GYDownloader.swift */; };
 		ACD3288A282F577A008F6D7E /* GYDownloadSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32889282F577A008F6D7E /* GYDownloadSetting.swift */; };
 		ACD3288C282F5B08008F6D7E /* RSUIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3288B282F5B08008F6D7E /* RSUIManager.swift */; };
 		ACD3288E282F80BE008F6D7E /* GYDownloadSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3288D282F80BE008F6D7E /* GYDownloadSettings.swift */; };
@@ -53,6 +53,7 @@
 		ACD3289E282FF025008F6D7E /* GYBase+macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3289D282FF025008F6D7E /* GYBase+macOS.swift */; };
 		ACD328A1282FF049008F6D7E /* GYOpenPanelConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD328A0282FF049008F6D7E /* GYOpenPanelConfigure.swift */; };
 		ACD328A3282FF1B3008F6D7E /* GYOpenPanelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD328A2282FF1B3008F6D7E /* GYOpenPanelManager.swift */; };
+		ACD328A5282FF6C4008F6D7E /* GYDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD328A4282FF6C4008F6D7E /* GYDownloadManager.swift */; };
 		ACDAE639282D49CE0042F54E /* GYHTTPRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */; };
 		ACDAE63B282D4ED20042F54E /* GYMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE63A282D4ED20042F54E /* GYMacros.swift */; };
 		ACDDE654282E9EB600EDA877 /* RSGigaTagRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE653282E9EB600EDA877 /* RSGigaTagRsp.swift */; };
@@ -123,7 +124,7 @@
 		AC0CA20428225F2100C1268F /* NSError+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+GYCommon.swift"; sourceTree = "<group>"; };
 		ACD3287F282F4947008F6D7E /* GYBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYBase.swift; sourceTree = "<group>"; };
 		ACD32885282F570E008F6D7E /* GYDownloladConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYDownloladConst.swift; sourceTree = "<group>"; };
-		ACD32887282F5756008F6D7E /* GYDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYDownloadManager.swift; sourceTree = "<group>"; };
+		ACD32887282F5756008F6D7E /* GYDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYDownloader.swift; sourceTree = "<group>"; };
 		ACD32889282F577A008F6D7E /* GYDownloadSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYDownloadSetting.swift; sourceTree = "<group>"; };
 		ACD3288B282F5B08008F6D7E /* RSUIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSUIManager.swift; sourceTree = "<group>"; };
 		ACD3288D282F80BE008F6D7E /* GYDownloadSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYDownloadSettings.swift; sourceTree = "<group>"; };
@@ -137,6 +138,7 @@
 		ACD3289D282FF025008F6D7E /* GYBase+macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GYBase+macOS.swift"; sourceTree = "<group>"; };
 		ACD328A0282FF049008F6D7E /* GYOpenPanelConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYOpenPanelConfigure.swift; sourceTree = "<group>"; };
 		ACD328A2282FF1B3008F6D7E /* GYOpenPanelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYOpenPanelManager.swift; sourceTree = "<group>"; };
+		ACD328A4282FF6C4008F6D7E /* GYDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYDownloadManager.swift; sourceTree = "<group>"; };
 		ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPRequestRetrier.swift; sourceTree = "<group>"; };
 		ACDAE63A282D4ED20042F54E /* GYMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMacros.swift; sourceTree = "<group>"; };
 		ACDDE652282E9D3A00EDA877 /* Resource-Studio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Resource-Studio-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -359,9 +361,10 @@
 			isa = PBXGroup;
 			children = (
 				ACD32885282F570E008F6D7E /* GYDownloladConst.swift */,
-				ACD32887282F5756008F6D7E /* GYDownloadManager.swift */,
+				ACD32887282F5756008F6D7E /* GYDownloader.swift */,
 				ACD32889282F577A008F6D7E /* GYDownloadSetting.swift */,
 				ACD3288D282F80BE008F6D7E /* GYDownloadSettings.swift */,
+				ACD328A4282FF6C4008F6D7E /* GYDownloadManager.swift */,
 			);
 			path = Download;
 			sourceTree = "<group>";
@@ -692,6 +695,7 @@
 				AC0CA21428225F2100C1268F /* GYHTTPBaseRequest.swift in Sources */,
 				AC0CA1BD28225D8500C1268F /* ViewController.swift in Sources */,
 				AC0CA21328225F2100C1268F /* GYHTTPDataTask.swift in Sources */,
+				ACD328A5282FF6C4008F6D7E /* GYDownloadManager.swift in Sources */,
 				AC0CA1BB28225D8500C1268F /* AppDelegate.swift in Sources */,
 				AC0CA21B28225F2100C1268F /* Character+GYCommon.swift in Sources */,
 				ACD3289E282FF025008F6D7E /* GYBase+macOS.swift in Sources */,
@@ -699,7 +703,7 @@
 				AC0CA21D28225F2100C1268F /* NSError+GYCommon.swift in Sources */,
 				AC0CA21A28225F2100C1268F /* Date+GYCommon.swift in Sources */,
 				AC0CA20F28225F2100C1268F /* GYHTTPPrinter.swift in Sources */,
-				ACD32888282F5756008F6D7E /* GYDownloadManager.swift in Sources */,
+				ACD32888282F5756008F6D7E /* GYDownloader.swift in Sources */,
 				ACD32886282F570E008F6D7E /* GYDownloladConst.swift in Sources */,
 				ACD32896282FADAE008F6D7E /* RSMenuItemDispatcher.swift in Sources */,
 				ACD3288E282F80BE008F6D7E /* GYDownloadSettings.swift in Sources */,
