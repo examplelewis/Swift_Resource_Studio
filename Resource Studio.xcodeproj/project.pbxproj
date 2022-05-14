@@ -112,6 +112,7 @@
 		AC0CA20428225F2100C1268F /* NSError+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+GYCommon.swift"; sourceTree = "<group>"; };
 		ACD3287F282F4947008F6D7E /* GYBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYBase.swift; sourceTree = "<group>"; };
 		ACD3288B282F5B08008F6D7E /* RSUIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSUIManager.swift; sourceTree = "<group>"; };
+		ACD32890282FA629008F6D7E /* Resource Studio-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Resource Studio-Bridging-Header.h"; sourceTree = "<group>"; };
 		ACD32891282FA629008F6D7E /* RSBaseBridging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSBaseBridging.m; sourceTree = "<group>"; };
 		ACD32893282FA640008F6D7E /* RSBaseBridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSBaseBridging.h; sourceTree = "<group>"; };
 		ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPRequestRetrier.swift; sourceTree = "<group>"; };

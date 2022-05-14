@@ -6,3 +6,10 @@
 //
 
 #import <Foundation/Foundation.h>
+
+NSString *RSCompileDate(void) {
+    return [NSString stringWithUTF8String:__DATE__];
+}
+NSString *RSCompileTime(void) {
+    return [NSString stringWithUTF8String:__TIME__];
+}
