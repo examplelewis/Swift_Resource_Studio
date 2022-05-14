@@ -45,7 +45,7 @@ extension Array {
     func export(toPath path: String, continueWhenExist: Bool) {
         var behavior: GYFileBehavior = .none
         if continueWhenExist {
-           behavior = behavior.union(.continueWhenExists)
+            behavior = behavior.union(.continueWhenExists)
         } else {
             behavior.remove(.continueWhenExists)
         }

@@ -127,7 +127,7 @@ class GYLogManager {
     
     // MARK: 内部实现
     private func _add(log: String, behavior: GYLogBehavior) {
-        if behavior.contains(.none) {
+        if behavior == .none {
             return
         }
         

@@ -30,14 +30,24 @@ func GYReadTextFile(atPath filePath: String) -> String? {
 
 // MARK: Export
 func GYExport(toPath path: String, string: String?, continueWhenExist: Bool, showSuccessLog: Bool) {
-    guard string != nil, let data = string!.data(using: .utf8) else {
+    guard string != nil else {
         return
     }
     
+    var string = string!
     if GYFileManager.itemExists(atPath: path) {
-        
-    } else {
-        GYFileManager.createFile(atPath: path)
+        // 如果需要接着写的话，那么先添加分隔符
+        if (continueWhenExist) {
+            string = String(format: "\n\n----------%@ 添加内容----------\n\n%@", Date.current().stringWith(format: GYTimeFormatyMdHms), string)
+        } else {
+            GYFileManager.removeItem(atPath: path)
+        }
+    }
+    
+    GYFileManager.createFile(atPath: path)
+    
+    guard let data = string.data(using: .utf8) else {
+        return
     }
     
     let fileHandle = FileHandle(forWritingAtPath: path)
