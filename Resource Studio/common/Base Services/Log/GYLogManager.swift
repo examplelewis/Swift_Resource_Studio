@@ -149,7 +149,7 @@ class GYLogManager {
         
         logString.append(log)
         
-        // 本地日志
+        // 控制台日志
         if behavior.contains(.onDDLog) {
             var localLogString = logString
             
@@ -158,6 +158,9 @@ class GYLogManager {
             if (firstTabsRange.location == 35) {
                 localLogString = (localLogString as NSString).replacingCharacters(in: firstTabsRange, with: "\t\t")
             }
+            
+            // 不使用DDLog，因为会带上时间戳
+            GYPrint()
             
             if behavior.contains(.levelDefault) {
                 saveDefault(log: localLogString)

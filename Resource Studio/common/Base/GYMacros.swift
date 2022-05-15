@@ -12,3 +12,7 @@ func GYSynchronized(_ lock: Any, closure: () -> Void) {
     closure()
     objc_sync_exit(lock)
 }
+
+func GYPrint() {
+    
+}
