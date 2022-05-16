@@ -42,6 +42,8 @@ class GYHTTPDataTask: Comparable {
     // MARK: Operation
     func cancel() {
         invalid = true
+        
+        GYHTTPPrinter.printCancel(request)
     }
     
     // MARK: Equatble

@@ -72,7 +72,6 @@ class GYAlamofire {
                 task.rspHeader = urlResponse.allHeaderFields as? [String: Any]
 
                 if let dataValue = dataResponse.value, let baseResponse = request.rspType().init() as? GYHTTPBaseHTMLResponse {
-                    print("data3: \(dataValue.count)")
                     baseResponse.parser = TFHpple(htmlData: dataValue)
                     baseResponse.headers = task.rspHeader
 
