@@ -74,4 +74,16 @@ extension String {
         
         GYExport(toPath: path, string: self, continueWhenExist: behavior.contains(.continueWhenExists), showSuccessLog: behavior.contains(.showSuccessLog))
     }
+    
+    // MARK: Other
+    func pinyin() -> String {
+        let stringRef = NSMutableString(string: self) as CFMutableString
+        CFStringTransform(stringRef,nil, kCFStringTransformToLatin, false) // 转换为带音标的拼音
+        CFStringTransform(stringRef, nil, kCFStringTransformStripCombiningMarks, false) // 去掉音标
+        
+        var pinyin = stringRef as String;
+        pinyin = pinyin.replacingOccurrences(of: " ", with: "")
+        
+        return pinyin
+    }
 }
