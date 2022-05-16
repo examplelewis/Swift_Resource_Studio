@@ -32,10 +32,6 @@ class GYLogManager {
         fileLogger.logFileManager.maximumNumberOfLogFiles = 3
         fileLogger.maximumFileSize = 10 * 1024 * 1024
         DDLog.add(fileLogger)
-        
-        let osLogger = DDOSLogger.sharedInstance
-        osLogger.logFormatter = GYOSLogFormatter()
-        DDLog.add(osLogger)
     }
     
     // MARK: UI
@@ -136,14 +132,14 @@ class GYLogManager {
         if behavior.contains(.showTime) {
             if current != nil {
                 let interval = Date.current().timeIntervalSince(current!)
-                logString = logString.appendingFormat("%@ | %@\t\t", Date.current().stringWith(format: GYTimeFormatyMdHmsS), GYHumanReadableTime(fromInterval: interval))
+                logString = logString.appendingFormat("%@ | %@\t\t", Date.current().string(format: GYTimeFormatyMdHmsS), GYHumanReadableTime(fromInterval: interval))
                 
                 let logsSize = (logString as NSString).size(withAttributes: [.font: font])
                 if logsSize.width < 250 {
                     logString.append("\t")
                 }
             } else {
-                logString = logString.appendingFormat("%@\t\t", Date.current().stringWith(format: GYTimeFormatyMdHmsS))
+                logString = logString.appendingFormat("%@\t\t", Date.current().string(format: GYTimeFormatyMdHmsS))
             }
         }
         
@@ -151,26 +147,8 @@ class GYLogManager {
         
         // 控制台日志
         if behavior.contains(.onDDLog) {
-            var localLogString = logString
-            
-            let firstTabsRange = (localLogString as NSString).range(of: "\t\t\t")
-            // 正常情况下第一次出现三个\t的location应该是35。如果超过35，那就表明第一次出现三个\t是在具体的日志内容中，不应替换
-            if (firstTabsRange.location == 35) {
-                localLogString = (localLogString as NSString).replacingCharacters(in: firstTabsRange, with: "\t\t")
-            }
-            
             // 不使用DDLog，因为会带上时间戳
-            GYPrint()
-            
-            if behavior.contains(.levelDefault) {
-                saveDefault(log: localLogString)
-            } else if behavior.contains(.levelSuccess) {
-                saveSuccess(log: localLogString)
-            } else if behavior.contains(.levelWarning) {
-                saveWarning(log: localLogString)
-            } else if behavior.contains(.levelError) {
-                saveError(log: localLogString)
-            }
+            GYPrint(log)
         }
         
         if behavior.contains(.onView) {
@@ -202,19 +180,5 @@ class GYLogManager {
 //            logs.addObject(attributedLog)
             lock.unlock()
         }
-    }
-    
-    // MARK: 保存
-    func saveDefault(log: String) {
-        DDLogDebug(log)
-    }
-    func saveSuccess(log: String) {
-        DDLogInfo(log)
-    }
-    func saveWarning(log: String) {
-        DDLogWarn(log)
-    }
-    func saveError(log: String) {
-        DDLogError(log)
     }
 }
