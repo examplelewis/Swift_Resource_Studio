@@ -65,8 +65,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // MARK: Setup
     func setupBuild() {
         let string = String(format: "%@ %@", RSCompileDate(), RSCompileTime())
-        let date = string.dateWith(format: "MMM dd yyyy HH:mm:ss", locale: "en_US")
-        buildTimeMenuItem.title = String(format: "最近编译：%@", date!.stringWith(format: "yyyy-MM-dd HH:mm:ss"))
+        let date = string.date(format: "MMM dd yyyy HH:mm:ss", locale: "en_US")
+        buildTimeMenuItem.title = String(format: "最近编译：%@", date!.string(format: "yyyy-MM-dd HH:mm:ss"))
     }
 }
 

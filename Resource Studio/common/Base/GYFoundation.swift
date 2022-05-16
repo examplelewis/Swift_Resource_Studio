@@ -38,7 +38,7 @@ func GYExport(toPath path: String, string: String?, continueWhenExist: Bool, sho
     if GYFileManager.itemExists(atPath: path) {
         // 如果需要接着写的话，那么先添加分隔符
         if (continueWhenExist) {
-            string = String(format: "\n\n----------%@ 添加内容----------\n\n%@", Date.current().stringWith(format: GYTimeFormatyMdHms), string)
+            string = String(format: "\n\n----------%@ 添加内容----------\n\n%@", Date.current().string(format: GYTimeFormatyMdHms), string)
         } else {
             GYFileManager.removeItem(atPath: path)
         }

@@ -13,7 +13,7 @@ extension Date {
         return Date(timeIntervalSinceNow: 0)
     }
     
-    func stringWith(format: String, locale: String = "zh_CN") -> String {
+    func string(format: String = GYTimeFormatyMdHms, locale: String = "zh_CN") -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = format
         formatter.locale = Locale(identifier: locale)

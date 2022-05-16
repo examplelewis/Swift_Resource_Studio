@@ -72,10 +72,10 @@ enum GYLogType: Int {
 
 // MARK: Time Format
 let GYTimeFormatCompactyMd = "yyyyMMdd";
+let GYTimeFormatCompactyMdHms = "yyyyMMddHHmmss";
 let GYTimeFormatyMdHms = "yyyy-MM-dd HH:mm:ss";
 let GYTimeFormatyMdHmsS = "yyyy-MM-dd HH:mm:ss.SSS";
 let GYTimeFormatEMdHmsZy = "EEE MMM dd HH:mm:ss Z yyyy";
-let GYTimeFormatyMdHmsCompact = "yyyyMMddHHmmss";
 
 // MARK: Content
 // Warning

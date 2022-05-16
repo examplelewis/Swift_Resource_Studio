@@ -27,7 +27,7 @@ extension String {
     }
     
     // MARK: Date
-    func dateWith(format: String, locale: String = "zh_CN") -> Date? {
+    func date(format: String = GYTimeFormatyMdHms, locale: String = "zh_CN") -> Date? {
         let formatter = DateFormatter()
         formatter.dateFormat = format
         formatter.locale = Locale(identifier: locale)
