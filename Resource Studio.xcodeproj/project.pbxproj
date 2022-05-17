@@ -69,6 +69,9 @@
 		ACFD9C7E2833EA6800306D98 /* GYJSONMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD9C7D2833EA6800306D98 /* GYJSONMacro.swift */; };
 		ACFD9C802833EBCB00306D98 /* GYStringMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD9C7F2833EBCB00306D98 /* GYStringMacro.swift */; };
 		ACFD9C822833EC2800306D98 /* GYTimeMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD9C812833EC2800306D98 /* GYTimeMacro.swift */; };
+		ACFD9C872833EC6C00306D98 /* GYLocalizationConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD9C842833EC6C00306D98 /* GYLocalizationConst.swift */; };
+		ACFD9C882833EC6C00306D98 /* GYLocalizationLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD9C852833EC6C00306D98 /* GYLocalizationLoader.swift */; };
+		ACFD9C892833EC6C00306D98 /* GYLocalizationResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ACFD9C862833EC6C00306D98 /* GYLocalizationResource.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +162,9 @@
 		ACFD9C7D2833EA6800306D98 /* GYJSONMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYJSONMacro.swift; sourceTree = "<group>"; };
 		ACFD9C7F2833EBCB00306D98 /* GYStringMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYStringMacro.swift; sourceTree = "<group>"; };
 		ACFD9C812833EC2800306D98 /* GYTimeMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYTimeMacro.swift; sourceTree = "<group>"; };
+		ACFD9C842833EC6C00306D98 /* GYLocalizationConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYLocalizationConst.swift; sourceTree = "<group>"; };
+		ACFD9C852833EC6C00306D98 /* GYLocalizationLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYLocalizationLoader.swift; sourceTree = "<group>"; };
+		ACFD9C862833EC6C00306D98 /* GYLocalizationResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GYLocalizationResource.bundle; sourceTree = "<group>"; };
 		E02790C597E955320F765940 /* Pods-Resource Studio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resource Studio.release.xcconfig"; path = "Target Support Files/Pods-Resource Studio/Pods-Resource Studio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -270,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				AC0CA1E728225F2100C1268F /* Log */,
+				ACFD9C832833EC6C00306D98 /* Localization */,
 			);
 			path = "Base Services";
 			sourceTree = "<group>";
@@ -436,6 +443,16 @@
 				ACFD9C812833EC2800306D98 /* GYTimeMacro.swift */,
 			);
 			path = Macros;
+			sourceTree = "<group>";
+		};
+		ACFD9C832833EC6C00306D98 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				ACFD9C842833EC6C00306D98 /* GYLocalizationConst.swift */,
+				ACFD9C852833EC6C00306D98 /* GYLocalizationLoader.swift */,
+				ACFD9C862833EC6C00306D98 /* GYLocalizationResource.bundle */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		ACFF138B282809C9003B7118 /* macOS */ = {
@@ -612,6 +629,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACFD9C892833EC6C00306D98 /* GYLocalizationResource.bundle in Resources */,
 				AC0CA1BF28225D8600C1268F /* Assets.xcassets in Resources */,
 				AC0CA1C228225D8600C1268F /* Main.storyboard in Resources */,
 			);
@@ -708,6 +726,8 @@
 				AC0CA20B28225F2100C1268F /* GYAlamofire.swift in Sources */,
 				ACDDE65C282EB4EC00EDA877 /* RSAppManager.swift in Sources */,
 				AC0CA20728225F2100C1268F /* GYLogFormatters.swift in Sources */,
+				ACFD9C872833EC6C00306D98 /* GYLocalizationConst.swift in Sources */,
+				ACFD9C882833EC6C00306D98 /* GYLocalizationLoader.swift in Sources */,
 				AC0CA21128225F2100C1268F /* GYHTTPBaseResponse.swift in Sources */,
 				AC0CA21C28225F2100C1268F /* Array+GYCommon.swift in Sources */,
 				AC0CA21028225F2100C1268F /* GYHTTPProtocols.swift in Sources */,
