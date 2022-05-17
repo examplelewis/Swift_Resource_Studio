@@ -8,8 +8,7 @@
 import Cocoa
 import Alamofire
 
-class ViewController: NSViewController, RSGigaTagInfoFetcherDelegate {
-    
+class ViewController: NSViewController {
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,13 +16,9 @@ class ViewController: NSViewController, RSGigaTagInfoFetcherDelegate {
         RSUIManager.shared.viewController = self
     }
     
+    // MARK: Actions
     @IBAction func tempButtonDidPress(_ sender: NSButton) {
         
-    }
-    
-    // MARK: RSGigaTagInfoFetcherDelegate
-    func gigaTagInfoFetcherDidFinish() {
-        fetcher = nil
     }
 }
 
