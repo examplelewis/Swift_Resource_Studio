@@ -1,31 +1,27 @@
 //
-//  GYFoundation.swift
-//  GYSwiftLib
+//  GYBaseMacro.swift
+//  Resource Studio
 //
-//  Created by 龚宇 on 22/04/23.
+//  Created by 龚宇 on 22/05/12.
 //
 
 import Foundation
 
-// MARK: Time
-func GYHumanReadableTime(fromInterval interval: TimeInterval) -> String {
-    let minutes = Int(Int(interval) / 60)
-    let seconds = Int(floor(interval - Double(minutes * 60)))
-    let milliseconds = Int(floor(interval * 1000)) % 1000
+// MARK: Print
+func GYPrint(_ format: String, file: String = #file, function: String = #function, line: Int = #line, _ arguments: CVarArg...) {
+    let message = String(format: format, arguments: arguments)
+    let filename = (file as NSString).lastPathComponent
+    let time = Date.current().string()
+    let string = String(format: "%@ [%@: #%ld]\n%@\n", time, filename, line, message)
     
-    return String(format: "%02ld:%02ld:%03ld", minutes, seconds, milliseconds)
+    print(string)
 }
 
-// MARK: Read
-func GYReadTextFile(atPath filePath: String) -> String? {
-    var content: String?
-    do {
-        content = try String(contentsOfFile: filePath, encoding: .utf8)
-    } catch {
-        GYLogManager.shared.addErrorLog(format: "文件路径: %@\n读取文件时出现错误: %@", filePath, error.localizedDescription)
-    }
-    
-    return content
+// MARK: Synchronize
+func GYSynchronized(_ lock: Any, closure: () -> Void) {
+    objc_sync_enter(lock)
+    closure()
+    objc_sync_exit(lock)
 }
 
 // MARK: Export

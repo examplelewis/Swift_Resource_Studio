@@ -1,36 +1,11 @@
 //
-//  GYMacros.swift
+//  GYJSONMacro.swift
 //  Resource Studio
 //
-//  Created by 龚宇 on 22/05/12.
+//  Created by 龚宇 on 22/05/17.
 //
 
 import Foundation
-
-// MARK: Base
-func GYPrint(_ format: String, file: String = #file, function: String = #function, line: Int = #line, _ arguments: CVarArg...) {
-    let message = String(format: format, arguments: arguments)
-    let filename = (file as NSString).lastPathComponent
-    let time = Date.current().string()
-    let string = String(format: "%@ [%@: #%ld]\n%@\n", time, filename, line, message)
-    
-    print(string)
-}
-func GYSynchronized(_ lock: Any, closure: () -> Void) {
-    objc_sync_enter(lock)
-    closure()
-    objc_sync_exit(lock)
-}
-
-// MARK: Foundation
-// 将 Data 转换为 字符串
-func GYStringFrom(data: Data?) -> String? {
-    if data == nil {
-        return nil
-    } else {
-        return String(bytes: data!, encoding: .utf8)
-    }
-}
 
 // MARK: -> JSON String
 // 将 任意对象 转换为 JSON String
@@ -81,4 +56,3 @@ func GYDictionaryFrom(data: Data?) -> [String: Any]? {
     let dictionary: [String: Any]? = GYObjectFrom(data: data)
     return dictionary
 }
-
