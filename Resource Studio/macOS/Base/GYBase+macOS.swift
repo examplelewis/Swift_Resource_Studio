@@ -7,34 +7,40 @@
 
 import Foundation
 
-// MARK: Open Panel
-struct GYOpenPanelBehavior: OptionSet {
-    let rawValue: Int
+extension GYBase {
+    // MARK: System Folder Path
+    var downloadFolderPath: String {
+        let url = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first!
+        return GYFileManager.pathFromOpenPanelURL(url)
+    }
     
-    // None
-    static let none = GYOpenPanelBehavior([])
+    // MARK: App Folder Path
+    var cookieFolderPath: String { (mainFolderPath as NSString).appendingPathComponent("Cookies") }
+    var logFolderPath: String { (mainFolderPath as NSString).appendingPathComponent("Logs") }
+    var dbFolderPath: String { (mainFolderPath as NSString).appendingPathComponent("Databases") }
+    var prefFolderPath: String { (mainFolderPath as NSString).appendingPathComponent("Preferences") }
     
-    // Choose
-    static let chooseFile = GYOpenPanelBehavior(rawValue: 1 << 0)
-    static let chooseFolder = GYOpenPanelBehavior(rawValue: 1 << 1)
-    
-    // Other
-    static let createFolder = GYOpenPanelBehavior(rawValue: 1 << 2)
-    static let multiple = GYOpenPanelBehavior(rawValue: 1 << 3)
-    static let showHidden = GYOpenPanelBehavior(rawValue: 1 << 4)
-    
-    // Combine
-    static let singleFile: GYOpenPanelBehavior = [.chooseFile]
-    static let singleFolder: GYOpenPanelBehavior = [.chooseFolder]
-    static let singleItem: GYOpenPanelBehavior = [.singleFile, singleFolder]
-    
-    static let multipleFile: GYOpenPanelBehavior = [.chooseFile, .multiple]
-    static let multipleFolder: GYOpenPanelBehavior = [.chooseFolder, .multiple]
-    static let multipleItem: GYOpenPanelBehavior = [.singleItem, .multiple]
-}
-
-enum GYOpenPanelWindowType: Int {
-    case mainWindow
-    case keyWindow
-    case customWindow
+    // MARK: Paths
+    func pathOfItemInDownloadFolder(_ component: String) -> String {
+        return (downloadFolderPath as NSString).appendingPathComponent(component)
+    }
+    func pathOfItemInMainFolder(_ component: String) -> String {
+        return (mainFolderPath as NSString).appendingPathComponent(component)
+    }
+    func sqliteFilePath(_ fileName: String) -> String {
+        var file = fileName
+        if !fileName.hasSuffix(".sqlite") {
+            file = fileName.appending(".sqlite")
+        }
+        
+        return (dbFolderPath as NSString).appendingPathComponent(file)
+    }
+    func preferenceFilePath(_ fileName: String) -> String {
+        var file = fileName
+        if !fileName.hasSuffix(".plist") {
+            file = fileName.appending(".plist")
+        }
+        
+        return (prefFolderPath as NSString).appendingPathComponent(file)
+    }
 }

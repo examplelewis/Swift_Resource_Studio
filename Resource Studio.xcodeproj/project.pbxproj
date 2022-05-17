@@ -72,6 +72,7 @@
 		ACFD9C872833EC6C00306D98 /* GYLocalizationConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD9C842833EC6C00306D98 /* GYLocalizationConst.swift */; };
 		ACFD9C882833EC6C00306D98 /* GYLocalizationLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD9C852833EC6C00306D98 /* GYLocalizationLoader.swift */; };
 		ACFD9C892833EC6C00306D98 /* GYLocalizationResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ACFD9C862833EC6C00306D98 /* GYLocalizationResource.bundle */; };
+		ACFD9C8B2833F1C400306D98 /* GYConst+macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD9C8A2833F1C400306D98 /* GYConst+macOS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +166,7 @@
 		ACFD9C842833EC6C00306D98 /* GYLocalizationConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYLocalizationConst.swift; sourceTree = "<group>"; };
 		ACFD9C852833EC6C00306D98 /* GYLocalizationLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYLocalizationLoader.swift; sourceTree = "<group>"; };
 		ACFD9C862833EC6C00306D98 /* GYLocalizationResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GYLocalizationResource.bundle; sourceTree = "<group>"; };
+		ACFD9C8A2833F1C400306D98 /* GYConst+macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GYConst+macOS.swift"; sourceTree = "<group>"; };
 		E02790C597E955320F765940 /* Pods-Resource Studio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resource Studio.release.xcconfig"; path = "Target Support Files/Pods-Resource Studio/Pods-Resource Studio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -410,6 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				ACD3289D282FF025008F6D7E /* GYBase+macOS.swift */,
+				ACFD9C8A2833F1C400306D98 /* GYConst+macOS.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -707,6 +710,7 @@
 				ACDAE63B282D4ED20042F54E /* GYBaseMacro.swift in Sources */,
 				ACDDE658282E9ED900EDA877 /* RSGigaTasks.swift in Sources */,
 				AC0CA21228225F2100C1268F /* GYHTTPBaseTasks.swift in Sources */,
+				ACFD9C8B2833F1C400306D98 /* GYConst+macOS.swift in Sources */,
 				ACFD9C822833EC2800306D98 /* GYTimeMacro.swift in Sources */,
 				AC0CA21628225F2100C1268F /* GYConst.swift in Sources */,
 				ACD3288A282F577A008F6D7E /* GYDownloadSetting.swift in Sources */,
