@@ -1,35 +1,12 @@
 //
-//  GYCommonConst.swift
+//  GYLogDefinition.swift
 //  GYSwiftLib
 //
-//  Created by 龚宇 on 22/04/23.
+//  Created by 龚宇 on 22/05/18.
 //
 
 import Foundation
 
-// MARK: File Behavior
-struct GYFileBehavior: OptionSet {
-    let rawValue: Int
-    
-    static let none = GYFileBehavior([])
-    
-    static let showSuccessLog = GYFileBehavior(rawValue: 1 << 0)
-    static let showNoneLog = GYFileBehavior(rawValue: 1 << 1)
-    static let exportNoneLog = GYFileBehavior(rawValue: 1 << 2)
-    static let continueWhenExists = GYFileBehavior(rawValue: 1 << 3)
-}
-
-// MARK: Error Type
-enum GYDownloadErrorType: Int {
-    case undefined
-    case connectionLost
-}
-enum GYErrorType: Equatable {
-    case undefined
-    case download(GYDownloadErrorType)
-}
-
-// MARK: Log
 struct GYLogBehavior: OptionSet {
     let rawValue: Int
     
@@ -69,22 +46,3 @@ enum GYLogType: Int {
     case normal
     case file
 }
-
-// MARK: Time Format
-let GYTimeFormatCompactyMd = "yyyyMMdd";
-let GYTimeFormatCompactyMdHms = "yyyyMMddHHmmss";
-let GYTimeFormatyMdHms = "yyyy-MM-dd HH:mm:ss";
-let GYTimeFormatyMdHmsS = "yyyy-MM-dd HH:mm:ss.SSS";
-let GYTimeFormatEMdHmsZy = "EEE MMM dd HH:mm:ss Z yyyy";
-
-// MARK: Content
-// Warning
-let GYWarningNoneContentFoundInInputTextView = "没有获得任何输入内容，请检查输入框";
-let GYWarningWrongContentFoundInInputTextView = "输入框的内容有误，请检查";
-
-// MARK: Notification Keys
-// 日志相关
-// 以下通知都需要在主线程上跑：dispatch_main_async_safe((^{   }));
-let GYLogCleanNotificationKey = "com.gongyu.GYSwiftLib.notification.keys.log.clean";
-let GYLogScrollLatestNotificationKey = "com.gongyu.GYSwiftLib.notification.keys.log.scroll.latest";
-let GYLogShowNotificationKey = "com.gongyu.GYSwiftLib.notification.keys.log.show";

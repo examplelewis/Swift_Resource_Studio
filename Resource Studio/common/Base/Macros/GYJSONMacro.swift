@@ -56,3 +56,18 @@ func GYDictionaryFrom(data: Data?) -> [String: Any]? {
     let dictionary: [String: Any]? = GYObjectFrom(data: data)
     return dictionary
 }
+
+// MARK: JSON String ->
+// 将 JSON String 转换为 数组
+func SPTArrayFrom(jsonString: String?) -> [Any]? {
+    let data = jsonString?.data(using: .utf8)
+    let array: [Any]? = GYObjectFrom(data: data)
+    return array
+}
+
+// 将 JSON String 转换为 字典
+func SPTDictionaryFrom(jsonString: String?) -> [String: Any]? {
+    let data = jsonString?.data(using: .utf8)
+    let dictionary: [String: Any]? = GYObjectFrom(data: data)
+    return dictionary
+}

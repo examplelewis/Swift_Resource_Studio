@@ -31,7 +31,7 @@
 		AC0CA21328225F2100C1268F /* GYHTTPDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1F928225F2100C1268F /* GYHTTPDataTask.swift */; };
 		AC0CA21428225F2100C1268F /* GYHTTPBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1FA28225F2100C1268F /* GYHTTPBaseRequest.swift */; };
 		AC0CA21528225F2100C1268F /* GYHTTPBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1FB28225F2100C1268F /* GYHTTPBaseModel.swift */; };
-		AC0CA21628225F2100C1268F /* GYConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1FC28225F2100C1268F /* GYConst.swift */; };
+		AC0CA21628225F2100C1268F /* GYConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1FC28225F2100C1268F /* GYConsts.swift */; };
 		AC0CA21728225F2100C1268F /* Dictionary+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1FE28225F2100C1268F /* Dictionary+GYCommon.swift */; };
 		AC0CA21828225F2100C1268F /* String+GYSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1FF28225F2100C1268F /* String+GYSubscript.swift */; };
 		AC0CA21928225F2100C1268F /* String+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20028225F2100C1268F /* String+GYCommon.swift */; };
@@ -65,6 +65,9 @@
 		ACDDE65C282EB4EC00EDA877 /* RSAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE65B282EB4EC00EDA877 /* RSAppManager.swift */; };
 		ACDDE660282EC1E300EDA877 /* GYHTTPCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE65F282EC1E300EDA877 /* GYHTTPCookie.swift */; };
 		ACDFA306282BDB5500B0D010 /* GYHTTPDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0607DB2829406600E642AF /* GYHTTPDataRequest.swift */; };
+		ACECED40283529B900547508 /* GYErrorDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECED3D283529B900547508 /* GYErrorDefinition.swift */; };
+		ACECED41283529B900547508 /* GYLogDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECED3E283529B900547508 /* GYLogDefinition.swift */; };
+		ACECED42283529B900547508 /* GYFileDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECED3F283529B900547508 /* GYFileDefinition.swift */; };
 		ACFC6CA0282C0AC400AC0EE8 /* GYOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFC6C9F282C0AC400AC0EE8 /* GYOperators.swift */; };
 		ACFD9C7E2833EA6800306D98 /* GYJSONMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD9C7D2833EA6800306D98 /* GYJSONMacro.swift */; };
 		ACFD9C802833EBCB00306D98 /* GYStringMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD9C7F2833EBCB00306D98 /* GYStringMacro.swift */; };
@@ -72,7 +75,7 @@
 		ACFD9C872833EC6C00306D98 /* GYLocalizationConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD9C842833EC6C00306D98 /* GYLocalizationConst.swift */; };
 		ACFD9C882833EC6C00306D98 /* GYLocalizationLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD9C852833EC6C00306D98 /* GYLocalizationLoader.swift */; };
 		ACFD9C892833EC6C00306D98 /* GYLocalizationResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ACFD9C862833EC6C00306D98 /* GYLocalizationResource.bundle */; };
-		ACFD9C8B2833F1C400306D98 /* GYConst+macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD9C8A2833F1C400306D98 /* GYConst+macOS.swift */; };
+		ACFD9C8B2833F1C400306D98 /* GYConsts+macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD9C8A2833F1C400306D98 /* GYConsts+macOS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,7 +126,7 @@
 		AC0CA1F928225F2100C1268F /* GYHTTPDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYHTTPDataTask.swift; sourceTree = "<group>"; };
 		AC0CA1FA28225F2100C1268F /* GYHTTPBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYHTTPBaseRequest.swift; sourceTree = "<group>"; };
 		AC0CA1FB28225F2100C1268F /* GYHTTPBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYHTTPBaseModel.swift; sourceTree = "<group>"; };
-		AC0CA1FC28225F2100C1268F /* GYConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYConst.swift; sourceTree = "<group>"; };
+		AC0CA1FC28225F2100C1268F /* GYConsts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYConsts.swift; sourceTree = "<group>"; };
 		AC0CA1FE28225F2100C1268F /* Dictionary+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+GYCommon.swift"; sourceTree = "<group>"; };
 		AC0CA1FF28225F2100C1268F /* String+GYSubscript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+GYSubscript.swift"; sourceTree = "<group>"; };
 		AC0CA20028225F2100C1268F /* String+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+GYCommon.swift"; sourceTree = "<group>"; };
@@ -159,6 +162,9 @@
 		ACDDE659282EA45A00EDA877 /* GYHTTPBaseHTMLResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPBaseHTMLResponse.swift; sourceTree = "<group>"; };
 		ACDDE65B282EB4EC00EDA877 /* RSAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAppManager.swift; sourceTree = "<group>"; };
 		ACDDE65F282EC1E300EDA877 /* GYHTTPCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPCookie.swift; sourceTree = "<group>"; };
+		ACECED3D283529B900547508 /* GYErrorDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYErrorDefinition.swift; sourceTree = "<group>"; };
+		ACECED3E283529B900547508 /* GYLogDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYLogDefinition.swift; sourceTree = "<group>"; };
+		ACECED3F283529B900547508 /* GYFileDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYFileDefinition.swift; sourceTree = "<group>"; };
 		ACFC6C9F282C0AC400AC0EE8 /* GYOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYOperators.swift; sourceTree = "<group>"; };
 		ACFD9C7D2833EA6800306D98 /* GYJSONMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYJSONMacro.swift; sourceTree = "<group>"; };
 		ACFD9C7F2833EBCB00306D98 /* GYStringMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYStringMacro.swift; sourceTree = "<group>"; };
@@ -166,7 +172,7 @@
 		ACFD9C842833EC6C00306D98 /* GYLocalizationConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYLocalizationConst.swift; sourceTree = "<group>"; };
 		ACFD9C852833EC6C00306D98 /* GYLocalizationLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYLocalizationLoader.swift; sourceTree = "<group>"; };
 		ACFD9C862833EC6C00306D98 /* GYLocalizationResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GYLocalizationResource.bundle; sourceTree = "<group>"; };
-		ACFD9C8A2833F1C400306D98 /* GYConst+macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GYConst+macOS.swift"; sourceTree = "<group>"; };
+		ACFD9C8A2833F1C400306D98 /* GYConsts+macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GYConsts+macOS.swift"; sourceTree = "<group>"; };
 		E02790C597E955320F765940 /* Pods-Resource Studio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resource Studio.release.xcconfig"; path = "Target Support Files/Pods-Resource Studio/Pods-Resource Studio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -358,8 +364,9 @@
 			isa = PBXGroup;
 			children = (
 				ACD3287F282F4947008F6D7E /* GYBase.swift */,
-				AC0CA1FC28225F2100C1268F /* GYConst.swift */,
+				AC0CA1FC28225F2100C1268F /* GYConsts.swift */,
 				ACFC6C9F282C0AC400AC0EE8 /* GYOperators.swift */,
+				ACECED3C283529B900547508 /* Definitions */,
 				ACFD9C7C2833EA4A00306D98 /* Macros */,
 			);
 			path = Base;
@@ -412,7 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				ACD3289D282FF025008F6D7E /* GYBase+macOS.swift */,
-				ACFD9C8A2833F1C400306D98 /* GYConst+macOS.swift */,
+				ACFD9C8A2833F1C400306D98 /* GYConsts+macOS.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -435,6 +442,16 @@
 				ACD328A828300109008F6D7E /* RSGigaTool.swift */,
 			);
 			path = GIGA;
+			sourceTree = "<group>";
+		};
+		ACECED3C283529B900547508 /* Definitions */ = {
+			isa = PBXGroup;
+			children = (
+				ACECED3D283529B900547508 /* GYErrorDefinition.swift */,
+				ACECED3F283529B900547508 /* GYFileDefinition.swift */,
+				ACECED3E283529B900547508 /* GYLogDefinition.swift */,
+			);
+			path = Definitions;
 			sourceTree = "<group>";
 		};
 		ACFD9C7C2833EA4A00306D98 /* Macros */ = {
@@ -710,11 +727,12 @@
 				ACDAE63B282D4ED20042F54E /* GYBaseMacro.swift in Sources */,
 				ACDDE658282E9ED900EDA877 /* RSGigaTasks.swift in Sources */,
 				AC0CA21228225F2100C1268F /* GYHTTPBaseTasks.swift in Sources */,
-				ACFD9C8B2833F1C400306D98 /* GYConst+macOS.swift in Sources */,
+				ACFD9C8B2833F1C400306D98 /* GYConsts+macOS.swift in Sources */,
 				ACFD9C822833EC2800306D98 /* GYTimeMacro.swift in Sources */,
-				AC0CA21628225F2100C1268F /* GYConst.swift in Sources */,
+				AC0CA21628225F2100C1268F /* GYConsts.swift in Sources */,
 				ACD3288A282F577A008F6D7E /* GYDownloadSetting.swift in Sources */,
 				ACD32892282FA629008F6D7E /* RSBaseBridging.m in Sources */,
+				ACECED41283529B900547508 /* GYLogDefinition.swift in Sources */,
 				AC0CA20628225F2100C1268F /* GYLogManager.swift in Sources */,
 				AC0CA20E28225F2100C1268F /* GYHTTPRequestAdapter.swift in Sources */,
 				ACFD9C802833EBCB00306D98 /* GYStringMacro.swift in Sources */,
@@ -728,6 +746,7 @@
 				ACDDE654282E9EB600EDA877 /* RSGigaTagRsp.swift in Sources */,
 				ACFD9C7E2833EA6800306D98 /* GYJSONMacro.swift in Sources */,
 				AC0CA20B28225F2100C1268F /* GYAlamofire.swift in Sources */,
+				ACECED42283529B900547508 /* GYFileDefinition.swift in Sources */,
 				ACDDE65C282EB4EC00EDA877 /* RSAppManager.swift in Sources */,
 				AC0CA20728225F2100C1268F /* GYLogFormatters.swift in Sources */,
 				ACFD9C872833EC6C00306D98 /* GYLocalizationConst.swift in Sources */,
@@ -742,6 +761,7 @@
 				AC0CA20C28225F2100C1268F /* GYHTTPServerTrustManager.swift in Sources */,
 				AC0CA21828225F2100C1268F /* String+GYSubscript.swift in Sources */,
 				AC0CA21428225F2100C1268F /* GYHTTPBaseRequest.swift in Sources */,
+				ACECED40283529B900547508 /* GYErrorDefinition.swift in Sources */,
 				AC0CA1BD28225D8500C1268F /* ViewController.swift in Sources */,
 				AC0CA21328225F2100C1268F /* GYHTTPDataTask.swift in Sources */,
 				ACD328A5282FF6C4008F6D7E /* GYDownloadManager.swift in Sources */,
