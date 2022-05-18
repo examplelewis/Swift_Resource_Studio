@@ -32,13 +32,7 @@
 		AC0CA21428225F2100C1268F /* GYHTTPBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1FA28225F2100C1268F /* GYHTTPBaseRequest.swift */; };
 		AC0CA21528225F2100C1268F /* GYHTTPBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1FB28225F2100C1268F /* GYHTTPBaseModel.swift */; };
 		AC0CA21628225F2100C1268F /* GYConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1FC28225F2100C1268F /* GYConsts.swift */; };
-		AC0CA21728225F2100C1268F /* Dictionary+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1FE28225F2100C1268F /* Dictionary+GYCommon.swift */; };
 		AC0CA21828225F2100C1268F /* String+GYSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1FF28225F2100C1268F /* String+GYSubscript.swift */; };
-		AC0CA21928225F2100C1268F /* String+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20028225F2100C1268F /* String+GYCommon.swift */; };
-		AC0CA21A28225F2100C1268F /* Date+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20128225F2100C1268F /* Date+GYCommon.swift */; };
-		AC0CA21B28225F2100C1268F /* Character+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20228225F2100C1268F /* Character+GYCommon.swift */; };
-		AC0CA21C28225F2100C1268F /* Array+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20328225F2100C1268F /* Array+GYCommon.swift */; };
-		AC0CA21D28225F2100C1268F /* NSError+GYCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20428225F2100C1268F /* NSError+GYCommon.swift */; };
 		ACD32880282F4947008F6D7E /* GYBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3287F282F4947008F6D7E /* GYBase.swift */; };
 		ACD32886282F570E008F6D7E /* GYDownloladConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32885282F570E008F6D7E /* GYDownloladConst.swift */; };
 		ACD32888282F5756008F6D7E /* GYDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32887282F5756008F6D7E /* GYDownloader.swift */; };
@@ -68,6 +62,12 @@
 		ACECED40283529B900547508 /* GYErrorDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECED3D283529B900547508 /* GYErrorDefinition.swift */; };
 		ACECED41283529B900547508 /* GYLogDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECED3E283529B900547508 /* GYLogDefinition.swift */; };
 		ACECED42283529B900547508 /* GYFileDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECED3F283529B900547508 /* GYFileDefinition.swift */; };
+		ACECED8A28352CB000547508 /* NSError+GYExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECED8428352CB000547508 /* NSError+GYExtension.swift */; };
+		ACECED8B28352CB000547508 /* Dictionary+GYExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECED8528352CB000547508 /* Dictionary+GYExtension.swift */; };
+		ACECED8C28352CB000547508 /* Character+GYExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECED8628352CB000547508 /* Character+GYExtension.swift */; };
+		ACECED8D28352CB000547508 /* Array+GYExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECED8728352CB000547508 /* Array+GYExtension.swift */; };
+		ACECED8E28352CB000547508 /* String+GYExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECED8828352CB000547508 /* String+GYExtension.swift */; };
+		ACECED8F28352CB000547508 /* Date+GYExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECED8928352CB000547508 /* Date+GYExtension.swift */; };
 		ACFC6CA0282C0AC400AC0EE8 /* GYOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFC6C9F282C0AC400AC0EE8 /* GYOperators.swift */; };
 		ACFD9C7E2833EA6800306D98 /* GYJSONMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD9C7D2833EA6800306D98 /* GYJSONMacro.swift */; };
 		ACFD9C802833EBCB00306D98 /* GYStringMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD9C7F2833EBCB00306D98 /* GYStringMacro.swift */; };
@@ -127,13 +127,7 @@
 		AC0CA1FA28225F2100C1268F /* GYHTTPBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYHTTPBaseRequest.swift; sourceTree = "<group>"; };
 		AC0CA1FB28225F2100C1268F /* GYHTTPBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYHTTPBaseModel.swift; sourceTree = "<group>"; };
 		AC0CA1FC28225F2100C1268F /* GYConsts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYConsts.swift; sourceTree = "<group>"; };
-		AC0CA1FE28225F2100C1268F /* Dictionary+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+GYCommon.swift"; sourceTree = "<group>"; };
 		AC0CA1FF28225F2100C1268F /* String+GYSubscript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+GYSubscript.swift"; sourceTree = "<group>"; };
-		AC0CA20028225F2100C1268F /* String+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+GYCommon.swift"; sourceTree = "<group>"; };
-		AC0CA20128225F2100C1268F /* Date+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+GYCommon.swift"; sourceTree = "<group>"; };
-		AC0CA20228225F2100C1268F /* Character+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Character+GYCommon.swift"; sourceTree = "<group>"; };
-		AC0CA20328225F2100C1268F /* Array+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+GYCommon.swift"; sourceTree = "<group>"; };
-		AC0CA20428225F2100C1268F /* NSError+GYCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+GYCommon.swift"; sourceTree = "<group>"; };
 		ACD3287F282F4947008F6D7E /* GYBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYBase.swift; sourceTree = "<group>"; };
 		ACD32885282F570E008F6D7E /* GYDownloladConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYDownloladConst.swift; sourceTree = "<group>"; };
 		ACD32887282F5756008F6D7E /* GYDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYDownloader.swift; sourceTree = "<group>"; };
@@ -165,6 +159,12 @@
 		ACECED3D283529B900547508 /* GYErrorDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYErrorDefinition.swift; sourceTree = "<group>"; };
 		ACECED3E283529B900547508 /* GYLogDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYLogDefinition.swift; sourceTree = "<group>"; };
 		ACECED3F283529B900547508 /* GYFileDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYFileDefinition.swift; sourceTree = "<group>"; };
+		ACECED8428352CB000547508 /* NSError+GYExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+GYExtension.swift"; sourceTree = "<group>"; };
+		ACECED8528352CB000547508 /* Dictionary+GYExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+GYExtension.swift"; sourceTree = "<group>"; };
+		ACECED8628352CB000547508 /* Character+GYExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Character+GYExtension.swift"; sourceTree = "<group>"; };
+		ACECED8728352CB000547508 /* Array+GYExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+GYExtension.swift"; sourceTree = "<group>"; };
+		ACECED8828352CB000547508 /* String+GYExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+GYExtension.swift"; sourceTree = "<group>"; };
+		ACECED8928352CB000547508 /* Date+GYExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+GYExtension.swift"; sourceTree = "<group>"; };
 		ACFC6C9F282C0AC400AC0EE8 /* GYOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYOperators.swift; sourceTree = "<group>"; };
 		ACFD9C7D2833EA6800306D98 /* GYJSONMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYJSONMacro.swift; sourceTree = "<group>"; };
 		ACFD9C7F2833EBCB00306D98 /* GYStringMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYStringMacro.swift; sourceTree = "<group>"; };
@@ -348,13 +348,13 @@
 		AC0CA1FD28225F2100C1268F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				AC0CA20328225F2100C1268F /* Array+GYCommon.swift */,
+				ACECED8728352CB000547508 /* Array+GYExtension.swift */,
 				AC0167E228328D4F000E4C61 /* Array+GYSubscript.swift */,
-				AC0CA20228225F2100C1268F /* Character+GYCommon.swift */,
-				AC0CA20128225F2100C1268F /* Date+GYCommon.swift */,
-				AC0CA1FE28225F2100C1268F /* Dictionary+GYCommon.swift */,
-				AC0CA20428225F2100C1268F /* NSError+GYCommon.swift */,
-				AC0CA20028225F2100C1268F /* String+GYCommon.swift */,
+				ACECED8628352CB000547508 /* Character+GYExtension.swift */,
+				ACECED8928352CB000547508 /* Date+GYExtension.swift */,
+				ACECED8528352CB000547508 /* Dictionary+GYExtension.swift */,
+				ACECED8428352CB000547508 /* NSError+GYExtension.swift */,
+				ACECED8828352CB000547508 /* String+GYExtension.swift */,
 				AC0CA1FF28225F2100C1268F /* String+GYSubscript.swift */,
 			);
 			path = Extensions;
@@ -731,15 +731,16 @@
 				ACFD9C822833EC2800306D98 /* GYTimeMacro.swift in Sources */,
 				AC0CA21628225F2100C1268F /* GYConsts.swift in Sources */,
 				ACD3288A282F577A008F6D7E /* GYDownloadSetting.swift in Sources */,
+				ACECED8D28352CB000547508 /* Array+GYExtension.swift in Sources */,
 				ACD32892282FA629008F6D7E /* RSBaseBridging.m in Sources */,
 				ACECED41283529B900547508 /* GYLogDefinition.swift in Sources */,
 				AC0CA20628225F2100C1268F /* GYLogManager.swift in Sources */,
 				AC0CA20E28225F2100C1268F /* GYHTTPRequestAdapter.swift in Sources */,
 				ACFD9C802833EBCB00306D98 /* GYStringMacro.swift in Sources */,
+				ACECED8A28352CB000547508 /* NSError+GYExtension.swift in Sources */,
 				ACDAE639282D49CE0042F54E /* GYHTTPRequestRetrier.swift in Sources */,
 				ACDDE656282E9EC800EDA877 /* RSGigaTagReq.swift in Sources */,
 				ACD32898282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift in Sources */,
-				AC0CA21728225F2100C1268F /* Dictionary+GYCommon.swift in Sources */,
 				AC0CA20828225F2100C1268F /* GYLog.swift in Sources */,
 				ACD3289A282FB33F008F6D7E /* WindowController.swift in Sources */,
 				AC0CA20A28225F2100C1268F /* GYFileManager.swift in Sources */,
@@ -752,30 +753,29 @@
 				ACFD9C872833EC6C00306D98 /* GYLocalizationConst.swift in Sources */,
 				ACFD9C882833EC6C00306D98 /* GYLocalizationLoader.swift in Sources */,
 				AC0CA21128225F2100C1268F /* GYHTTPBaseResponse.swift in Sources */,
-				AC0CA21C28225F2100C1268F /* Array+GYCommon.swift in Sources */,
 				AC0CA21028225F2100C1268F /* GYHTTPProtocols.swift in Sources */,
+				ACECED8B28352CB000547508 /* Dictionary+GYExtension.swift in Sources */,
 				ACD3289C282FCA2A008F6D7E /* RSGigaTagInfoFetcher.swift in Sources */,
 				ACD3288C282F5B08008F6D7E /* RSUIManager.swift in Sources */,
-				AC0CA21928225F2100C1268F /* String+GYCommon.swift in Sources */,
 				ACD328A1282FF049008F6D7E /* GYOpenPanelConfigure.swift in Sources */,
 				AC0CA20C28225F2100C1268F /* GYHTTPServerTrustManager.swift in Sources */,
 				AC0CA21828225F2100C1268F /* String+GYSubscript.swift in Sources */,
 				AC0CA21428225F2100C1268F /* GYHTTPBaseRequest.swift in Sources */,
 				ACECED40283529B900547508 /* GYErrorDefinition.swift in Sources */,
+				ACECED8E28352CB000547508 /* String+GYExtension.swift in Sources */,
 				AC0CA1BD28225D8500C1268F /* ViewController.swift in Sources */,
 				AC0CA21328225F2100C1268F /* GYHTTPDataTask.swift in Sources */,
 				ACD328A5282FF6C4008F6D7E /* GYDownloadManager.swift in Sources */,
 				ACD328A7282FFDE1008F6D7E /* GYDownloadHolder.swift in Sources */,
 				AC0CA1BB28225D8500C1268F /* AppDelegate.swift in Sources */,
-				AC0CA21B28225F2100C1268F /* Character+GYCommon.swift in Sources */,
 				ACD3289E282FF025008F6D7E /* GYBase+macOS.swift in Sources */,
 				ACFC6CA0282C0AC400AC0EE8 /* GYOperators.swift in Sources */,
-				AC0CA21D28225F2100C1268F /* NSError+GYCommon.swift in Sources */,
-				AC0CA21A28225F2100C1268F /* Date+GYCommon.swift in Sources */,
 				AC0CA20F28225F2100C1268F /* GYHTTPPrinter.swift in Sources */,
+				ACECED8C28352CB000547508 /* Character+GYExtension.swift in Sources */,
 				AC0167E328328D4F000E4C61 /* Array+GYSubscript.swift in Sources */,
 				ACD32888282F5756008F6D7E /* GYDownloader.swift in Sources */,
 				ACD32886282F570E008F6D7E /* GYDownloladConst.swift in Sources */,
+				ACECED8F28352CB000547508 /* Date+GYExtension.swift in Sources */,
 				ACD32896282FADAE008F6D7E /* RSMenuItemDispatcher.swift in Sources */,
 				ACD3288E282F80BE008F6D7E /* GYDownloadSettings.swift in Sources */,
 				ACD328A928300109008F6D7E /* RSGigaTool.swift in Sources */,

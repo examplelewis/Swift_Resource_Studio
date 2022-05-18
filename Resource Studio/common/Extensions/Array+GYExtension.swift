@@ -1,5 +1,5 @@
 //
-//  Dictionary+GYCommon.swift
+//  Array+GYExtension.swift
 //  GYSwiftLib
 //
 //  Created by 龚宇 on 22/04/23.
@@ -7,8 +7,21 @@
 
 import Foundation
 
-extension Dictionary {
+extension Array {
+    // MARK: Duplicates
+    var nonDuplicates: Self {
+        let orderedSet = NSOrderedSet(array: self)
+        return orderedSet.array as! Self
+    }
+    
     // MARK: String
+    var stringValue: String {
+        if self is [String] {
+            return (self as! [String]).joined(separator: "\n")
+        } else {
+            return ""
+        }
+    }
     var readableJSONString: String? {
         if readableJSONData == nil {
             return nil
@@ -32,7 +45,7 @@ extension Dictionary {
     func export(toPath path: String, continueWhenExist: Bool) {
         var behavior: GYFileBehavior = .none
         if continueWhenExist {
-           behavior = behavior.union(.continueWhenExists)
+            behavior = behavior.union(.continueWhenExists)
         } else {
             behavior.remove(.continueWhenExists)
         }
@@ -49,7 +62,7 @@ extension Dictionary {
             }
         }
         
-        GYExport(toPath: path, string: readableJSONString, continueWhenExist: behavior.contains(.continueWhenExists), showSuccessLog: behavior.contains(.showSuccessLog))
+        GYExport(toPath: path, string: stringValue, continueWhenExist: behavior.contains(.continueWhenExists), showSuccessLog: behavior.contains(.showSuccessLog))
     }
     func export(toPlistPath path: String) {
         export(toPlistPath: path, behavior: .none)
