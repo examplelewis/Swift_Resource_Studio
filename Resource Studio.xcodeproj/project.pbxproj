@@ -58,6 +58,7 @@
 		ACDDE65A282EA45A00EDA877 /* GYHTTPBaseHTMLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE659282EA45A00EDA877 /* GYHTTPBaseHTMLResponse.swift */; };
 		ACDDE65C282EB4EC00EDA877 /* RSAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE65B282EB4EC00EDA877 /* RSAppManager.swift */; };
 		ACDDE660282EC1E300EDA877 /* GYHTTPCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE65F282EC1E300EDA877 /* GYHTTPCookie.swift */; };
+		ACDE1A742837DE1200CE0C26 /* GYOpenPanelDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE1A732837DE1200CE0C26 /* GYOpenPanelDefinition.swift */; };
 		ACDFA306282BDB5500B0D010 /* GYHTTPDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0607DB2829406600E642AF /* GYHTTPDataRequest.swift */; };
 		ACECED40283529B900547508 /* GYErrorDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECED3D283529B900547508 /* GYErrorDefinition.swift */; };
 		ACECED41283529B900547508 /* GYLogDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECED3E283529B900547508 /* GYLogDefinition.swift */; };
@@ -156,6 +157,7 @@
 		ACDDE659282EA45A00EDA877 /* GYHTTPBaseHTMLResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPBaseHTMLResponse.swift; sourceTree = "<group>"; };
 		ACDDE65B282EB4EC00EDA877 /* RSAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAppManager.swift; sourceTree = "<group>"; };
 		ACDDE65F282EC1E300EDA877 /* GYHTTPCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPCookie.swift; sourceTree = "<group>"; };
+		ACDE1A732837DE1200CE0C26 /* GYOpenPanelDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYOpenPanelDefinition.swift; sourceTree = "<group>"; };
 		ACECED3D283529B900547508 /* GYErrorDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYErrorDefinition.swift; sourceTree = "<group>"; };
 		ACECED3E283529B900547508 /* GYLogDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYLogDefinition.swift; sourceTree = "<group>"; };
 		ACECED3F283529B900547508 /* GYFileDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYFileDefinition.swift; sourceTree = "<group>"; };
@@ -450,6 +452,7 @@
 				ACECED3D283529B900547508 /* GYErrorDefinition.swift */,
 				ACECED3F283529B900547508 /* GYFileDefinition.swift */,
 				ACECED3E283529B900547508 /* GYLogDefinition.swift */,
+				ACDE1A732837DE1200CE0C26 /* GYOpenPanelDefinition.swift */,
 			);
 			path = Definitions;
 			sourceTree = "<group>";
@@ -751,6 +754,7 @@
 				ACDDE65C282EB4EC00EDA877 /* RSAppManager.swift in Sources */,
 				AC0CA20728225F2100C1268F /* GYLogFormatters.swift in Sources */,
 				ACFD9C872833EC6C00306D98 /* GYLocalizationConst.swift in Sources */,
+				ACDE1A742837DE1200CE0C26 /* GYOpenPanelDefinition.swift in Sources */,
 				ACFD9C882833EC6C00306D98 /* GYLocalizationLoader.swift in Sources */,
 				AC0CA21128225F2100C1268F /* GYHTTPBaseResponse.swift in Sources */,
 				AC0CA21028225F2100C1268F /* GYHTTPProtocols.swift in Sources */,
