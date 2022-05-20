@@ -23,3 +23,7 @@ func <> (left: UInt, right: ClosedRange<Double>) -> Bool { left >= UInt(right.lo
 func <> (left: Float, right: ClosedRange<Double>) -> Bool { left >= Float(right.lowerBound) && left <= Float(right.upperBound) }
 func <> (left: CGFloat, right: ClosedRange<Double>) -> Bool { left >= CGFloat(right.lowerBound) && left <= CGFloat(right.upperBound) }
 func <> (left: Double, right: ClosedRange<Double>) -> Bool { left >= right.lowerBound && left <= right.upperBound }
+
+
+// 重载 加法 运算符: point + size = rect
+func + (lhs: CGPoint, rhs: CGSize) -> CGRect { CGRect(x: lhs.x, y: lhs.y, width: rhs.width, height: rhs.height) }
