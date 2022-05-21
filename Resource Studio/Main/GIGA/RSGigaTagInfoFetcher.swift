@@ -14,7 +14,7 @@ protocol RSGigaTagInfoFetcherDelegate: AnyObject {
 
 // 使用方法
 /**
- var fetcher = RSGigaTagInfoFetcher(tagIDs: [366, 486])
+ private var fetcher: RSGigaTagInfoFetcher? = RSGigaTagInfoFetcher(tagIDs: [366, 486])
  fetcher?.start(isFirstTag: true)
  
  // MARK: RSGigaTagInfoFetcherDelegate
@@ -26,7 +26,7 @@ protocol RSGigaTagInfoFetcherDelegate: AnyObject {
 class RSGigaTagInfoFetcher {
     weak var delegate: RSGigaTagInfoFetcherDelegate?
     
-    private let gigaTasks = RSGigaTasks()
+    private let tasks = RSGigaTasks()
     
     private var tagIDs: [Int] // 标签ID
     
@@ -45,23 +45,18 @@ class RSGigaTagInfoFetcher {
             GYLogManager.shared.addDefaultLog(format: "抓取 GIGA 官网标签数据, 流程开始")
         }
         
+        currentTag = ""
+        currentPage = 1
+        currentTotalPages = 0
+        currentImageURLs = []
+        
         if tagIDs.count == 0 {
             // tagIDs 为空数组，说明抓取流程结束
             GYLogManager.shared.addDefaultLog(format: "抓取 GIGA 官网标签数据, 流程结束")
             
-            currentTag = ""
-            currentPage = 1
-            currentTotalPages = 0
-            currentImageURLs = []
-            
             delegate?.gigaTagInfoFetcherDidFinish()
         } else {
             // 抓取新的标签，需要清空记录
-            currentTag = ""
-            currentPage = 1
-            currentTotalPages = 0
-            currentImageURLs = []
-            
             let tagID = tagIDs.removeFirst()
             _fetchSingleTagBy(tagID: tagID, isFirstPage: true)
         }
@@ -77,28 +72,28 @@ class RSGigaTagInfoFetcher {
             return
         }
         
-        gigaTasks.fetchTagBy(tagID: tagID, page: currentPage) { [weak self] (success, parser) in
-            guard success else {
-                return
+        tasks.fetchTagBy(tagID: tagID, page: currentPage) { [weak self] (success, parser) in
+            if success {
+                // Componets
+                self!.currentTotalPages = self!._currentTotalPagesFrom(parser: parser!)
+                self!.currentTag = self!._currentTagFrom(parser: parser!)
+                self!.currentImageURLs.append(contentsOf: self!._currentImageURLsFrom(parser: parser!))
+                
+                // Log
+                GYLogManager.shared.addDefaultLog(format: "已成功抓取 GIGA 标签: %@, 共计 %ld 条记录", self!.currentTag, self!.currentImageURLs.count)
+                
+                // Export
+                let folderPath = (GYBase.shared.downloadFolderPath as NSString).appendingPathComponent("GIGA Tags")
+                GYFileManager.createFolder(atPath: folderPath)
+                let txtFile = String(format: "%@.txt", self!.currentTag)
+                let txtFilePath = (folderPath as NSString).appendingPathComponent(txtFile)
+                self!.currentImageURLs.export(toPath: txtFilePath, continueWhenExist: false)
+            } else {
+                GYLogManager.shared.addErrorLog(format: "抓取 GIGA 标签: %@ 第 %ld 页时出现错误, 即将抓取下一页", self!.currentTag, self!.currentPage)
             }
             
-            // Componets
-            self!.currentTotalPages = self!._currentTotalPagesFrom(parser: parser!)
-            self!.currentTag = self!._currentTagFrom(parser: parser!)
-            self!.currentImageURLs.append(contentsOf: self!._currentImageURLsFrom(parser: parser!))
-            
-            // Log
-            GYLogManager.shared.addDefaultLog(format: "已成功抓取 GIGA 标签: %@, 共计 %ld 条记录", self!.currentTag, self!.currentImageURLs.count)
-            
-            // Export
-            let folderPath = (GYBase.shared.downloadFolderPath as NSString).appendingPathComponent("GIGA Tags")
-            GYFileManager.createFolder(atPath: folderPath)
-            let txtFile = String(format: "%@.txt", self!.currentTag)
-            let txtFilePath = (folderPath as NSString).appendingPathComponent(txtFile)
-            self!.currentImageURLs.export(toPath: txtFilePath, continueWhenExist: false)
-            
+            // 抓取下一页
             self!.currentPage += 1
-            
             self!._fetchSingleTagBy(tagID: tagID, isFirstPage: false)
         }
     }
