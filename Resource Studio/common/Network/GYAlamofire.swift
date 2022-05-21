@@ -53,7 +53,9 @@ class GYAlamofire {
         configuration.allowsCellularAccess = true
         configuration.waitsForConnectivity = true
         configuration.headers = HTTPHeaders([:])
+        #if os(macOS)
         updateCookies(configuration)
+        #endif
         
         let interceptor = Interceptor(adapter: GYHTTPRequestAdapter(), retrier: GYHTTPRequestRetrier())
         session = Session(configuration: configuration, interceptor: interceptor, serverTrustManager: GYHTTPServerTrustManager(evaluators: [:]), eventMonitors: [GYHTTPEventMonitor()])
@@ -64,7 +66,8 @@ class GYAlamofire {
         let dataRequest = GYHTTPDataRequest(url: request.url(), method: request.method(), headers: request.headers(), parameters: request.pack())
         
         session.request(dataRequest).responseData { (dataResponse: AFDataResponse<Data>) in
-            GYHTTPPrinter.printAFDataResponse(dataResponse)
+            // HTML 请求不输出结果
+//            GYHTTPPrinter.printAFDataResponse(dataResponse)
 
             if dataResponse.error != nil {
                 task.rspError = dataResponse.error
