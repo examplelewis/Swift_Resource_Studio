@@ -411,7 +411,6 @@
 			children = (
 				ACDDE65B282EB4EC00EDA877 /* RSAppManager.swift */,
 				ACD3288B282F5B08008F6D7E /* RSUIManager.swift */,
-				ACD32882282F53C1008F6D7E /* Download */,
 				ACD32894282FABE6008F6D7E /* MenuItem */,
 			);
 			path = Universal;
@@ -527,6 +526,7 @@
 			isa = PBXGroup;
 			children = (
 				ACFF138F28280A1B003B7118 /* Alert */,
+				ACD32882282F53C1008F6D7E /* Download */,
 				ACFF139028280A21003B7118 /* Open Panel */,
 				ACFF139128280A28003B7118 /* Window */,
 			);
