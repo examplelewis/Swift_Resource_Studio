@@ -44,7 +44,7 @@
 		ACD3288A282F577A008F6D7E /* GYDownloadSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32889282F577A008F6D7E /* GYDownloadSetting.swift */; };
 		ACD3288C282F5B08008F6D7E /* RSUIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3288B282F5B08008F6D7E /* RSUIManager.swift */; };
 		ACD3288E282F80BE008F6D7E /* GYDownloadSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3288D282F80BE008F6D7E /* GYDownloadSettings.swift */; };
-		ACD32892282FA629008F6D7E /* RSBaseBridging.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD32891282FA629008F6D7E /* RSBaseBridging.m */; };
+		ACD32892282FA629008F6D7E /* GYBaseBridging.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD32891282FA629008F6D7E /* GYBaseBridging.m */; };
 		ACD32896282FADAE008F6D7E /* RSMenuItemDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32895282FADAE008F6D7E /* RSMenuItemDispatcher.swift */; };
 		ACD32898282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32897282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift */; };
 		ACD3289A282FB33F008F6D7E /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32899282FB33F008F6D7E /* WindowController.swift */; };
@@ -147,8 +147,8 @@
 		ACD3288B282F5B08008F6D7E /* RSUIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSUIManager.swift; sourceTree = "<group>"; };
 		ACD3288D282F80BE008F6D7E /* GYDownloadSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYDownloadSettings.swift; sourceTree = "<group>"; };
 		ACD32890282FA629008F6D7E /* Resource Studio-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Resource Studio-Bridging-Header.h"; sourceTree = "<group>"; };
-		ACD32891282FA629008F6D7E /* RSBaseBridging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSBaseBridging.m; sourceTree = "<group>"; };
-		ACD32893282FA640008F6D7E /* RSBaseBridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSBaseBridging.h; sourceTree = "<group>"; };
+		ACD32891282FA629008F6D7E /* GYBaseBridging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYBaseBridging.m; sourceTree = "<group>"; };
+		ACD32893282FA640008F6D7E /* GYBaseBridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYBaseBridging.h; sourceTree = "<group>"; };
 		ACD32895282FADAE008F6D7E /* RSMenuItemDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMenuItemDispatcher.swift; sourceTree = "<group>"; };
 		ACD32897282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMenuItemDownloadDispatcher.swift; sourceTree = "<group>"; };
 		ACD32899282FB33F008F6D7E /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
@@ -244,6 +244,15 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		AC03B4E12838C67300409AB3 /* Bridging */ = {
+			isa = PBXGroup;
+			children = (
+				ACD32893282FA640008F6D7E /* GYBaseBridging.h */,
+				ACD32891282FA629008F6D7E /* GYBaseBridging.m */,
+			);
+			path = Bridging;
+			sourceTree = "<group>";
+		};
 		AC0CA1AE28225D8500C1268F = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +316,7 @@
 			children = (
 				AC0CA20528225F2100C1268F /* Base */,
 				AC0CA1E628225F2100C1268F /* Base Services */,
+				AC03B4E12838C67300409AB3 /* Bridging */,
 				AC0CA1FD28225F2100C1268F /* Extensions */,
 				AC0CA1EC28225F2100C1268F /* Managers */,
 			);
@@ -433,8 +443,6 @@
 			isa = PBXGroup;
 			children = (
 				ACD32890282FA629008F6D7E /* Resource Studio-Bridging-Header.h */,
-				ACD32893282FA640008F6D7E /* RSBaseBridging.h */,
-				ACD32891282FA629008F6D7E /* RSBaseBridging.m */,
 			);
 			path = "Objective-C Bridging";
 			sourceTree = "<group>";
@@ -770,7 +778,7 @@
 				AC0CA21628225F2100C1268F /* GYConsts.swift in Sources */,
 				ACD3288A282F577A008F6D7E /* GYDownloadSetting.swift in Sources */,
 				ACECED8D28352CB000547508 /* Array+GYExtension.swift in Sources */,
-				ACD32892282FA629008F6D7E /* RSBaseBridging.m in Sources */,
+				ACD32892282FA629008F6D7E /* GYBaseBridging.m in Sources */,
 				ACECED41283529B900547508 /* GYLogDefinition.swift in Sources */,
 				AC0CA20628225F2100C1268F /* GYLogManager.swift in Sources */,
 				AC0CA20E28225F2100C1268F /* GYHTTPRequestAdapter.swift in Sources */,
