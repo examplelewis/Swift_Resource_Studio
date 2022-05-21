@@ -309,7 +309,6 @@
 				AC0CA1E628225F2100C1268F /* Base Services */,
 				AC0CA1FD28225F2100C1268F /* Extensions */,
 				AC0CA1EC28225F2100C1268F /* Managers */,
-				AC0CA1EE28225F2100C1268F /* Network */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -319,6 +318,7 @@
 			children = (
 				AC0CA1E728225F2100C1268F /* Log */,
 				ACFD9C832833EC6C00306D98 /* Localization */,
+				AC0CA1EE28225F2100C1268F /* Network */,
 			);
 			path = "Base Services";
 			sourceTree = "<group>";
