@@ -65,4 +65,28 @@ class RSSitesDatabaseManager {
         
         GYLogManager.shared.addDefaultLog(format: "已向 jav_library_works 添加 %ld 条数据", works.count)
     }
+    
+    // MARK: Nyaa Tag
+    func insertNyaa(tag: String, count: Int) {
+        let url = String(format: "https://sukebei.nyaa.si/?f=0&c=0_0&q=%@", tag)
+        
+        queue.inDatabase { db in
+           let success = db.executeUpdate("INSERT INTO nyaa_tags (input, name, count, url, time) values(?, ?, ?, ?, ?)", withArgumentsIn: [tag, tag, count, url, Date.current().string()])
+            
+            if success {
+                GYLogManager.shared.addSuccessLog(format: "已向 nyaa_tags 添加标签: %@", tag)
+            } else {
+                GYLogManager.shared.addErrorLog(format: "向 nyaa_tags 添加标签: %@ 时发生错误: %@", tag, db.lastErrorMessage())
+            }
+        }
+    }
+    func insertNyaa(works: [RSNyaaWork]) {
+        for work in works {
+            queue.inDatabase { db in
+                db.executeUpdate("INSERT INTO nyaa_works (tag_name, work_name, work_url, work_magnet, work_torrent, time) values(?, ?, ?, ?, ?, ?)", withArgumentsIn: [work.tagName, work.name, work.URL, work.magnet ?? "NULL", work.torrent ?? "NULL", Date.current().string()])
+            }
+        }
+        
+        GYLogManager.shared.addDefaultLog(format: "已向 nyaa_works 添加 %ld 条数据", works.count)
+    }
 }

@@ -35,6 +35,7 @@ class RSNyaaTagFetcher {
     private var currentTotalPages = 0 // 当前标签一共多少页
     private var currentPage = 1 // 当前标签的页码，从1开始
     private var currentMagnetURLs: [String] = [] // 当前标签下的作品磁力链接地址
+    private var currentWorks: [RSNyaaWork] = [] // 当前标签下的作品
     
     // MARK: Initial
     init(tags: [String]) {
@@ -51,6 +52,7 @@ class RSNyaaTagFetcher {
         currentPage = 1
         currentTotalPages = 0
         currentMagnetURLs = []
+        currentWorks = []
         
         if tags.count == 0 {
             // tags 为空数组，说明抓取流程结束
@@ -67,6 +69,10 @@ class RSNyaaTagFetcher {
     private func _fetchSingleTagBy(isFirstPage: Bool) {
         // 如果不是第一页，那么 currentTotalPages 已经赋值了; 如果 currentPage > currentTotalPages，说明最后一页已经抓取完毕了
         if !isFirstPage && currentPage > currentTotalPages {
+            // 往数据库里存当前标签的数据
+            RSSitesDatabaseManager.shared.insertNyaa(tag: currentTag, count: currentWorks.count)
+            RSSitesDatabaseManager.shared.insertNyaa(works: currentWorks)
+            
             // 抓取下一个标签
             start(isFirstTag: false)
             
@@ -80,7 +86,7 @@ class RSNyaaTagFetcher {
                 self!.currentMagnetURLs.append(contentsOf: self!._currentMagnetURLsFrom(parser: parser!))
                 
                 // Log
-                GYLogManager.shared.addDefaultLog(format: "已成功抓取 Nyaa 标签: %@, 共计 %ld 条记录", self!.currentTag, self!.currentMagnetURLs.count)
+                GYLogManager.shared.addDefaultLog(format: "已成功抓取 Nyaa 标签: %@, 第 %ld 页, 共 %ld 页, 共计 %ld 条记录", self!.currentTag, self!.currentPage, self!.currentTotalPages, self!.currentMagnetURLs.count)
                 
                 // Export
                 let folderPath = (GYBase.shared.downloadFolderPath as NSString).appendingPathComponent("Nyaa Tags")
@@ -127,56 +133,69 @@ class RSNyaaTagFetcher {
         return Int(aElements!.first!.firstTextChild()!.content)!
     }
     private func _currentMagnetURLsFrom(parser: TFHpple) -> [String] {
-        var divArray = parser.search(withXPathQuery: "//div") as? [TFHppleElement]
-        divArray = divArray?.filter({
+        var trArray = parser.search(withXPathQuery: "//tr") as? [TFHppleElement]
+        trArray = trArray?.filter({
             if let classObj = $0.attributes["class"], let classString = classObj as? String {
-                return classString == "col s6 m4 l3 center thumBox"
+                return classString == "default"
             } else {
                 return false
             }
         })
-        guard divArray != nil, divArray!.count > 0 else {
+        guard trArray != nil, trArray!.count > 0 else {
             return []
         }
         
-        var imageURLs: [String] = []
-        for div in divArray! {
-            var subElements: [TFHppleElement]? = div.children as? [TFHppleElement]
-            subElements = subElements?.filter({
-                if let classObj = $0.attributes["class"], let classString = classObj as? String {
-                    return classString == "search_sam_box"
-                } else {
-                    return false
-                }
-            })
-            guard subElements != nil, subElements!.count > 0 else {
+        var magnets: [String] = []
+        for tr in trArray! {
+            guard let (workName, workURL, workMagnet, workTorrent) = _workComponentsFrom(element: tr) else {
                 continue
             }
             
-            let subElement = subElements!.first!
-            var textElements: [TFHppleElement]? = subElement.children as? [TFHppleElement]
-            textElements = textElements?.filter({ $0.isTextNode() && $0.content != nil && $0.content.contains("（") && $0.content.contains("）") })
-            guard textElements != nil, textElements!.count > 0 else {
-                continue
+            let work = RSNyaaWork()
+            work.tagName = currentTag
+            work.name = workName
+            work.URL = workURL
+            work.magnet = workMagnet
+            work.torrent = workTorrent
+            
+            if workMagnet != nil {
+                magnets.append(workMagnet!)
             }
-            
-            let textElement = textElements!.first!
-            var content = textElement.content!
-            content = content.replacingOccurrences(of: "（", with: "")
-            content = content.replacingOccurrences(of: "）", with: "")
-            content = content.replacingOccurrences(of: "\t", with: "")
-            content = content.replacingOccurrences(of: "\n", with: "")
-            content = content.replacingOccurrences(of: "\r", with: "")
-            content = content.replacingOccurrences(of: "　", with: "")
-            
-            let components = content.components(separatedBy: "-")
-            let series = components.first!
-            let number = components.last!
-            let url = String(format: "https://www.giga-web.jp/db_titles/%@/%@%@/pac_s.jpg", series.lowercased(), series.lowercased(), number)
-            
-            imageURLs.append(url)
+            currentWorks.append(work)
         }
         
-        return imageURLs
+        return magnets
+    }
+    private func _workComponentsFrom(element: TFHppleElement) -> (String, String, String?, String?)? {
+        if element.children.count < 3 {
+            return nil
+        }
+        
+        let fourthElement = element.children[3] as! TFHppleElement
+        guard let linkTitleElement = fourthElement.children[1] as? TFHppleElement else {
+            return nil
+        }
+        guard let workName = linkTitleElement.attributes["title"] as? String else {
+            return nil
+        }
+        guard var workURL = linkTitleElement.attributes["href"] as? String else {
+            return nil
+        }
+        workURL = String(format: "https://sukebei.nyaa.si%@", workURL)
+        
+        var workTorrent: String?
+        var workMagnet: String?
+        let sixthElement = element.children[5] as! TFHppleElement
+        if let torrentElement = sixthElement.children[1] as? TFHppleElement {
+            workTorrent = torrentElement.attributes["href"] as? String
+            if workTorrent != nil {
+                workTorrent = String(format: "https://sukebei.nyaa.si%@", workTorrent!)
+            }
+        }
+        if let magnetElement = sixthElement.children[3] as? TFHppleElement {
+            workMagnet = magnetElement.attributes["href"] as? String
+        }
+        
+        return (workName, workURL, workMagnet, workTorrent)
     }
 }
