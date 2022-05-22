@@ -52,7 +52,7 @@
 		ACD32896282FADAE008F6D7E /* RSMenuItemDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32895282FADAE008F6D7E /* RSMenuItemDispatcher.swift */; };
 		ACD32898282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32897282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift */; };
 		ACD3289A282FB33F008F6D7E /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32899282FB33F008F6D7E /* WindowController.swift */; };
-		ACD3289C282FCA2A008F6D7E /* RSGigaTagInfoFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3289B282FCA2A008F6D7E /* RSGigaTagInfoFetcher.swift */; };
+		ACD3289C282FCA2A008F6D7E /* RSGigaTagFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3289B282FCA2A008F6D7E /* RSGigaTagFetcher.swift */; };
 		ACD3289E282FF025008F6D7E /* GYBase+macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3289D282FF025008F6D7E /* GYBase+macOS.swift */; };
 		ACD328A1282FF049008F6D7E /* GYOpenPanelConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD328A0282FF049008F6D7E /* GYOpenPanelConfigure.swift */; };
 		ACD328A3282FF1B3008F6D7E /* GYOpenPanelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD328A2282FF1B3008F6D7E /* GYOpenPanelManager.swift */; };
@@ -162,7 +162,7 @@
 		ACD32895282FADAE008F6D7E /* RSMenuItemDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMenuItemDispatcher.swift; sourceTree = "<group>"; };
 		ACD32897282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMenuItemDownloadDispatcher.swift; sourceTree = "<group>"; };
 		ACD32899282FB33F008F6D7E /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
-		ACD3289B282FCA2A008F6D7E /* RSGigaTagInfoFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSGigaTagInfoFetcher.swift; sourceTree = "<group>"; };
+		ACD3289B282FCA2A008F6D7E /* RSGigaTagFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSGigaTagFetcher.swift; sourceTree = "<group>"; };
 		ACD3289D282FF025008F6D7E /* GYBase+macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GYBase+macOS.swift"; sourceTree = "<group>"; };
 		ACD328A0282FF049008F6D7E /* GYOpenPanelConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYOpenPanelConfigure.swift; sourceTree = "<group>"; };
 		ACD328A2282FF1B3008F6D7E /* GYOpenPanelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYOpenPanelManager.swift; sourceTree = "<group>"; };
@@ -509,7 +509,7 @@
 		ACDDE64B282E9B0100EDA877 /* GIGA */ = {
 			isa = PBXGroup;
 			children = (
-				ACD3289B282FCA2A008F6D7E /* RSGigaTagInfoFetcher.swift */,
+				ACD3289B282FCA2A008F6D7E /* RSGigaTagFetcher.swift */,
 				ACD328A828300109008F6D7E /* RSGigaTool.swift */,
 				ACDF6095283A182F00B59FDC /* API */,
 			);
@@ -849,7 +849,7 @@
 				AC0CA21128225F2100C1268F /* GYHTTPBaseResponse.swift in Sources */,
 				AC0CA21028225F2100C1268F /* GYHTTPProtocols.swift in Sources */,
 				ACECED8B28352CB000547508 /* Dictionary+GYExtension.swift in Sources */,
-				ACD3289C282FCA2A008F6D7E /* RSGigaTagInfoFetcher.swift in Sources */,
+				ACD3289C282FCA2A008F6D7E /* RSGigaTagFetcher.swift in Sources */,
 				ACD3288C282F5B08008F6D7E /* RSUIManager.swift in Sources */,
 				ACD328A1282FF049008F6D7E /* GYOpenPanelConfigure.swift in Sources */,
 				AC0CA20C28225F2100C1268F /* GYHTTPServerTrustManager.swift in Sources */,

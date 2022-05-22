@@ -1,5 +1,5 @@
 //
-//  RSGigaTagInfoFetcher.swift
+//  RSGigaTagFetcher.swift
 //  Resource Studio
 //
 //  Created by 龚宇 on 22/05/14.
@@ -8,24 +8,24 @@
 import Foundation
 import hpple
 
-protocol RSGigaTagInfoFetcherDelegate: AnyObject {
+protocol RSGigaTagFetcherDelegate: AnyObject {
     func gigaTagInfoFetcherDidFinish()
 }
 
 // 使用方法
 /**
- private var fetcher: RSGigaTagInfoFetcher? = RSGigaTagInfoFetcher(tagIDs: [366, 486])
+ private var fetcher: RSGigaTagFetcher? = RSGigaTagFetcher(tagIDs: [366, 486])
  fetcher?.delegate = self
  fetcher?.start(isFirstTag: true)
  
- // MARK: RSGigaTagInfoFetcherDelegate
+ // MARK: RSGigaTagFetcherDelegate
  func gigaTagInfoFetcherDidFinish() {
     fetcher = nil
  }
  */
 
-class RSGigaTagInfoFetcher {
-    weak var delegate: RSGigaTagInfoFetcherDelegate?
+class RSGigaTagFetcher {
+    weak var delegate: RSGigaTagFetcherDelegate?
     
     private let tasks = RSGigaTasks()
     
