@@ -92,7 +92,7 @@ class RSJavLibraryActorFetcher {
                 self!.currentImageURLs.append(contentsOf: self!._currentImageURLsFrom(parser: parser!))
                 
                 // Log
-                GYLogManager.shared.addDefaultLog(format: "已成功抓取 JAVLibrary 女优: %@, 共计 %ld 条记录", self!.currentTag, self!.currentImageURLs.count)
+                GYLogManager.shared.addDefaultLog(format: "已成功抓取 JAVLibrary 女优: %@, 第 %ld 页, 共 %ld 页, 共计 %ld 条记录", self!.currentTag, self!.currentPage, self!.currentTotalPages, self!.currentImageURLs.count)
                 
                 // Export
                 let folderPath = (GYBase.shared.downloadFolderPath as NSString).appendingPathComponent("JAVLibrary Actors")
@@ -172,7 +172,7 @@ class RSJavLibraryActorFetcher {
         
         var imageURLs: [String] = []
         for div in divArray! {
-            guard let (workName, workURL, workImageURL) = _workURLFrom(element: div) else {
+            guard let (workName, workURL, workImageURL) = _workComponentsFrom(element: div) else {
                 continue
             }
             
@@ -188,7 +188,7 @@ class RSJavLibraryActorFetcher {
         
         return imageURLs
     }
-    private func _workURLFrom(element: TFHppleElement) -> (String, String, String)? {
+    private func _workComponentsFrom(element: TFHppleElement) -> (String, String, String)? {
         var aElements: [TFHppleElement]? = element.children as? [TFHppleElement]
         aElements = aElements?.filter({ $0.attributes.keys.contains("href") })
         guard aElements != nil, aElements!.count > 0 else {

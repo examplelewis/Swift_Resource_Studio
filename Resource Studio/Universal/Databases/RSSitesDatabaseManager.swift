@@ -47,7 +47,7 @@ class RSSitesDatabaseManager {
         let url = String(format: "https://www.javlibrary.com/cn/vl_star.php?&mode=2&s=%@", input)
         
         queue.inDatabase { db in
-           let success = db.executeUpdate("INSERT INTO jav_library_tags (input, url, name, count, time) values(?, ?, ?, ?, ?)", withArgumentsIn: [input, url, tag, count, Date.current().string()])
+           let success = db.executeUpdate("INSERT INTO jav_library_tags (input, name, count, url, time) values(?, ?, ?, ?, ?)", withArgumentsIn: [input, tag, count, url, Date.current().string()])
             
             if success {
                 GYLogManager.shared.addSuccessLog(format: "已向 jav_library_tags 添加标签: %@", tag)
