@@ -50,6 +50,7 @@ class RSGigaTagFetcher {
         
         // 抓取新的标签，需要清空记录
         currentTag = ""
+        currentTagID = ""
         currentPage = 1
         currentTotalPages = 0
         currentImageURLs = []
@@ -71,7 +72,7 @@ class RSGigaTagFetcher {
         // 如果不是第一页，那么 currentTotalPages 已经赋值了; 如果 currentPage > currentTotalPages，说明最后一页已经抓取完毕了
         if !isFirstPage && currentPage > currentTotalPages {
             // 往数据库里存当前标签的数据
-            RSSitesDatabaseManager.shared.insertGiga(tag: currentTag, input: String(currentTagID), count: currentWorks.count)
+            RSSitesDatabaseManager.shared.insertGiga(tag: currentTag, input: currentTagID, count: currentWorks.count)
             RSSitesDatabaseManager.shared.insertGiga(works: currentWorks)
             
             // 抓取下一个标签
