@@ -14,6 +14,10 @@
 		AC03B4D928388C3100409AB3 /* RSJavLibraryTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4D828388C3100409AB3 /* RSJavLibraryTasks.swift */; };
 		AC03B4DB28388C5100409AB3 /* RSJavLibraryActorFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4DA28388C5100409AB3 /* RSJavLibraryActorFetcher.swift */; };
 		AC03B4DD28388C5E00409AB3 /* RSJavLibraryTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4DC28388C5E00409AB3 /* RSJavLibraryTool.swift */; };
+		AC0722A7283A0ED8008D8034 /* RSNyaaTagFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0722A6283A0ED8008D8034 /* RSNyaaTagFetcher.swift */; };
+		AC0722AA283A0F07008D8034 /* RSNyaaTagRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0722A9283A0F07008D8034 /* RSNyaaTagRsp.swift */; };
+		AC0722AC283A0F15008D8034 /* RSNyaaTagReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0722AB283A0F15008D8034 /* RSNyaaTagReq.swift */; };
+		AC0722AE283A0F22008D8034 /* RSNyaaTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0722AD283A0F22008D8034 /* RSNyaaTasks.swift */; };
 		AC0CA1BB28225D8500C1268F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1BA28225D8500C1268F /* AppDelegate.swift */; };
 		AC0CA1BD28225D8500C1268F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1BC28225D8500C1268F /* ViewController.swift */; };
 		AC0CA1BF28225D8600C1268F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC0CA1BE28225D8600C1268F /* Assets.xcassets */; };
@@ -112,6 +116,10 @@
 		AC03B4DA28388C5100409AB3 /* RSJavLibraryActorFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSJavLibraryActorFetcher.swift; sourceTree = "<group>"; };
 		AC03B4DC28388C5E00409AB3 /* RSJavLibraryTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSJavLibraryTool.swift; sourceTree = "<group>"; };
 		AC0607DB2829406600E642AF /* GYHTTPDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPDataRequest.swift; sourceTree = "<group>"; };
+		AC0722A6283A0ED8008D8034 /* RSNyaaTagFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNyaaTagFetcher.swift; sourceTree = "<group>"; };
+		AC0722A9283A0F07008D8034 /* RSNyaaTagRsp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNyaaTagRsp.swift; sourceTree = "<group>"; };
+		AC0722AB283A0F15008D8034 /* RSNyaaTagReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNyaaTagReq.swift; sourceTree = "<group>"; };
+		AC0722AD283A0F22008D8034 /* RSNyaaTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNyaaTasks.swift; sourceTree = "<group>"; };
 		AC0CA1B728225D8500C1268F /* Resource Studio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Resource Studio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC0CA1BA28225D8500C1268F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC0CA1BC28225D8500C1268F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -251,6 +259,25 @@
 				ACD32891282FA629008F6D7E /* GYBaseBridging.m */,
 			);
 			path = Bridging;
+			sourceTree = "<group>";
+		};
+		AC0722A5283A0EB1008D8034 /* Nyaa */ = {
+			isa = PBXGroup;
+			children = (
+				AC0722A6283A0ED8008D8034 /* RSNyaaTagFetcher.swift */,
+				AC0722A8283A0EF5008D8034 /* API */,
+			);
+			path = Nyaa;
+			sourceTree = "<group>";
+		};
+		AC0722A8283A0EF5008D8034 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AC0722AD283A0F22008D8034 /* RSNyaaTasks.swift */,
+				AC0722AB283A0F15008D8034 /* RSNyaaTagReq.swift */,
+				AC0722A9283A0F07008D8034 /* RSNyaaTagRsp.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		AC0CA1AE28225D8500C1268F = {
@@ -468,6 +495,7 @@
 		ACDDE64A282E9AED00EDA877 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				AC0722A5283A0EB1008D8034 /* Nyaa */,
 				AC03B4D328388AA200409AB3 /* JavLibrary */,
 				ACDDE64B282E9B0100EDA877 /* GIGA */,
 			);
@@ -769,6 +797,7 @@
 				ACD328A3282FF1B3008F6D7E /* GYOpenPanelManager.swift in Sources */,
 				ACDDE660282EC1E300EDA877 /* GYHTTPCookie.swift in Sources */,
 				ACDDE65A282EA45A00EDA877 /* GYHTTPBaseHTMLResponse.swift in Sources */,
+				AC0722A7283A0ED8008D8034 /* RSNyaaTagFetcher.swift in Sources */,
 				ACD32880282F4947008F6D7E /* GYBase.swift in Sources */,
 				ACDAE63B282D4ED20042F54E /* GYBaseMacro.swift in Sources */,
 				ACDDE658282E9ED900EDA877 /* RSGigaTasks.swift in Sources */,
@@ -787,12 +816,14 @@
 				AC03B4D528388C0F00409AB3 /* RSJavLibraryActorReq.swift in Sources */,
 				ACDAE639282D49CE0042F54E /* GYHTTPRequestRetrier.swift in Sources */,
 				ACDDE656282E9EC800EDA877 /* RSGigaTagReq.swift in Sources */,
+				AC0722AE283A0F22008D8034 /* RSNyaaTasks.swift in Sources */,
 				ACD32898282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift in Sources */,
 				AC0CA20828225F2100C1268F /* GYLog.swift in Sources */,
 				ACD3289A282FB33F008F6D7E /* WindowController.swift in Sources */,
 				AC0CA20A28225F2100C1268F /* GYFileManager.swift in Sources */,
 				ACDDE654282E9EB600EDA877 /* RSGigaTagRsp.swift in Sources */,
 				ACFD9C7E2833EA6800306D98 /* GYJSONMacro.swift in Sources */,
+				AC0722AC283A0F15008D8034 /* RSNyaaTagReq.swift in Sources */,
 				AC03B4D928388C3100409AB3 /* RSJavLibraryTasks.swift in Sources */,
 				AC0CA20B28225F2100C1268F /* GYAlamofire.swift in Sources */,
 				ACECED42283529B900547508 /* GYFileDefinition.swift in Sources */,
@@ -808,6 +839,7 @@
 				ACD3288C282F5B08008F6D7E /* RSUIManager.swift in Sources */,
 				ACD328A1282FF049008F6D7E /* GYOpenPanelConfigure.swift in Sources */,
 				AC0CA20C28225F2100C1268F /* GYHTTPServerTrustManager.swift in Sources */,
+				AC0722AA283A0F07008D8034 /* RSNyaaTagRsp.swift in Sources */,
 				AC0CA21828225F2100C1268F /* String+GYSubscript.swift in Sources */,
 				AC0CA21428225F2100C1268F /* GYHTTPBaseRequest.swift in Sources */,
 				ACECED40283529B900547508 /* GYErrorDefinition.swift in Sources */,
