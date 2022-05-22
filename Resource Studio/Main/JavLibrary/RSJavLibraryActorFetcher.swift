@@ -15,6 +15,7 @@ protocol RSJavLibraryActorFetcherDelegate: AnyObject {
 // 使用方法
 /**
  private var fetcher: RSJavLibraryActorFetcher? = RSJavLibraryActorFetcher(keywords: ["paca"])
+ fetcher?.delegate = self
  fetcher?.start(isFirstTag: true)
  
  // MARK: RSJavLibraryActorFetcherDelegate
@@ -48,6 +49,7 @@ class RSJavLibraryActorFetcher {
             GYLogManager.shared.addDefaultLog(format: "抓取 JAVLibrary 官网女优数据, 流程开始")
         }
         
+        // 抓取新的标签，需要清空记录
         currentTag = ""
         currentPage = 1
         currentTotalPages = 0
@@ -59,7 +61,6 @@ class RSJavLibraryActorFetcher {
             
             delegate?.javLibraryActorFetcherDidFinish()
         } else {
-            // 抓取新的标签，需要清空记录
             let keyword = keywords.removeFirst()
             _fetchSingleTagBy(keyword: keyword, isFirstPage: true)
         }
