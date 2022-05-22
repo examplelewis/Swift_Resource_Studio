@@ -23,7 +23,7 @@ class RSSitesDatabaseManager {
         let url = String(format: "https://www.giga-web.jp/search/index.php?year=&month=&day=&narrow=&salesform_id=&tag_id=%@&actor_id=&series_id=&label_id=&sort=1&s_type=&keyword=", input)
         
         queue.inDatabase { db in
-           let success = db.executeUpdate("INSERT INTO giga_tags (input, url, name, count, time) values(?, ?, ?, ?, ?)", withArgumentsIn: [input, url, tag, count, Date.current().string()])
+           let success = db.executeUpdate("INSERT INTO giga_tags (input, name, count, url, time) values(?, ?, ?, ?, ?)", withArgumentsIn: [input, tag, count, url, Date.current().string()])
             
             if success {
                 GYLogManager.shared.addSuccessLog(format: "已向 giga_tags 添加标签: %@", tag)

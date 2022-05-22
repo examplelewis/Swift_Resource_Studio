@@ -93,7 +93,7 @@ class RSGigaTagFetcher {
                 self!.currentImageURLs.append(contentsOf: self!._currentImageURLsFrom(parser: parser!))
                 
                 // Log
-                GYLogManager.shared.addDefaultLog(format: "已成功抓取 GIGA 标签: %@, 共计 %ld 条记录", self!.currentTag, self!.currentImageURLs.count)
+                GYLogManager.shared.addDefaultLog(format: "已成功抓取 GIGA 标签: %@, 第 %ld 页, 共 %ld 页, 共计 %ld 条记录", self!.currentTag, self!.currentPage, self!.currentTotalPages, self!.currentImageURLs.count)
                 
                 // Export
                 let folderPath = (GYBase.shared.downloadFolderPath as NSString).appendingPathComponent("GIGA Tags")
