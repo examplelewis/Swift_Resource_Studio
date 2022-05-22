@@ -14,7 +14,7 @@ protocol RSJavLibraryActorFetcherDelegate: AnyObject {
 
 // 使用方法
 /**
- private var fetcher: RSJavLibraryActorFetcher? = RSJavLibraryActorFetcher(keywords: ["paca"])
+ private var fetcher: RSJavLibraryActorFetcher? = RSJavLibraryActorFetcher(keywords: ["ae4ua", "affa", "ayua", "iqla", "priq", "pqaq", "brca", "aq4q", "pfma", "paca", "anfa", "ai4q"])
  fetcher?.delegate = self
  fetcher?.start(isFirstTag: true)
  
@@ -32,9 +32,11 @@ class RSJavLibraryActorFetcher {
     private var keywords: [String] // 关键字
     
     private var currentTag = "" // 当前标签内容
+    private var currentKeyword = "" // 当前关键字
     private var currentTotalPages = 0 // 当前标签一共多少页
     private var currentPage = 1 // 当前标签的页码，从1开始
     private var currentImageURLs: [String] = [] // 当前标签下的作品图片地址
+    private var currentWorks: [RSJavLibraryWork] = [] // 当前标签下的作品
     
     // MARK: Initial
     init(keywords: [String]) {
@@ -51,9 +53,11 @@ class RSJavLibraryActorFetcher {
         
         // 抓取新的标签，需要清空记录
         currentTag = ""
+        currentKeyword = ""
         currentPage = 1
         currentTotalPages = 0
         currentImageURLs = []
+        currentWorks = []
         
         if keywords.count == 0 {
             // tagIDs 为空数组，说明抓取流程结束
@@ -61,22 +65,26 @@ class RSJavLibraryActorFetcher {
             
             delegate?.javLibraryActorFetcherDidFinish()
         } else {
-            let keyword = keywords.removeFirst()
-            _fetchSingleTagBy(keyword: keyword, isFirstPage: true)
+            currentKeyword = keywords.removeFirst()
+            _fetchSingleTagBy(isFirstPage: true)
         }
     }
     
     // MARK: Fetch
-    private func _fetchSingleTagBy(keyword: String, isFirstPage: Bool) {
+    private func _fetchSingleTagBy(isFirstPage: Bool) {
         // 如果不是第一页，那么 currentTotalPages 已经赋值了; 如果 currentPage > currentTotalPages，说明最后一页已经抓取完毕了
         if !isFirstPage && currentPage > currentTotalPages {
+            // 往数据库里存当前标签的数据
+            RSSitesDatabaseManager.shared.insertJav(tag: currentTag, input: currentKeyword, count: currentWorks.count)
+            RSSitesDatabaseManager.shared.insertJav(works: currentWorks)
+            
             // 抓取下一个标签
             start(isFirstTag: false)
             
             return
         }
         
-        tasks.fetchActorBy(keyWord: keyword, page: currentPage) { [weak self] (success, parser) in
+        tasks.fetchActorBy(keyWord: currentKeyword, page: currentPage) { [weak self] (success, parser) in
             if success {
                 // Componets
                 self!.currentTotalPages = self!._currentTotalPagesFrom(parser: parser!)
@@ -98,7 +106,7 @@ class RSJavLibraryActorFetcher {
             
             // 抓取下一页
             self!.currentPage += 1
-            self!._fetchSingleTagBy(keyword: keyword, isFirstPage: false)
+            self!._fetchSingleTagBy(isFirstPage: false)
         }
     }
     
@@ -164,26 +172,44 @@ class RSJavLibraryActorFetcher {
         
         var imageURLs: [String] = []
         for div in divArray! {
-            var subElements: [TFHppleElement]? = div.children as? [TFHppleElement]
-            subElements = subElements?.filter({ $0.attributes.keys.contains("href") })
-            guard subElements != nil, subElements!.count > 0 else {
+            guard let (workName, workURL, workImageURL) = _workURLFrom(element: div) else {
                 continue
             }
             
-            let subElement = subElements!.first!
-            var imgElements: [TFHppleElement]? = subElement.children as? [TFHppleElement]
-            imgElements = imgElements?.filter({ $0.attributes.keys.contains("src") })
-            guard imgElements != nil, imgElements!.count > 0 else {
-                continue
-            }
+            let work = RSJavLibraryWork()
+            work.tagName = currentTag
+            work.name = workName
+            work.URL = workURL
+            work.imageURL = workImageURL
             
-            let imgElement = imgElements!.first!
-            var imgSrc = imgElement.attributes["src"] as! String
-            imgSrc = imgSrc.replacingOccurrences(of: "ps.jpg", with: "pl.jpg")
-            
-            imageURLs.append(imgSrc)
+            imageURLs.append(workImageURL)
+            currentWorks.append(work)
         }
         
         return imageURLs
+    }
+    private func _workURLFrom(element: TFHppleElement) -> (String, String, String)? {
+        var aElements: [TFHppleElement]? = element.children as? [TFHppleElement]
+        aElements = aElements?.filter({ $0.attributes.keys.contains("href") })
+        guard aElements != nil, aElements!.count > 0 else {
+            return nil
+        }
+        
+        let aElement = aElements!.first!
+        let workName = aElement.attributes["title"] as! String
+        var workURL = aElement.attributes["href"] as! String
+        workURL = workURL.replacingOccurrences(of: ".", with: "https://www.javlibrary.com/cn")
+        
+        var imgElements: [TFHppleElement]? = aElement.children as? [TFHppleElement]
+        imgElements = imgElements?.filter({ $0.attributes.keys.contains("src") })
+        guard imgElements != nil, imgElements!.count > 0 else {
+            return nil
+        }
+        
+        let imgElement = imgElements!.first!
+        var workImageURL = imgElement.attributes["src"] as! String
+        workImageURL = workImageURL.replacingOccurrences(of: "ps.jpg", with: "pl.jpg")
+        
+        return (workName, workURL, workImageURL)
     }
 }
