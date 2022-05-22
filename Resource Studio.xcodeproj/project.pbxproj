@@ -69,8 +69,8 @@
 		ACDDE660282EC1E300EDA877 /* GYHTTPCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE65F282EC1E300EDA877 /* GYHTTPCookie.swift */; };
 		ACDE1A722837DCE500CE0C26 /* GYURLMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE1A712837DCE500CE0C26 /* GYURLMacro.swift */; };
 		ACDE1A742837DE1200CE0C26 /* GYOpenPanelDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE1A732837DE1200CE0C26 /* GYOpenPanelDefinition.swift */; };
-		ACDF6097283A185800B59FDC /* RSGigaTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF6096283A185800B59FDC /* RSGigaTag.swift */; };
 		ACDF6099283A187600B59FDC /* RSGigaWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF6098283A187600B59FDC /* RSGigaWork.swift */; };
+		ACDF609C283A1D5F00B59FDC /* RSSitesDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF609B283A1D5F00B59FDC /* RSSitesDatabaseManager.swift */; };
 		ACDFA306282BDB5500B0D010 /* GYHTTPDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0607DB2829406600E642AF /* GYHTTPDataRequest.swift */; };
 		ACECED40283529B900547508 /* GYErrorDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECED3D283529B900547508 /* GYErrorDefinition.swift */; };
 		ACECED41283529B900547508 /* GYLogDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECED3E283529B900547508 /* GYLogDefinition.swift */; };
@@ -180,8 +180,8 @@
 		ACDDE65F282EC1E300EDA877 /* GYHTTPCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPCookie.swift; sourceTree = "<group>"; };
 		ACDE1A712837DCE500CE0C26 /* GYURLMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYURLMacro.swift; sourceTree = "<group>"; };
 		ACDE1A732837DE1200CE0C26 /* GYOpenPanelDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYOpenPanelDefinition.swift; sourceTree = "<group>"; };
-		ACDF6096283A185800B59FDC /* RSGigaTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSGigaTag.swift; sourceTree = "<group>"; };
 		ACDF6098283A187600B59FDC /* RSGigaWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSGigaWork.swift; sourceTree = "<group>"; };
+		ACDF609B283A1D5F00B59FDC /* RSSitesDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSitesDatabaseManager.swift; sourceTree = "<group>"; };
 		ACECED3D283529B900547508 /* GYErrorDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYErrorDefinition.swift; sourceTree = "<group>"; };
 		ACECED3E283529B900547508 /* GYLogDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYLogDefinition.swift; sourceTree = "<group>"; };
 		ACECED3F283529B900547508 /* GYFileDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYFileDefinition.swift; sourceTree = "<group>"; };
@@ -453,6 +453,7 @@
 				ACDDE65B282EB4EC00EDA877 /* RSAppManager.swift */,
 				ACD3288B282F5B08008F6D7E /* RSUIManager.swift */,
 				ACD32894282FABE6008F6D7E /* MenuItem */,
+				ACDF609A283A1D2D00B59FDC /* Databases */,
 			);
 			path = Universal;
 			sourceTree = "<group>";
@@ -522,10 +523,17 @@
 				ACDDE657282E9ED900EDA877 /* RSGigaTasks.swift */,
 				ACDDE655282E9EC800EDA877 /* RSGigaTagReq.swift */,
 				ACDDE653282E9EB600EDA877 /* RSGigaTagRsp.swift */,
-				ACDF6096283A185800B59FDC /* RSGigaTag.swift */,
 				ACDF6098283A187600B59FDC /* RSGigaWork.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		ACDF609A283A1D2D00B59FDC /* Databases */ = {
+			isa = PBXGroup;
+			children = (
+				ACDF609B283A1D5F00B59FDC /* RSSitesDatabaseManager.swift */,
+			);
+			path = Databases;
 			sourceTree = "<group>";
 		};
 		ACECED3C283529B900547508 /* Definitions */ = {
@@ -853,6 +861,7 @@
 				ACD3288C282F5B08008F6D7E /* RSUIManager.swift in Sources */,
 				ACD328A1282FF049008F6D7E /* GYOpenPanelConfigure.swift in Sources */,
 				AC0CA20C28225F2100C1268F /* GYHTTPServerTrustManager.swift in Sources */,
+				ACDF609C283A1D5F00B59FDC /* RSSitesDatabaseManager.swift in Sources */,
 				AC0722AA283A0F07008D8034 /* RSNyaaTagRsp.swift in Sources */,
 				AC0CA21828225F2100C1268F /* String+GYSubscript.swift in Sources */,
 				AC0CA21428225F2100C1268F /* GYHTTPBaseRequest.swift in Sources */,
@@ -861,7 +870,6 @@
 				ACECED8E28352CB000547508 /* String+GYExtension.swift in Sources */,
 				AC0CA1BD28225D8500C1268F /* ViewController.swift in Sources */,
 				AC0CA21328225F2100C1268F /* GYHTTPDataTask.swift in Sources */,
-				ACDF6097283A185800B59FDC /* RSGigaTag.swift in Sources */,
 				ACD328A5282FF6C4008F6D7E /* GYDownloadManager.swift in Sources */,
 				ACD328A7282FFDE1008F6D7E /* GYDownloadHolder.swift in Sources */,
 				AC0CA1BB28225D8500C1268F /* AppDelegate.swift in Sources */,

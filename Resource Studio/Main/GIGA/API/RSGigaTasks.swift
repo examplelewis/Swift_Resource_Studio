@@ -9,9 +9,9 @@ import Cocoa
 import hpple
 
 class RSGigaTasks: GYHTTPBaseTasks {
-    func fetchTagBy(tagID: Int, page: Int, callback: ((_ success: Bool, _ parser: TFHpple?) -> Void)?) {
+    func fetchTagBy(tagID: String, page: Int, callback: ((_ success: Bool, _ parser: TFHpple?) -> Void)?) {
         let req = RSGigaTagReq()
-        req.tagID = tagID
+        req.tagID = Int(tagID)!
         req.page = page
         
         send(req) { request, response in

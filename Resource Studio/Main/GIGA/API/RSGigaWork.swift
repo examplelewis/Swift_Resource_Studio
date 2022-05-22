@@ -9,8 +9,8 @@ import Cocoa
 
 class RSGigaWork: GYHTTPBaseModel {
     var tagName = ""
-    var workName = ""
-    var workURL = ""
-    var workImageURL = ""
+    var name = ""
+    var URL = ""
+    var imageURL = ""
     var time = ""
 }

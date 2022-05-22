@@ -14,7 +14,7 @@ protocol RSGigaTagFetcherDelegate: AnyObject {
 
 // 使用方法
 /**
- private var fetcher: RSGigaTagFetcher? = RSGigaTagFetcher(tagIDs: [366, 486])
+ private var fetcher: RSGigaTagFetcher? = RSGigaTagFetcher(tagIDs: ["31717", "92", "412", "353", "494", "481", "31691", "545", "30829", "31631", "31399", "30219", "30495", "227", "31624", "31710", "73", "31783", "31597", "487", "37", "31628", "31695", "31694", "232", "35", "31834", "30710", "32027", "31720", "31694", "459", "30600", "300", "201", "30629", "519", "30013", "30023", "30553", "31616", "363", "30300", "486", "96"])
  fetcher?.delegate = self
  fetcher?.start(isFirstTag: true)
  
@@ -29,15 +29,17 @@ class RSGigaTagFetcher {
     
     private let tasks = RSGigaTasks()
     
-    private var tagIDs: [Int] // 标签ID
+    private var tagIDs: [String] // 标签ID
     
     private var currentTag = "" // 当前标签内容
+    private var currentTagID = "" // 当前标签ID
     private var currentTotalPages = 0 // 当前标签一共多少页
     private var currentPage = 1 // 当前标签的页码，从1开始
     private var currentImageURLs: [String] = [] // 当前标签下的作品图片地址
+    private var currentWorks: [RSGigaWork] = [] // 当前标签下的作品
     
     // MARK: Initial
-    init(tagIDs: [Int]) {
+    init(tagIDs: [String]) {
         self.tagIDs = tagIDs
     }
     
@@ -51,6 +53,7 @@ class RSGigaTagFetcher {
         currentPage = 1
         currentTotalPages = 0
         currentImageURLs = []
+        currentWorks = []
         
         if tagIDs.count == 0 {
             // tagIDs 为空数组，说明抓取流程结束
@@ -58,26 +61,34 @@ class RSGigaTagFetcher {
             
             delegate?.gigaTagInfoFetcherDidFinish()
         } else {
-            let tagID = tagIDs.removeFirst()
-            _fetchSingleTagBy(tagID: tagID, isFirstPage: true)
+            currentTagID = tagIDs.removeFirst()
+            _fetchSingleTagBy(isFirstPage: true)
         }
     }
     
     // MARK: Fetch
-    private func _fetchSingleTagBy(tagID: Int, isFirstPage: Bool) {
+    private func _fetchSingleTagBy(isFirstPage: Bool) {
         // 如果不是第一页，那么 currentTotalPages 已经赋值了; 如果 currentPage > currentTotalPages，说明最后一页已经抓取完毕了
         if !isFirstPage && currentPage > currentTotalPages {
+            // 往数据库里存当前标签的数据
+            RSSitesDatabaseManager.shared.insertGiga(tag: currentTag, input: String(currentTagID), count: currentWorks.count)
+            RSSitesDatabaseManager.shared.insertGiga(works: currentWorks)
+            
             // 抓取下一个标签
             start(isFirstTag: false)
             
             return
         }
         
-        tasks.fetchTagBy(tagID: tagID, page: currentPage) { [weak self] (success, parser) in
+        tasks.fetchTagBy(tagID: currentTagID, page: currentPage) { [weak self] (success, parser) in
             if success {
                 // Componets
-                self!.currentTotalPages = self!._currentTotalPagesFrom(parser: parser!)
-                self!.currentTag = self!._currentTagFrom(parser: parser!)
+                if self!.currentTotalPages == 0 {
+                    self!.currentTotalPages = self!._currentTotalPagesFrom(parser: parser!)
+                }
+                if self!.currentTag.count == 0 {
+                    self!.currentTag = self!._currentTagFrom(parser: parser!)
+                }
                 self!.currentImageURLs.append(contentsOf: self!._currentImageURLsFrom(parser: parser!))
                 
                 // Log
@@ -95,7 +106,7 @@ class RSGigaTagFetcher {
             
             // 抓取下一页
             self!.currentPage += 1
-            self!._fetchSingleTagBy(tagID: tagID, isFirstPage: false)
+            self!._fetchSingleTagBy(isFirstPage: false)
         }
     }
     
@@ -184,42 +195,84 @@ class RSGigaTagFetcher {
         
         var imageURLs: [String] = []
         for div in divArray! {
-            var subElements: [TFHppleElement]? = div.children as? [TFHppleElement]
-            subElements = subElements?.filter({
-                if let classObj = $0.attributes["class"], let classString = classObj as? String {
-                    return classString == "search_sam_box"
-                } else {
-                    return false
-                }
-            })
-            guard subElements != nil, subElements!.count > 0 else {
+            guard let workImageURL = _workImageURLFrom(element: div) else {
+                continue
+            }
+            guard let (workName, workURL) = _workNameAndURLFrom(element: div) else {
                 continue
             }
             
-            let subElement = subElements!.first!
-            var textElements: [TFHppleElement]? = subElement.children as? [TFHppleElement]
-            textElements = textElements?.filter({ $0.isTextNode() && $0.content != nil && $0.content.contains("（") && $0.content.contains("）") })
-            guard textElements != nil, textElements!.count > 0 else {
-                continue
-            }
+            let work = RSGigaWork()
+            work.tagName = currentTag
+            work.name = workName
+            work.URL = workURL
+            work.imageURL = workImageURL
             
-            let textElement = textElements!.first!
-            var content = textElement.content!
-            content = content.replacingOccurrences(of: "（", with: "")
-            content = content.replacingOccurrences(of: "）", with: "")
-            content = content.replacingOccurrences(of: "\t", with: "")
-            content = content.replacingOccurrences(of: "\n", with: "")
-            content = content.replacingOccurrences(of: "\r", with: "")
-            content = content.replacingOccurrences(of: "　", with: "")
-            
-            let components = content.components(separatedBy: "-")
-            let series = components.first!
-            let number = components.last!
-            let url = String(format: "https://www.giga-web.jp/db_titles/%@/%@%@/pac_s.jpg", series.lowercased(), series.lowercased(), number)
-            
-            imageURLs.append(url)
+            imageURLs.append(workImageURL)
+            currentWorks.append(work)
         }
         
         return imageURLs
+    }
+    private func _workImageURLFrom(element: TFHppleElement) -> String? {
+        var subElements: [TFHppleElement]? = element.children as? [TFHppleElement]
+        subElements = subElements?.filter({
+            if let classObj = $0.attributes["class"], let classString = classObj as? String {
+                return classString == "search_sam_box"
+            } else {
+                return false
+            }
+        })
+        guard subElements != nil, subElements!.count > 0 else {
+            return nil
+        }
+        
+        let subElement = subElements!.first!
+        var textElements: [TFHppleElement]? = subElement.children as? [TFHppleElement]
+        textElements = textElements?.filter({ $0.isTextNode() && $0.content != nil && $0.content.contains("（") && $0.content.contains("）") })
+        guard textElements != nil, textElements!.count > 0 else {
+            return nil
+        }
+        
+        let textElement = textElements!.first!
+        var content = textElement.content!
+        content = content.replacingOccurrences(of: "（", with: "")
+        content = content.replacingOccurrences(of: "）", with: "")
+        content = content.replacingOccurrences(of: "\t", with: "")
+        content = content.replacingOccurrences(of: "\n", with: "")
+        content = content.replacingOccurrences(of: "\r", with: "")
+        content = content.replacingOccurrences(of: "　", with: "")
+        
+        let components = content.components(separatedBy: "-")
+        let series = components.first!
+        let number = components.last!
+        
+        return String(format: "https://www.giga-web.jp/db_titles/%@/%@%@/pac_s.jpg", series.lowercased(), series.lowercased(), number)
+    }
+    private func _workNameAndURLFrom(element: TFHppleElement) -> (String, String)? {
+        var subElements: [TFHppleElement]? = element.children as? [TFHppleElement]
+        subElements = subElements?.filter({
+            if let classObj = $0.attributes["class"], let classString = classObj as? String {
+                return classString == "search_sam_box"
+            } else {
+                return false
+            }
+        })
+        guard subElements != nil, subElements!.count > 0 else {
+            return nil
+        }
+        
+        let subElement = subElements!.first!
+        var aElements: [TFHppleElement]? = subElement.children as? [TFHppleElement]
+        aElements = aElements?.filter({ $0.attributes.keys.contains("href") })
+        guard aElements != nil, aElements!.count > 0 else {
+            return nil
+        }
+        
+        let aElement = aElements!.first!
+        let URL = String(format: "https://www.giga-web.jp/%@", aElement.attributes["href"] as! String)
+        let name = aElement.firstChild.firstTextChild().content!
+        
+        return (URL, name)
     }
 }
