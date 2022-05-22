@@ -15,6 +15,7 @@ protocol RSGigaTagInfoFetcherDelegate: AnyObject {
 // 使用方法
 /**
  private var fetcher: RSGigaTagInfoFetcher? = RSGigaTagInfoFetcher(tagIDs: [366, 486])
+ fetcher?.delegate = self
  fetcher?.start(isFirstTag: true)
  
  // MARK: RSGigaTagInfoFetcherDelegate
@@ -45,6 +46,7 @@ class RSGigaTagInfoFetcher {
             GYLogManager.shared.addDefaultLog(format: "抓取 GIGA 官网标签数据, 流程开始")
         }
         
+        // 抓取新的标签，需要清空记录
         currentTag = ""
         currentPage = 1
         currentTotalPages = 0
@@ -56,7 +58,6 @@ class RSGigaTagInfoFetcher {
             
             delegate?.gigaTagInfoFetcherDidFinish()
         } else {
-            // 抓取新的标签，需要清空记录
             let tagID = tagIDs.removeFirst()
             _fetchSingleTagBy(tagID: tagID, isFirstPage: true)
         }
