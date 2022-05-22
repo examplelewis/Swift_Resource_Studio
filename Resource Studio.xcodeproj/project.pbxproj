@@ -506,12 +506,20 @@
 			isa = PBXGroup;
 			children = (
 				ACD3289B282FCA2A008F6D7E /* RSGigaTagInfoFetcher.swift */,
+				ACD328A828300109008F6D7E /* RSGigaTool.swift */,
+				ACDF6095283A182F00B59FDC /* API */,
+			);
+			path = GIGA;
+			sourceTree = "<group>";
+		};
+		ACDF6095283A182F00B59FDC /* API */ = {
+			isa = PBXGroup;
+			children = (
 				ACDDE657282E9ED900EDA877 /* RSGigaTasks.swift */,
 				ACDDE655282E9EC800EDA877 /* RSGigaTagReq.swift */,
 				ACDDE653282E9EB600EDA877 /* RSGigaTagRsp.swift */,
-				ACD328A828300109008F6D7E /* RSGigaTool.swift */,
 			);
-			path = GIGA;
+			path = API;
 			sourceTree = "<group>";
 		};
 		ACECED3C283529B900547508 /* Definitions */ = {
