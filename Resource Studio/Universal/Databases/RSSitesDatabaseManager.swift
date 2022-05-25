@@ -89,4 +89,57 @@ class RSSitesDatabaseManager {
         
         GYLogManager.shared.addDefaultLog(format: "已向 nyaa_works 添加 %ld 条数据", works.count)
     }
+    // 更新 nyaa work 的下载状态
+    func updateNyaaWorkBy(magnet: String, for state: Int) {
+        var workID = -1
+        queue.inDatabase { db in
+            let sql = String(format: "select id from nyaa_works where work_magnet like '%%%@%%'", magnet)
+            let rs = try? db.executeQuery(sql, values: nil)
+            if rs != nil {
+                while rs!.next() {
+                    workID = Int(rs!.int(forColumn: "id"))
+                }
+            }
+            
+            rs?.close()
+        }
+        
+        if workID == -1 {
+            GYLogManager.shared.addWarningLog(format: "未找到包含链接: %@ 的作品", magnet)
+        } else if let stateDesc = _nyaaWorkStateDescBy(state: state) {
+            queue.inDatabase { db in
+                let sql = String(format: "UPDATE nyaa_works set state = %ld, state_desc = '%@' where id = %ld", state, stateDesc, workID)
+                let success = db.executeUpdate(sql, withArgumentsIn: [])
+                
+                if success {
+                    GYLogManager.shared.addSuccessLog(format: "已将包含链接: %@ 的作品标记为【%@】", magnet, stateDesc)
+                } else {
+                    GYLogManager.shared.addErrorLog(format: "将包含链接: %@ 的作品标记为【%@】时出现错误: %@", magnet, stateDesc, db.lastErrorMessage())
+                }
+            }
+        } else {
+            GYLogManager.shared.addErrorLog(format: "输入的状态 %ld 有误，无法找到对应描述", state)
+        }
+    }
+}
+
+extension RSSitesDatabaseManager {
+    public func _nyaaWorkStateDescBy(state: Int) -> String? {
+        switch state {
+        case -10:
+            return "这是合集，暂时不下载"
+        case -5:
+            return "迅雷违规，无法下载"
+        case 0:
+            return "待下载"
+        case 1:
+            return "正在下载"
+        case 89:
+            return "与已下载的重复，不下载"
+        case 99:
+            return "已下载"
+        default:
+            return nil
+        }
+    }
 }
