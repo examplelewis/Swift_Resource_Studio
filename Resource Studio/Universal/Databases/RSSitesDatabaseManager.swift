@@ -124,7 +124,7 @@ class RSSitesDatabaseManager {
 }
 
 extension RSSitesDatabaseManager {
-    public func _nyaaWorkStateDescBy(state: Int) -> String? {
+    fileprivate func _nyaaWorkStateDescBy(state: Int) -> String? {
         switch state {
         case -10:
             return "这是合集，暂时不下载"
