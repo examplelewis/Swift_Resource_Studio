@@ -15,7 +15,7 @@ class RSAppManager {
     
     // MARK: Setup
     func setup() {
-        GYBase.shared.mainFolderPath = "/Users/Mercury/SynologyDrive/同步文档/Resource Studio"
+        GYBase.shared.mainFolderPath = "/Users/Mercury/SynologyDrive/同步文档/App Data/Resource Studio"
         
         GYLogManager.shared.update(defaultColor: NSColor.labelColor, successColor: NSColor.systemGreen, warningColor: NSColor.systemYellow, errorColor: NSColor.systemRed, font: NSFont(name: "PingFangSC-Regular", size: 12.0)!)
     }
