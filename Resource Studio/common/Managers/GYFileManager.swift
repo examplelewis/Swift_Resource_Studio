@@ -46,19 +46,19 @@ class GYFileManager {
     }
     @discardableResult
     static func trashItem(atURL itemURL: URL, resultItemURL: inout NSURL?) -> Bool {
-        var desc: String?
         do {
             try FileManager.default.trashItem(at: itemURL, resultingItemURL: &resultItemURL)
-        } catch {
-            desc = error.localizedDescription
-        }
-        
-        if desc == nil {
             GYLogManager.shared.addDefaultLog(format: "%@ 已经被移动到废纸篓", itemURL.lastPathComponent)
             return true
-        } else {
-            GYLogManager.shared.addErrorLog(format: "移动文件 %@ 到废纸篓时发生错误: %@", itemURL.lastPathComponent, desc!)
-            return false
+        } catch {
+            if itemURL.absoluteString.hasPrefix("file:///Volumes/") {
+                // 如果是群晖里面的文件夹，那么直接删除
+                removeItem(atURL: itemURL)
+                return true
+            } else {
+                GYLogManager.shared.addErrorLog(format: "移动文件 %@ 到废纸篓时发生错误: %@", itemURL.lastPathComponent, error.localizedDescription)
+                return false
+            }
         }
     }
     static func trashItem(atURL itemURL: URL, resultingItemURL: inout NSURL?) throws {
