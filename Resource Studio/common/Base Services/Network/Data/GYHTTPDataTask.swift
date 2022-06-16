@@ -11,9 +11,9 @@ protocol GYHTTPDataDaskDelegate: AnyObject {
     func dataTaskDidFinished(_ dataTask: GYHTTPDataTask)
 }
 
-typealias GYHTTPSuccessBlock = (GYHTTPRequestProtocol, GYHTTPResponseProtocol) -> Void
-typealias GYHTTPFailureBlock = (GYHTTPRequestProtocol, Error) -> Void
-typealias GYHTTPCancelBlock = (GYHTTPRequestProtocol) -> Void
+typealias GYHTTPSuccessBlock = (_ request: GYHTTPRequestProtocol, _ response: GYHTTPResponseProtocol) -> Void
+typealias GYHTTPFailureBlock = (_ request: GYHTTPRequestProtocol, _ response: Error) -> Void
+typealias GYHTTPCancelBlock = (_ request: GYHTTPRequestProtocol) -> Void
 
 // 遵循 Comparable 协议是为了可以在数组中调用 .contains() 之类的方法
 class GYHTTPDataTask: Comparable {
