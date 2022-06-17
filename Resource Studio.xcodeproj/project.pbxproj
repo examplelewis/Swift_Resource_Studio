@@ -18,6 +18,9 @@
 		AC0722AA283A0F07008D8034 /* RSNyaaTagRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0722A9283A0F07008D8034 /* RSNyaaTagRsp.swift */; };
 		AC0722AC283A0F15008D8034 /* RSNyaaTagReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0722AB283A0F15008D8034 /* RSNyaaTagReq.swift */; };
 		AC0722AE283A0F22008D8034 /* RSNyaaTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0722AD283A0F22008D8034 /* RSNyaaTasks.swift */; };
+		AC0C71532848E0A700C9985B /* RSSitesRule34Req.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0C71522848E0A700C9985B /* RSSitesRule34Req.swift */; };
+		AC0C71552848E0B400C9985B /* RSSitesRule34Rsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0C71542848E0B400C9985B /* RSSitesRule34Rsp.swift */; };
+		AC0C71572848E0C300C9985B /* RSSitesRule34Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0C71562848E0C300C9985B /* RSSitesRule34Tasks.swift */; };
 		AC0CA1BB28225D8500C1268F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1BA28225D8500C1268F /* AppDelegate.swift */; };
 		AC0CA1BD28225D8500C1268F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA1BC28225D8500C1268F /* ViewController.swift */; };
 		AC0CA1BF28225D8600C1268F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC0CA1BE28225D8600C1268F /* Assets.xcassets */; };
@@ -128,6 +131,9 @@
 		AC0722A9283A0F07008D8034 /* RSNyaaTagRsp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNyaaTagRsp.swift; sourceTree = "<group>"; };
 		AC0722AB283A0F15008D8034 /* RSNyaaTagReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNyaaTagReq.swift; sourceTree = "<group>"; };
 		AC0722AD283A0F22008D8034 /* RSNyaaTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNyaaTasks.swift; sourceTree = "<group>"; };
+		AC0C71522848E0A700C9985B /* RSSitesRule34Req.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSitesRule34Req.swift; sourceTree = "<group>"; };
+		AC0C71542848E0B400C9985B /* RSSitesRule34Rsp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSitesRule34Rsp.swift; sourceTree = "<group>"; };
+		AC0C71562848E0C300C9985B /* RSSitesRule34Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSitesRule34Tasks.swift; sourceTree = "<group>"; };
 		AC0CA1B728225D8500C1268F /* Resource Studio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Resource Studio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC0CA1BA28225D8500C1268F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC0CA1BC28225D8500C1268F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -296,6 +302,16 @@
 				ACDF609F283A443900B59FDC /* RSNyaaWork.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		AC0C71512848E08500C9985B /* Sites */ = {
+			isa = PBXGroup;
+			children = (
+				AC0C71562848E0C300C9985B /* RSSitesRule34Tasks.swift */,
+				AC0C71522848E0A700C9985B /* RSSitesRule34Req.swift */,
+				AC0C71542848E0B400C9985B /* RSSitesRule34Rsp.swift */,
+			);
+			path = Sites;
 			sourceTree = "<group>";
 		};
 		AC0CA1AE28225D8500C1268F = {
@@ -515,6 +531,7 @@
 		ACDDE64A282E9AED00EDA877 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				AC0C71512848E08500C9985B /* Sites */,
 				AC0722A5283A0EB1008D8034 /* Nyaa */,
 				AC03B4D328388AA200409AB3 /* JavLibrary */,
 				ACDDE64B282E9B0100EDA877 /* GIGA */,
@@ -851,6 +868,8 @@
 				ACECED41283529B900547508 /* GYLogDefinition.swift in Sources */,
 				AC0CA20628225F2100C1268F /* GYLogManager.swift in Sources */,
 				AC0CA20E28225F2100C1268F /* GYHTTPRequestAdapter.swift in Sources */,
+				AC0C71552848E0B400C9985B /* RSSitesRule34Rsp.swift in Sources */,
+				AC0C71572848E0C300C9985B /* RSSitesRule34Tasks.swift in Sources */,
 				ACFD9C802833EBCB00306D98 /* GYStringMacro.swift in Sources */,
 				ACECED8A28352CB000547508 /* NSError+GYExtension.swift in Sources */,
 				AC03B4D528388C0F00409AB3 /* RSJavLibraryActorReq.swift in Sources */,
@@ -863,6 +882,7 @@
 				ACD3289A282FB33F008F6D7E /* WindowController.swift in Sources */,
 				AC0CA20A28225F2100C1268F /* GYFileManager.swift in Sources */,
 				ACDDE654282E9EB600EDA877 /* RSGigaTagRsp.swift in Sources */,
+				AC0C71532848E0A700C9985B /* RSSitesRule34Req.swift in Sources */,
 				ACFD9C7E2833EA6800306D98 /* GYJSONMacro.swift in Sources */,
 				AC0722AC283A0F15008D8034 /* RSNyaaTagReq.swift in Sources */,
 				AC03B4D928388C3100409AB3 /* RSJavLibraryTasks.swift in Sources */,
