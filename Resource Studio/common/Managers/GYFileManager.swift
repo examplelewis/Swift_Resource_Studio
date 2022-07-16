@@ -109,6 +109,7 @@ class GYFileManager {
         }
         
         itemPaths = filteredReturned(itemPaths: itemPaths) // 先过滤文件名
+        itemPaths = itemPaths.sorted(by: { $0.localizedStandardCompare($1) == .orderedAscending }) // 使用本地的(macOS Finder 自带的)排序方法
         itemPaths = itemPaths.compactMap({ (folderPath as NSString).appendingPathComponent($0) }) // 变成完整路径
         itemPaths = itemPaths.filter({ !itemIsFolder(atPath: $0) }) // 过滤掉文件夹
         
@@ -135,6 +136,7 @@ class GYFileManager {
         }
         
         itemPaths = filteredReturned(itemPaths: itemPaths) // 先过滤文件名
+        itemPaths = itemPaths.sorted(by: { $0.localizedStandardCompare($1) == .orderedAscending }) // 使用本地的(macOS Finder 自带的)排序方法
         itemPaths = itemPaths.compactMap({ (folderPath as NSString).appendingPathComponent($0) }) // 变成完整路径
         itemPaths = itemPaths.filter({ itemIsFolder(atPath: $0) }) // 过滤掉非文件夹
         
@@ -147,6 +149,7 @@ class GYFileManager {
         }
         
         itemPaths = filteredReturned(itemPaths: itemPaths) // 先过滤文件名
+        itemPaths = itemPaths.sorted(by: { $0.localizedStandardCompare($1) == .orderedAscending }) // 使用本地的(macOS Finder 自带的)排序方法
         itemPaths = itemPaths.compactMap({ (folderPath as NSString).appendingPathComponent($0) }) // 变成完整路径
         
         return itemPaths
@@ -158,6 +161,7 @@ class GYFileManager {
         }
         
         itemPaths = filteredReturnedHidden(itemPaths: itemPaths) // 先过滤文件名
+        itemPaths = itemPaths.sorted(by: { $0.localizedStandardCompare($1) == .orderedAscending }) // 使用本地的(macOS Finder 自带的)排序方法
         itemPaths = itemPaths.compactMap({ (folderPath as NSString).appendingPathComponent($0) }) // 变成完整路径
         
         return itemPaths
@@ -171,6 +175,7 @@ class GYFileManager {
         }
         
         itemPaths = filteredReturned(itemPaths: itemPaths) // 先过滤文件名
+        itemPaths = itemPaths.sorted(by: { $0.localizedStandardCompare($1) == .orderedAscending }) // 使用本地的(macOS Finder 自带的)排序方法
         itemPaths = itemPaths.compactMap({ (folderPath as NSString).appendingPathComponent($0) }) // 变成完整路径
         itemPaths = itemPaths.filter({ !itemIsFolder(atPath: $0) }) // 过滤掉文件夹
         
@@ -197,6 +202,7 @@ class GYFileManager {
         }
         
         itemPaths = filteredReturned(itemPaths: itemPaths) // 先过滤文件名
+        itemPaths = itemPaths.sorted(by: { $0.localizedStandardCompare($1) == .orderedAscending }) // 使用本地的(macOS Finder 自带的)排序方法
         itemPaths = itemPaths.compactMap({ (folderPath as NSString).appendingPathComponent($0) }) // 变成完整路径
         itemPaths = itemPaths.filter({ itemIsFolder(atPath: $0) }) // 过滤掉非文件夹
         
@@ -209,6 +215,7 @@ class GYFileManager {
         }
         
         itemPaths = filteredReturned(itemPaths: itemPaths) // 先过滤文件名
+        itemPaths = itemPaths.sorted(by: { $0.localizedStandardCompare($1) == .orderedAscending }) // 使用本地的(macOS Finder 自带的)排序方法
         itemPaths = itemPaths.compactMap({ (folderPath as NSString).appendingPathComponent($0) }) // 变成完整路径
         
         return itemPaths
@@ -220,6 +227,7 @@ class GYFileManager {
         }
         
         itemPaths = filteredReturnedHidden(itemPaths: itemPaths) // 先过滤文件名
+        itemPaths = itemPaths.sorted(by: { $0.localizedStandardCompare($1) == .orderedAscending }) // 使用本地的(macOS Finder 自带的)排序方法
         itemPaths = itemPaths.compactMap({ (folderPath as NSString).appendingPathComponent($0) }) // 变成完整路径
         
         return itemPaths
