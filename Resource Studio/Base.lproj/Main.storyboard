@@ -666,16 +666,16 @@
                                                             <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="vqa-AF-hgk"/>
                                                         </connections>
                                                     </menuItem>
-                                                    <menuItem title="下载单个图包的图片 [图包页面地址] [不走数据库]" tag="1050002" id="LF6-31-Aeb">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="Fnt-OE-MJp"/>
-                                                        </connections>
-                                                    </menuItem>
                                                     <menuItem title="下载多个图片 [图片页面地址]" tag="1050003" id="X34-yU-y2Q">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
                                                             <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="L0P-NM-LnR"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="下载单个图包的图片 [图包页面地址] [不走数据库]" tag="1050002" id="LF6-31-Aeb">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="Fnt-OE-MJp"/>
                                                         </connections>
                                                     </menuItem>
                                                     <menuItem title="获取多个图包的种子文件 [图包页面地址]" tag="1050004" id="sN6-tF-odr">
@@ -875,7 +875,7 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="-56"/>
+            <point key="canvasLocation" x="20" y="-86"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -884,9 +884,9 @@
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="1024" height="664"/>
+                        <rect key="contentRect" x="196" y="240" width="1280" height="744"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <value key="minSize" type="size" width="1024" height="596"/>
+                        <value key="minSize" type="size" width="1280" height="744"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -897,38 +897,46 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="347" y="382"/>
+            <point key="canvasLocation" x="475" y="399"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Resource_Studio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="640"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1280" height="720"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tgh-f1-8pN">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="640"/>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aaK-c2-b3T">
+                                <rect key="frame" x="960" y="0.0" width="320" height="720"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6hg-Yw-huI">
+                                <rect key="frame" x="480" y="0.0" width="320" height="720"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aLx-0d-8n7">
-                                        <rect key="frame" x="17" y="596" width="105" height="25"/>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7dA-9K-knN">
+                                        <rect key="frame" x="134" y="673" width="61" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="OPm-Se-oOP" id="p8q-or-lxl">
-                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="menu"/>
-                                            <menu key="menu" id="UkN-FV-Odh">
-                                                <items>
-                                                    <menuItem title="Item 1" state="on" id="OPm-Se-oOP"/>
-                                                    <menuItem title="Item 2" id="7EQ-gH-L3p"/>
-                                                    <menuItem title="Item 3" id="KG6-Qq-Wus"/>
-                                                </items>
-                                            </menu>
-                                        </popUpButtonCell>
-                                    </popUpButton>
-                                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jm3-DA-S6H">
-                                        <rect key="frame" x="17" y="550" width="172" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="临时" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3a8-QC-Otb">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="tempButtonDidPress:" target="XfG-lQ-9wD" id="4vh-vc-znE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </customView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="tgh-f1-8pN">
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="720"/>
+                                <subviews>
+                                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jm3-DA-S6H">
+                                        <rect key="frame" x="167" y="676" width="137" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="G1M-Xg-4Vq"/>
+                                            <constraint firstAttribute="width" constant="130" id="aJf-AS-dnk"/>
+                                        </constraints>
                                         <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="8gE-0g-58Z" id="r3K-sF-lre">
                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="menu"/>
@@ -941,9 +949,26 @@
                                             </menu>
                                         </popUpButtonCell>
                                     </popUpButton>
-                                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RtY-A3-lQ6">
-                                        <rect key="frame" x="17" y="503" width="172" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aLx-0d-8n7">
+                                        <rect key="frame" x="17" y="676" width="137" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="QKY-ZJ-QE5"/>
+                                            <constraint firstAttribute="height" constant="20" id="ofe-n0-VxP"/>
+                                        </constraints>
+                                        <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="OPm-Se-oOP" id="p8q-or-lxl">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="menu"/>
+                                            <menu key="menu" id="UkN-FV-Odh">
+                                                <items>
+                                                    <menuItem title="Item 1" state="on" id="OPm-Se-oOP"/>
+                                                    <menuItem title="Item 2" id="7EQ-gH-L3p"/>
+                                                    <menuItem title="Item 3" id="KG6-Qq-Wus"/>
+                                                </items>
+                                            </menu>
+                                        </popUpButtonCell>
+                                    </popUpButton>
+                                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RtY-A3-lQ6">
+                                        <rect key="frame" x="17" y="636" width="287" height="25"/>
                                         <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="yhe-tf-UAg" id="5y2-x1-vZg">
                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="menu"/>
@@ -956,35 +981,37 @@
                                             </menu>
                                         </popUpButtonCell>
                                     </popUpButton>
-                                </subviews>
-                            </customView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aaK-c2-b3T">
-                                <rect key="frame" x="704" y="0.0" width="320" height="640"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </customView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6hg-Yw-huI">
-                                <rect key="frame" x="352" y="0.0" width="320" height="640"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <subviews>
-                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7dA-9K-knN">
-                                        <rect key="frame" x="134" y="593" width="61" height="32"/>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zv8-2y-tFw">
+                                        <rect key="frame" x="320" y="640" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="push" title="临时" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3a8-QC-Otb">
+                                        <buttonCell key="cell" type="square" title="开始" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Wcf-uv-DA3">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
-                                        <connections>
-                                            <action selector="tempButtonDidPress:" target="XfG-lQ-9wD" id="4vh-vc-znE"/>
-                                        </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="RtY-A3-lQ6" firstAttribute="leading" secondItem="tgh-f1-8pN" secondAttribute="leading" constant="20" symbolic="YES" id="MXN-Ib-OUE"/>
+                                    <constraint firstItem="RtY-A3-lQ6" firstAttribute="trailing" secondItem="jm3-DA-S6H" secondAttribute="trailing" id="Moh-Cf-IgU"/>
+                                    <constraint firstItem="RtY-A3-lQ6" firstAttribute="top" secondItem="jm3-DA-S6H" secondAttribute="bottom" constant="20" id="R7L-K8-o1F"/>
+                                    <constraint firstItem="aLx-0d-8n7" firstAttribute="top" secondItem="tgh-f1-8pN" secondAttribute="top" constant="20" symbolic="YES" id="b4B-OY-xJe"/>
+                                    <constraint firstAttribute="width" constant="400" id="ddH-5u-I7g"/>
+                                    <constraint firstItem="aLx-0d-8n7" firstAttribute="leading" secondItem="tgh-f1-8pN" secondAttribute="leading" constant="20" symbolic="YES" id="h1T-Mw-tm4"/>
+                                    <constraint firstItem="jm3-DA-S6H" firstAttribute="leading" secondItem="aLx-0d-8n7" secondAttribute="trailing" constant="20" id="sPc-24-Wn6"/>
+                                    <constraint firstItem="jm3-DA-S6H" firstAttribute="top" secondItem="tgh-f1-8pN" secondAttribute="top" constant="20" symbolic="YES" id="ysI-MB-ql9"/>
+                                </constraints>
                             </customView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="tgh-f1-8pN" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="E5R-1k-5j5"/>
+                            <constraint firstItem="tgh-f1-8pN" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="eGZ-Ch-lvF"/>
+                            <constraint firstAttribute="bottom" secondItem="tgh-f1-8pN" secondAttribute="bottom" id="yvP-E8-gro"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="347" y="1161"/>
+            <point key="canvasLocation" x="475" y="1270"/>
         </scene>
     </scenes>
 </document>
