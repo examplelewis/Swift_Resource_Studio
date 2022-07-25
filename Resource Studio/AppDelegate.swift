@@ -51,8 +51,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         logFilePaths = logFilePaths.sorted(by: { $0 > $1 })
         
         if logFilePaths.count == 0 || !NSWorkspace.shared.open(URL(fileURLWithPath: logFilePaths.first!)) {
-//            GYAlertConfigure *configure = [GYAlertConfigure criticalConfigureWithMessage:@"打开日志文件时发生错误，打开失败" info:nil];
-//            [GYAlertManager showAlertOnMainWindowWithConfigure:configure handler:nil];
+            let configure = GYAlertConfigure.criticalConfigure(withMessage: "打开日志文件时发生错误，打开失败")
+            GYAlertManager.showAlertOnMainWindow(withConfigure: configure)
         }
     }
     @IBAction func openPreferenceMenuItemDidPress(_ sender: NSMenuItem) {

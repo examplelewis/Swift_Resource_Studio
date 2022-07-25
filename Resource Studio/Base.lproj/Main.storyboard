@@ -908,7 +908,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tgh-f1-8pN">
-                                <rect key="frame" x="0.0" y="0.0" width="339" height="640"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="640"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aLx-0d-8n7">
@@ -959,11 +959,11 @@
                                 </subviews>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aaK-c2-b3T">
-                                <rect key="frame" x="700" y="0.0" width="324" height="640"/>
+                                <rect key="frame" x="704" y="0.0" width="320" height="640"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6hg-Yw-huI">
-                                <rect key="frame" x="365" y="0.0" width="313" height="640"/>
+                                <rect key="frame" x="352" y="0.0" width="320" height="640"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7dA-9K-knN">

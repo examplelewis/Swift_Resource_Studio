@@ -8,11 +8,10 @@
 import Cocoa
 
 class WindowController: NSWindowController {
-
+    // MARK: Lifecycle
     override func windowDidLoad() {
         super.windowDidLoad()
     
         RSUIManager.shared.windowController = self
     }
-
 }
