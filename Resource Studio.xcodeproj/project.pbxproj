@@ -10,6 +10,9 @@
 		92C9D1CE5A038F292150475F /* Pods_Resource_Studio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F24121A3FE890F4DA7B4688 /* Pods_Resource_Studio.framework */; };
 		A8A7003F2888DFD000276414 /* GYAlertConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7003E2888DFD000276414 /* GYAlertConfigure.swift */; };
 		A8A700412888E27900276414 /* GYAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A700402888E27900276414 /* GYAlertManager.swift */; };
+		A8A700432888F03B00276414 /* GYModalWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A700422888F03B00276414 /* GYModalWindowController.swift */; };
+		A8A7004C2888FBFD00276414 /* GYWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7004B2888FBFD00276414 /* GYWindowManager.swift */; };
+		A8A700522888FC7F00276414 /* GYWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A700512888FC7F00276414 /* GYWindowController.swift */; };
 		A8E8F5CF2887D715008A0C00 /* GYAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E8F5CE2887D715008A0C00 /* GYAlert.swift */; };
 		AC0167E328328D4F000E4C61 /* Array+GYSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0167E228328D4F000E4C61 /* Array+GYSubscript.swift */; };
 		AC03B4D528388C0F00409AB3 /* RSJavLibraryActorReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4D428388C0F00409AB3 /* RSJavLibraryActorReq.swift */; };
@@ -125,6 +128,9 @@
 		0F24121A3FE890F4DA7B4688 /* Pods_Resource_Studio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resource_Studio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A7003E2888DFD000276414 /* GYAlertConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYAlertConfigure.swift; sourceTree = "<group>"; };
 		A8A700402888E27900276414 /* GYAlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYAlertManager.swift; sourceTree = "<group>"; };
+		A8A700422888F03B00276414 /* GYModalWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYModalWindowController.swift; sourceTree = "<group>"; };
+		A8A7004B2888FBFD00276414 /* GYWindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYWindowManager.swift; sourceTree = "<group>"; };
+		A8A700512888FC7F00276414 /* GYWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYWindowController.swift; sourceTree = "<group>"; };
 		A8E8F5CE2887D715008A0C00 /* GYAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYAlert.swift; sourceTree = "<group>"; };
 		AC0167E228328D4F000E4C61 /* Array+GYSubscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+GYSubscript.swift"; sourceTree = "<group>"; };
 		AC03B4D428388C0F00409AB3 /* RSJavLibraryActorReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSJavLibraryActorReq.swift; sourceTree = "<group>"; };
@@ -668,6 +674,9 @@
 		ACFF139128280A28003B7118 /* Window */ = {
 			isa = PBXGroup;
 			children = (
+				A8A700422888F03B00276414 /* GYModalWindowController.swift */,
+				A8A700512888FC7F00276414 /* GYWindowController.swift */,
+				A8A7004B2888FBFD00276414 /* GYWindowManager.swift */,
 			);
 			path = Window;
 			sourceTree = "<group>";
@@ -866,6 +875,7 @@
 				AC0722A7283A0ED8008D8034 /* RSNyaaTagFetcher.swift in Sources */,
 				ACD32880282F4947008F6D7E /* GYBase.swift in Sources */,
 				ACDAE63B282D4ED20042F54E /* GYBaseMacro.swift in Sources */,
+				A8A700432888F03B00276414 /* GYModalWindowController.swift in Sources */,
 				ACDDE658282E9ED900EDA877 /* RSGigaTasks.swift in Sources */,
 				AC0CA21228225F2100C1268F /* GYHTTPBaseTasks.swift in Sources */,
 				ACFD9C8B2833F1C400306D98 /* GYConsts+macOS.swift in Sources */,
@@ -877,6 +887,7 @@
 				A8A700412888E27900276414 /* GYAlertManager.swift in Sources */,
 				ACECED41283529B900547508 /* GYLogDefinition.swift in Sources */,
 				AC0CA20628225F2100C1268F /* GYLogManager.swift in Sources */,
+				A8A700522888FC7F00276414 /* GYWindowController.swift in Sources */,
 				AC0CA20E28225F2100C1268F /* GYHTTPRequestAdapter.swift in Sources */,
 				AC0C71552848E0B400C9985B /* RSSitesRule34Rsp.swift in Sources */,
 				AC0C71572848E0C300C9985B /* RSSitesRule34Tasks.swift in Sources */,
@@ -925,6 +936,7 @@
 				AC0CA21328225F2100C1268F /* GYHTTPDataTask.swift in Sources */,
 				ACD328A5282FF6C4008F6D7E /* GYDownloadManager.swift in Sources */,
 				ACD328A7282FFDE1008F6D7E /* GYDownloadHolder.swift in Sources */,
+				A8A7004C2888FBFD00276414 /* GYWindowManager.swift in Sources */,
 				AC0CA1BB28225D8500C1268F /* AppDelegate.swift in Sources */,
 				ACD3289E282FF025008F6D7E /* GYBase+macOS.swift in Sources */,
 				ACFC6CA0282C0AC400AC0EE8 /* GYOperators.swift in Sources */,
