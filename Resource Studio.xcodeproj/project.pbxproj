@@ -13,6 +13,7 @@
 		A8A700432888F03B00276414 /* GYModalWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A700422888F03B00276414 /* GYModalWindowController.swift */; };
 		A8A7004C2888FBFD00276414 /* GYWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7004B2888FBFD00276414 /* GYWindowManager.swift */; };
 		A8A700522888FC7F00276414 /* GYWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A700512888FC7F00276414 /* GYWindowController.swift */; };
+		A8A70056288901F800276414 /* GYDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A70055288901F800276414 /* GYDeviceManager.swift */; };
 		A8E8F5CF2887D715008A0C00 /* GYAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E8F5CE2887D715008A0C00 /* GYAlert.swift */; };
 		AC0167E328328D4F000E4C61 /* Array+GYSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0167E228328D4F000E4C61 /* Array+GYSubscript.swift */; };
 		AC03B4D528388C0F00409AB3 /* RSJavLibraryActorReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4D428388C0F00409AB3 /* RSJavLibraryActorReq.swift */; };
@@ -131,6 +132,7 @@
 		A8A700422888F03B00276414 /* GYModalWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYModalWindowController.swift; sourceTree = "<group>"; };
 		A8A7004B2888FBFD00276414 /* GYWindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYWindowManager.swift; sourceTree = "<group>"; };
 		A8A700512888FC7F00276414 /* GYWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYWindowController.swift; sourceTree = "<group>"; };
+		A8A70055288901F800276414 /* GYDeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYDeviceManager.swift; sourceTree = "<group>"; };
 		A8E8F5CE2887D715008A0C00 /* GYAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYAlert.swift; sourceTree = "<group>"; };
 		AC0167E228328D4F000E4C61 /* Array+GYSubscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+GYSubscript.swift"; sourceTree = "<group>"; };
 		AC03B4D428388C0F00409AB3 /* RSJavLibraryActorReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSJavLibraryActorReq.swift; sourceTree = "<group>"; };
@@ -264,6 +266,14 @@
 				0F24121A3FE890F4DA7B4688 /* Pods_Resource_Studio.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8A70054288901E100276414 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A8A70055288901F800276414 /* GYDeviceManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		AC03B4D328388AA200409AB3 /* JavLibrary */ = {
@@ -619,7 +629,7 @@
 				ACD3289F282FF029008F6D7E /* Base */,
 				ACFF138C282809DE003B7118 /* Base Services */,
 				ACFF138D282809F0003B7118 /* Extensions */,
-				ACFF138E282809FA003B7118 /* Managers */,
+				A8A70054288901E100276414 /* Managers */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -643,13 +653,6 @@
 				ACF1378F285C5ECB001706A8 /* GYUIManager+macOS.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		ACFF138E282809FA003B7118 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		ACFF138F28280A1B003B7118 /* Alert */ = {
@@ -898,6 +901,7 @@
 				ACF137A8285C791C001706A8 /* GYColorMacros+macOS.swift in Sources */,
 				ACDDE656282E9EC800EDA877 /* RSGigaTagReq.swift in Sources */,
 				AC0722AE283A0F22008D8034 /* RSNyaaTasks.swift in Sources */,
+				A8A70056288901F800276414 /* GYDeviceManager.swift in Sources */,
 				ACD32898282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift in Sources */,
 				AC0CA20828225F2100C1268F /* GYLog.swift in Sources */,
 				ACD3289A282FB33F008F6D7E /* WindowController.swift in Sources */,
