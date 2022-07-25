@@ -16,6 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     // MARK: NSApplicationDelegate
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        setupNotifications()
         setupBuild()
         
         RSAppManager.shared.setup()
@@ -41,7 +42,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         customMenuItemDidPress(sender)
     }
     @IBAction func customMenuItemDidPress(_ sender: NSMenuItem) {
-        GYDispatchMenuItem(sender)
+        RSDispatchMenuItem(sender)
     }
     @IBAction func helpMenuItemDidPress(_ sender: NSMenuItem) {
         
@@ -63,10 +64,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     // MARK: Setup
+    func setupNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(downloadMenuItemDispatchedBy(notification:)), name: Notification.Name(rawValue: GYDwonloadMenuItemDispatchNotificationKey), object: nil)
+    }
     func setupBuild() {
         let string = String(format: "%@ %@", GYCompileDate(), GYCompileTime())
         let date = string.date(format: "MMM dd yyyy HH:mm:ss", locale: "en_US")
         buildTimeMenuItem.title = String(format: "最近编译：%@", date!.string(format: "yyyy-MM-dd HH:mm:ss"))
+    }
+    
+    // MARK: Actions
+    @objc func downloadMenuItemDispatchedBy(notification: Notification) {
+        if let menuItem = notification.object as? NSMenuItem {
+            RSDispatchDownloadMenuItem(menuItem)
+        }
     }
 }
 

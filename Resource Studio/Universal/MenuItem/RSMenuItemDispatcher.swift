@@ -8,13 +8,13 @@
 import Foundation
 import AppKit
 
-func GYDispatchMenuItem(_ menuItem: NSMenuItem) {
+func RSDispatchMenuItem(_ menuItem: NSMenuItem) {
     switch menuItem.tag / 1000000 {
     case 1:
         
         break
     case 4:
-        GYDispatchDownloadMenuItem(menuItem)
+        RSDispatchDownloadMenuItem(menuItem)
         
         break
     case 5:

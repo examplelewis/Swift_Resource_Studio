@@ -8,7 +8,7 @@
 import Foundation
 import AppKit
 
-func GYDispatchDownloadMenuItem(_ menuItem: NSMenuItem) {
+func RSDispatchDownloadMenuItem(_ menuItem: NSMenuItem) {
     GYLogManager.shared.reset()
     
     let setting = GYDownloadSettings.shared.settingFrom(menuItemTag: menuItem.tag)
