@@ -18,6 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         setupNotifications()
         setupBuild()
+        setupDownloads()
         
         RSAppManager.shared.setup()
         RSUIManager.shared.appDelegate = self
@@ -71,6 +72,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let string = String(format: "%@ %@", GYCompileDate(), GYCompileTime())
         let date = string.date(format: "MMM dd yyyy HH:mm:ss", locale: "en_US")
         buildTimeMenuItem.title = String(format: "最近编译：%@", date!.string(format: "yyyy-MM-dd HH:mm:ss"))
+    }
+    func setupDownloads() {
+        GYDownloadSettings.shared.updateMenuItems { [weak self] (menu: NSMenu) in
+            self?.downloadRootMenuItem.submenu = menu
+        }
     }
     
     // MARK: Actions

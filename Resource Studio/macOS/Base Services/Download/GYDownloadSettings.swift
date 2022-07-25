@@ -22,7 +22,7 @@ class GYDownloadSettings {
             return nil
         }
     }
-    func updateMenuItems() {
+    func updateMenuItems(withCallback callback: ((_ menu: NSMenu) -> Void)? = nil) {
         let menu = NSMenu()
         menu.title = "下载"
         
@@ -48,9 +48,9 @@ class GYDownloadSettings {
             menu.addItem(menuItem)
         }
         
-        RSUIManager.shared.appDelegate.downloadRootMenuItem.submenu = menu
+        callback?(menu)
     }
     @objc private func downloadMenuItemDidPress(_ sender: NSMenuItem) {
-        GYDispatchDownloadMenuItem(sender)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: GYDwonloadMenuItemDispatchNotificationKey), object: sender)
     }
 }
