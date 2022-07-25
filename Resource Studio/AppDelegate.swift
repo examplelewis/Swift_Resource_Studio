@@ -18,12 +18,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         setupNotifications()
         setupBuild()
+        setupBase()
         setupDownloads()
         
-        RSAppManager.shared.setup()
         RSUIManager.shared.appDelegate = self
-        
-        GYDownloadSettings.shared.updateMenuItems()
     }
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
@@ -72,6 +70,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let string = String(format: "%@ %@", GYCompileDate(), GYCompileTime())
         let date = string.date(format: "MMM dd yyyy HH:mm:ss", locale: "en_US")
         buildTimeMenuItem.title = String(format: "最近编译：%@", date!.string(format: "yyyy-MM-dd HH:mm:ss"))
+    }
+    func setupBase() {
+        GYBase.shared.mainFolderPath = String(format: "%@/SynologyDrive/同步文档/App Data/Resource Studio", NSHomeDirectory())
+        
+        GYLogManager.shared.update(defaultColor: NSColor.labelColor, successColor: NSColor.systemGreen, warningColor: NSColor.systemYellow, errorColor: NSColor.systemRed, font: NSFont(name: "PingFangSC-Regular", size: 12.0)!)
     }
     func setupDownloads() {
         GYDownloadSettings.shared.updateMenuItems { [weak self] (menu: NSMenu) in
