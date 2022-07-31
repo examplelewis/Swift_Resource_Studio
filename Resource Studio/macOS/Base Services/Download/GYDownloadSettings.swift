@@ -22,22 +22,23 @@ class GYDownloadSettings {
             return nil
         }
     }
-    func updateMenuItems(withCallback callback: ((_ menu: NSMenu) -> Void)? = nil) {
+    func updateMenuItems(withBaseTag baseTag: Int, callback: ((_ menu: NSMenu) -> Void)? = nil) {
         let menu = NSMenu()
         menu.title = "下载"
         
         var menuItemTag = 0
         for (index, setting) in settings.enumerated() {
+            // 添加分隔符
             if index % 2 == 0 {
-                if menuItemTag / 100 != (setting.menuItemTag - GYDownloadMenuItemStartTag) / 100 {
-                    menuItemTag = setting.menuItemTag - GYDownloadMenuItemStartTag
+                if menuItemTag / 100 != (setting.menuItemTag) / 100 {
+                    menuItemTag = setting.menuItemTag
                     menu.addItem(.separator())
                 }
             }
             
             let menuItem = NSMenuItem()
             menuItem.title = String(format: "%@ [%@]", setting.menuItemTitle, setting.source == .input ? "输入" : "选择文件")
-            menuItem.tag = setting.menuItemTag
+            menuItem.tag = setting.menuItemTag + baseTag
             if setting.source == .panel {
                 menuItem.isAlternate = true
                 menuItem.keyEquivalentModifierMask = .option

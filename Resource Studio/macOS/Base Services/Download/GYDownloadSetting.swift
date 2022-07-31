@@ -41,18 +41,18 @@ class GYDownloadSetting {
     }
     
     // MARK: Instance
-    static let defaultInput = GYDownloadSetting(menuItemTitle: "默认设置", menuItemTag: GYDownloadMenuItemStartTag + 1, maxConcurrentCount: 15, source: .input)
-    static let defaultPanel = GYDownloadSetting(menuItemTitle: "默认设置", menuItemTag: GYDownloadMenuItemStartTag + 2, maxConcurrentCount: 15, source: .panel)
+    static let defaultInput = GYDownloadSetting(menuItemTitle: "默认设置", menuItemTag: 1, maxConcurrentCount: 15, source: .input)
+    static let defaultPanel = GYDownloadSetting(menuItemTitle: "默认设置", menuItemTag: 2, maxConcurrentCount: 15, source: .panel)
 
-    static let concurrent1Input = GYDownloadSetting(menuItemTitle: "同时下载1个", menuItemTag: GYDownloadMenuItemStartTag + 100 + 1, maxConcurrentCount: 1, source: .input)
-    static let concurrent1Panel = GYDownloadSetting(menuItemTitle: "同时下载1个", menuItemTag: GYDownloadMenuItemStartTag + 100 + 2, maxConcurrentCount: 1, source: .panel)
-    static let concurrent5Input = GYDownloadSetting(menuItemTitle: "同时下载5个", menuItemTag: GYDownloadMenuItemStartTag + 100 + 3, maxConcurrentCount: 5, source: .input)
-    static let concurrent5Panel = GYDownloadSetting(menuItemTitle: "同时下载5个", menuItemTag: GYDownloadMenuItemStartTag + 100 + 4, maxConcurrentCount: 5, source: .panel)
-    static let concurrent10Input = GYDownloadSetting(menuItemTitle: "同时下载10个", menuItemTag: GYDownloadMenuItemStartTag + 100 + 5, maxConcurrentCount: 10, source: .input)
-    static let concurrent10Panel = GYDownloadSetting(menuItemTitle: "同时下载10个", menuItemTag: GYDownloadMenuItemStartTag + 100 + 6, maxConcurrentCount: 10, source: .panel)
+    static let concurrent1Input = GYDownloadSetting(menuItemTitle: "同时下载1个", menuItemTag: 100 + 1, maxConcurrentCount: 1, source: .input)
+    static let concurrent1Panel = GYDownloadSetting(menuItemTitle: "同时下载1个", menuItemTag: 100 + 2, maxConcurrentCount: 1, source: .panel)
+    static let concurrent5Input = GYDownloadSetting(menuItemTitle: "同时下载5个", menuItemTag: 100 + 3, maxConcurrentCount: 5, source: .input)
+    static let concurrent5Panel = GYDownloadSetting(menuItemTitle: "同时下载5个", menuItemTag: 100 + 4, maxConcurrentCount: 5, source: .panel)
+    static let concurrent10Input = GYDownloadSetting(menuItemTitle: "同时下载10个", menuItemTag: 100 + 5, maxConcurrentCount: 10, source: .input)
+    static let concurrent10Panel = GYDownloadSetting(menuItemTitle: "同时下载10个", menuItemTag: 100 + 6, maxConcurrentCount: 10, source: .panel)
 
-    static let resourceSitesInput = GYDownloadSetting(menuItemTitle: "适用于 图站", menuItemTag: GYDownloadMenuItemStartTag + 200 + 1, maxConcurrentCount: 3, maxRedownloadTimes: 2, timeoutInterval: 15, source: .input)
-    static let resourceSitesPanel = GYDownloadSetting(menuItemTitle: "适用于 图站", menuItemTag: GYDownloadMenuItemStartTag + 200 + 2, maxConcurrentCount: 3, maxRedownloadTimes: 2, timeoutInterval: 15, source: .panel)
-    static let videoInput = GYDownloadSetting(menuItemTitle: "适用于 视频", menuItemTag: GYDownloadMenuItemStartTag + 200 + 3, maxConcurrentCount: 5, maxRedownloadTimes: 2, source: .input)
-    static let videoPanel = GYDownloadSetting(menuItemTitle: "适用于 视频", menuItemTag: GYDownloadMenuItemStartTag + 200 + 4, maxConcurrentCount: 3, maxRedownloadTimes: 2, source: .panel)
+    static let resourceSitesInput = GYDownloadSetting(menuItemTitle: "适用于 图站", menuItemTag: 200 + 1, maxConcurrentCount: 3, maxRedownloadTimes: 2, timeoutInterval: 15, source: .input)
+    static let resourceSitesPanel = GYDownloadSetting(menuItemTitle: "适用于 图站", menuItemTag: 200 + 2, maxConcurrentCount: 3, maxRedownloadTimes: 2, timeoutInterval: 15, source: .panel)
+    static let videoInput = GYDownloadSetting(menuItemTitle: "适用于 视频", menuItemTag: 200 + 3, maxConcurrentCount: 5, maxRedownloadTimes: 2, source: .input)
+    static let videoPanel = GYDownloadSetting(menuItemTitle: "适用于 视频", menuItemTag: 200 + 4, maxConcurrentCount: 3, maxRedownloadTimes: 2, source: .panel)
 }

@@ -9,6 +9,3 @@ import Foundation
 
 // MARK: File
 let GYDownloadRemainURLsFile = "GYDownloadRemainURLs.txt"
-
-// MARK: Tag
-let GYDownloadMenuItemStartTag = 4000000
