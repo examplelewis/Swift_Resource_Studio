@@ -66,3 +66,10 @@ func GYExport(toPlistPath path: String, data: Data, continueWhenExist: Bool, sho
         }
     }
 }
+func GYAsyncSafe(ops: @escaping () -> Void) {
+    if Thread.isMainThread {
+        ops()
+    } else {
+        DispatchQueue.main.async(execute: ops)
+    }
+}
