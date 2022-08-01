@@ -77,7 +77,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         GYLogManager.shared.update(defaultColor: NSColor.labelColor, successColor: NSColor.systemGreen, warningColor: NSColor.systemYellow, errorColor: NSColor.systemRed, font: NSFont(name: "PingFangSC-Regular", size: 12.0)!)
     }
     func setupDownloads() {
-        GYDownloadSettings.shared.updateMenuItems(withBaseTag: 12000000, callback: { [weak self] (menu: NSMenu) in
+        GYDownloadSettings.shared.updateMenuItems(withBaseTag: RSDownloadMenuItemBaseTag, callback: { [weak self] (menu: NSMenu) in
             self?.downloadRootMenuItem.submenu = menu
         })
     }
