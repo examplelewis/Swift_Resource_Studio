@@ -11,7 +11,6 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBOutlet weak var downloadRootMenuItem: NSMenuItem!
-    
     @IBOutlet weak var buildTimeMenuItem: NSMenuItem!
     
     // MARK: NSApplicationDelegate
@@ -22,6 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         setupDownloads()
         
         RSUIManager.shared.appDelegate = self
+        RSAppManager.shared.setup()
     }
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
