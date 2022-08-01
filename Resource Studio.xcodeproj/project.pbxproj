@@ -29,6 +29,8 @@
 		AC03B4D928388C3100409AB3 /* RSAVJavLibraryTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4D828388C3100409AB3 /* RSAVJavLibraryTasks.swift */; };
 		AC03B4DB28388C5100409AB3 /* RSAVJavLibraryActorFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4DA28388C5100409AB3 /* RSAVJavLibraryActorFetcher.swift */; };
 		AC03B4DD28388C5E00409AB3 /* RSAVJavLibraryTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4DC28388C5E00409AB3 /* RSAVJavLibraryTool.swift */; };
+		AC06CC242898011300A0B80A /* RSDBMainDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC06CC232898011300A0B80A /* RSDBMainDatabase.swift */; };
+		AC06CC262898014100A0B80A /* RSDBExHentaiDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC06CC252898014100A0B80A /* RSDBExHentaiDatabase.swift */; };
 		AC0722A7283A0ED8008D8034 /* RSAVNyaaTagFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0722A6283A0ED8008D8034 /* RSAVNyaaTagFetcher.swift */; };
 		AC0722AA283A0F07008D8034 /* RSAVNyaaTagRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0722A9283A0F07008D8034 /* RSAVNyaaTagRsp.swift */; };
 		AC0722AC283A0F15008D8034 /* RSAVNyaaTagReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0722AB283A0F15008D8034 /* RSAVNyaaTagReq.swift */; };
@@ -157,6 +159,8 @@
 		AC03B4DA28388C5100409AB3 /* RSAVJavLibraryActorFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVJavLibraryActorFetcher.swift; sourceTree = "<group>"; };
 		AC03B4DC28388C5E00409AB3 /* RSAVJavLibraryTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVJavLibraryTool.swift; sourceTree = "<group>"; };
 		AC0607DB2829406600E642AF /* GYHTTPDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPDataRequest.swift; sourceTree = "<group>"; };
+		AC06CC232898011300A0B80A /* RSDBMainDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSDBMainDatabase.swift; sourceTree = "<group>"; };
+		AC06CC252898014100A0B80A /* RSDBExHentaiDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSDBExHentaiDatabase.swift; sourceTree = "<group>"; };
 		AC0722A6283A0ED8008D8034 /* RSAVNyaaTagFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVNyaaTagFetcher.swift; sourceTree = "<group>"; };
 		AC0722A9283A0F07008D8034 /* RSAVNyaaTagRsp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVNyaaTagRsp.swift; sourceTree = "<group>"; };
 		AC0722AB283A0F15008D8034 /* RSAVNyaaTagReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVNyaaTagReq.swift; sourceTree = "<group>"; };
@@ -618,6 +622,8 @@
 			isa = PBXGroup;
 			children = (
 				ACDF609B283A1D5F00B59FDC /* RSDBAVDatabase.swift */,
+				AC06CC232898011300A0B80A /* RSDBMainDatabase.swift */,
+				AC06CC252898014100A0B80A /* RSDBExHentaiDatabase.swift */,
 			);
 			path = Databases;
 			sourceTree = "<group>";
@@ -919,7 +925,9 @@
 				A8FBB9DB2897CC4F00BB7751 /* RSMenuItemTorrentDispatcher.swift in Sources */,
 				ACFD9C822833EC2800306D98 /* GYTimeMacro.swift in Sources */,
 				AC0CA21628225F2100C1268F /* GYConsts.swift in Sources */,
+				AC06CC242898011300A0B80A /* RSDBMainDatabase.swift in Sources */,
 				ACD3288A282F577A008F6D7E /* GYDownloadSetting.swift in Sources */,
+				AC06CC262898014100A0B80A /* RSDBExHentaiDatabase.swift in Sources */,
 				ACECED8D28352CB000547508 /* Array+GYExtension.swift in Sources */,
 				ACD32892282FA629008F6D7E /* GYBaseBridging.m in Sources */,
 				A8FBB9D92897CC3700BB7751 /* RSMenuItemRule34Dispatcher.swift in Sources */,
