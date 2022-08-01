@@ -1,5 +1,5 @@
 //
-//  RSNyaaTagRsp.swift
+//  RSAVNyaaTagRsp.swift
 //  Resource Studio
 //
 //  Created by 龚宇 on 22/05/22.
@@ -7,6 +7,6 @@
 
 import Cocoa
 
-class RSNyaaTagRsp: GYHTTPBaseHTMLResponse {
+class RSAVNyaaTagRsp: GYHTTPBaseHTMLResponse {
 
 }

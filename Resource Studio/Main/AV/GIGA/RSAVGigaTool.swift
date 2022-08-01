@@ -1,5 +1,5 @@
 //
-//  RSGigaTool.swift
+//  RSAVGigaTool.swift
 //  Resource Studio
 //
 //  Created by 龚宇 on 22/05/14.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-func RSGigaWorkImageNameFrom(url: String, oldFileName: String) -> String {
+func RSAVGigaWorkImageNameFrom(url: String, oldFileName: String) -> String {
     let urlComponets = url.components(separatedBy: "/")
     let series = urlComponets[urlComponets.count - 3]
     let newSeries = series.uppercased().appending("-")

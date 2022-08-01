@@ -1,5 +1,5 @@
 //
-//  RSNyaaTagReq.swift
+//  RSAVNyaaTagReq.swift
 //  Resource Studio
 //
 //  Created by 龚宇 on 22/05/22.
@@ -7,7 +7,7 @@
 
 import Cocoa
 
-class RSNyaaTagReq: GYHTTPBaseRequest {
+class RSAVNyaaTagReq: GYHTTPBaseRequest {
     var tag = ""
     var page = 1 // 页码从1开始
     

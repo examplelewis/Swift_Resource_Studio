@@ -1,5 +1,5 @@
 //
-//  RSJavLibraryActorReq.swift
+//  RSAVJavLibraryActorReq.swift
 //  Resource Studio
 //
 //  Created by 龚宇 on 22/05/21.
@@ -7,7 +7,7 @@
 
 import Cocoa
 
-class RSJavLibraryActorReq: GYHTTPBaseRequest {
+class RSAVJavLibraryActorReq: GYHTTPBaseRequest {
     var keyWord = ""
     var page = 1 // 页码从1开始
     

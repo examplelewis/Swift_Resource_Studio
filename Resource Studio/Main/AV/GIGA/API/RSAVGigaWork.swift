@@ -1,13 +1,13 @@
 //
-//  RSJavLibraryWork.swift
+//  RSAVGigaWork.swift
 //  Resource Studio
 //
 //  Created by 龚宇 on 22/05/22.
 //
 
-import Foundation
+import Cocoa
 
-class RSJavLibraryWork: GYHTTPBaseModel {
+class RSAVGigaWork: GYHTTPBaseModel {
     var tagName = ""
     var name = ""
     var URL = ""

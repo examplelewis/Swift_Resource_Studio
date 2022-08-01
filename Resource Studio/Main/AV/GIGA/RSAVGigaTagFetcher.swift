@@ -1,5 +1,5 @@
 //
-//  RSGigaTagFetcher.swift
+//  RSAVGigaTagFetcher.swift
 //  Resource Studio
 //
 //  Created by 龚宇 on 22/05/14.
@@ -8,26 +8,26 @@
 import Foundation
 import hpple
 
-protocol RSGigaTagFetcherDelegate: AnyObject {
+protocol RSAVGigaTagFetcherDelegate: AnyObject {
     func gigaTagInfoFetcherDidFinish()
 }
 
 // 使用方法
 /**
- private var fetcher: RSGigaTagFetcher? = RSGigaTagFetcher(tagIDs: ["31717", "92", "412", "353", "494", "481", "31691", "545", "30829", "31631", "31399", "30219", "30495", "227", "31624", "31710", "73", "31783", "31597", "487", "37", "31628", "31695", "31694", "232", "35", "31834", "30710", "32027", "31720", "31694", "459", "30600", "300", "201", "30629", "519", "30013", "30023", "30553", "31616", "363", "30300", "486", "96"])
+ private var fetcher: RSAVGigaTagFetcher? = RSAVGigaTagFetcher(tagIDs: ["31717", "92", "412", "353", "494", "481", "31691", "545", "30829", "31631", "31399", "30219", "30495", "227", "31624", "31710", "73", "31783", "31597", "487", "37", "31628", "31695", "31694", "232", "35", "31834", "30710", "32027", "31720", "31694", "459", "30600", "300", "201", "30629", "519", "30013", "30023", "30553", "31616", "363", "30300", "486", "96"])
  fetcher?.delegate = self
  fetcher?.start(isFirstTag: true)
  
- // MARK: RSGigaTagFetcherDelegate
+ // MARK: RSAVGigaTagFetcherDelegate
  func gigaTagInfoFetcherDidFinish() {
     fetcher = nil
  }
  */
 
-class RSGigaTagFetcher {
-    weak var delegate: RSGigaTagFetcherDelegate?
+class RSAVGigaTagFetcher {
+    weak var delegate: RSAVGigaTagFetcherDelegate?
     
-    private let tasks = RSGigaTasks()
+    private let tasks = RSAVGigaTasks()
     
     private var tagIDs: [String] // 标签ID
     
@@ -36,7 +36,7 @@ class RSGigaTagFetcher {
     private var currentTotalPages = 0 // 当前标签一共多少页
     private var currentPage = 1 // 当前标签的页码，从1开始
     private var currentImageURLs: [String] = [] // 当前标签下的作品图片地址
-    private var currentWorks: [RSGigaWork] = [] // 当前标签下的作品
+    private var currentWorks: [RSAVGigaWork] = [] // 当前标签下的作品
     
     // MARK: Initial
     init(tagIDs: [String]) {
@@ -72,8 +72,8 @@ class RSGigaTagFetcher {
         // 如果不是第一页，那么 currentTotalPages 已经赋值了; 如果 currentPage > currentTotalPages，说明最后一页已经抓取完毕了
         if !isFirstPage && currentPage > currentTotalPages {
             // 往数据库里存当前标签的数据
-            RSSitesDatabaseManager.shared.insertGiga(tag: currentTag, input: currentTagID, count: currentWorks.count)
-            RSSitesDatabaseManager.shared.insertGiga(works: currentWorks)
+            RSDBAVDatabase.shared.insertGiga(tag: currentTag, input: currentTagID, count: currentWorks.count)
+            RSDBAVDatabase.shared.insertGiga(works: currentWorks)
             
             // 抓取下一个标签
             start(isFirstTag: false)
@@ -203,7 +203,7 @@ class RSGigaTagFetcher {
                 continue
             }
             
-            let work = RSGigaWork()
+            let work = RSAVGigaWork()
             work.tagName = currentTag
             work.name = workName
             work.URL = workURL

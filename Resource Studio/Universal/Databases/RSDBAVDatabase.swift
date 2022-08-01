@@ -1,5 +1,5 @@
 //
-//  RSSitesDatabaseManager.swift
+//  RSDBAVDatabase.swift
 //  Resource Studio
 //
 //  Created by 龚宇 on 22/05/22.
@@ -8,15 +8,10 @@
 import Foundation
 import FMDB
 
-class RSSitesDatabaseManager {
-    static let shared = RSSitesDatabaseManager()
+class RSDBAVDatabase {
+    static let shared = RSDBAVDatabase()
     
-    private let queue: FMDatabaseQueue
-    
-    // MARK: Init
-    init() {
-        queue = FMDatabaseQueue(path: GYBase.shared.pathOfSqlite("Resources"))!
-    }
+    private let queue = FMDatabaseQueue(path: GYBase.shared.pathOfSqlite("Adult Videos"))!
     
     // MARK: GIGA tags
     func insertGiga(tag: String, input: String, count: Int) {
@@ -32,7 +27,7 @@ class RSSitesDatabaseManager {
             }
         }
     }
-    func insertGiga(works: [RSGigaWork]) {
+    func insertGiga(works: [RSAVGigaWork]) {
         for work in works {
             queue.inDatabase { db in
                 db.executeUpdate("INSERT INTO giga_works (tag_name, work_name, work_url, work_image_url, time) values(?, ?, ?, ?, ?)", withArgumentsIn: [work.tagName, work.name, work.URL, work.imageURL, Date.current().string()])
@@ -56,7 +51,7 @@ class RSSitesDatabaseManager {
             }
         }
     }
-    func insertJav(works: [RSJavLibraryWork]) {
+    func insertJav(works: [RSAVJavLibraryWork]) {
         for work in works {
             queue.inDatabase { db in
                 db.executeUpdate("INSERT INTO jav_library_works (tag_name, work_name, work_url, work_image_url, time) values(?, ?, ?, ?, ?)", withArgumentsIn: [work.tagName, work.name, work.URL, work.imageURL, Date.current().string()])
@@ -80,7 +75,7 @@ class RSSitesDatabaseManager {
             }
         }
     }
-    func insertNyaa(works: [RSNyaaWork]) {
+    func insertNyaa(works: [RSAVNyaaWork]) {
         for work in works {
             queue.inDatabase { db in
                 db.executeUpdate("INSERT INTO nyaa_works (tag_name, work_name, work_url, work_magnet, work_torrent, time) values(?, ?, ?, ?, ?, ?)", withArgumentsIn: [work.tagName, work.name, work.URL, work.magnet ?? "NULL", work.torrent ?? "NULL", Date.current().string()])
@@ -123,7 +118,7 @@ class RSSitesDatabaseManager {
     }
 }
 
-extension RSSitesDatabaseManager {
+extension RSDBAVDatabase {
     fileprivate func _nyaaWorkStateDescBy(state: Int) -> String? {
         switch state {
         case -10:

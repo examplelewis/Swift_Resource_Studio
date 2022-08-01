@@ -1,5 +1,5 @@
 //
-//  RSGigaTagReq.swift
+//  RSAVGigaTagReq.swift
 //  Resource Studio
 //
 //  Created by 龚宇 on 22/05/13.
@@ -7,7 +7,7 @@
 
 import Cocoa
 
-class RSGigaTagReq: GYHTTPBaseRequest {
+class RSAVGigaTagReq: GYHTTPBaseRequest {
     var tagID = 0
     var page = 1 // 页码从1开始
     

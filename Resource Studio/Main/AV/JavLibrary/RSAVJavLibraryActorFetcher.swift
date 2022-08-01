@@ -1,5 +1,5 @@
 //
-//  RSJavLibraryActorFetcher.swift
+//  RSAVJavLibraryActorFetcher.swift
 //  Resource Studio
 //
 //  Created by 龚宇 on 22/05/21.
@@ -8,26 +8,26 @@
 import Foundation
 import hpple
 
-protocol RSJavLibraryActorFetcherDelegate: AnyObject {
+protocol RSAVJavLibraryActorFetcherDelegate: AnyObject {
     func javLibraryActorFetcherDidFinish()
 }
 
 // 使用方法
 /**
- private var fetcher: RSJavLibraryActorFetcher? = RSJavLibraryActorFetcher(keywords: ["ae4ua", "affa", "ayua", "iqla", "priq", "pqaq", "brca", "aq4q", "pfma", "paca", "anfa", "ai4q"])
+ private var fetcher: RSAVJavLibraryActorFetcher? = RSAVJavLibraryActorFetcher(keywords: ["ae4ua", "affa", "ayua", "iqla", "priq", "pqaq", "brca", "aq4q", "pfma", "paca", "anfa", "ai4q"])
  fetcher?.delegate = self
  fetcher?.start(isFirstTag: true)
  
- // MARK: RSJavLibraryActorFetcherDelegate
+ // MARK: RSAVJavLibraryActorFetcherDelegate
  func javLibraryActorFetcherDidFinish() {
      fetcher = nil
  }
  */
 
-class RSJavLibraryActorFetcher {
-    weak var delegate: RSJavLibraryActorFetcherDelegate?
+class RSAVJavLibraryActorFetcher {
+    weak var delegate: RSAVJavLibraryActorFetcherDelegate?
     
-    private let tasks = RSJavLibraryTasks()
+    private let tasks = RSAVJavLibraryTasks()
     
     private var keywords: [String] // 关键字
     
@@ -36,7 +36,7 @@ class RSJavLibraryActorFetcher {
     private var currentTotalPages = 0 // 当前标签一共多少页
     private var currentPage = 1 // 当前标签的页码，从1开始
     private var currentImageURLs: [String] = [] // 当前标签下的作品图片地址
-    private var currentWorks: [RSJavLibraryWork] = [] // 当前标签下的作品
+    private var currentWorks: [RSAVJavLibraryWork] = [] // 当前标签下的作品
     
     // MARK: Initial
     init(keywords: [String]) {
@@ -75,8 +75,8 @@ class RSJavLibraryActorFetcher {
         // 如果不是第一页，那么 currentTotalPages 已经赋值了; 如果 currentPage > currentTotalPages，说明最后一页已经抓取完毕了
         if !isFirstPage && currentPage > currentTotalPages {
             // 往数据库里存当前标签的数据
-            RSSitesDatabaseManager.shared.insertJav(tag: currentTag, input: currentKeyword, count: currentWorks.count)
-            RSSitesDatabaseManager.shared.insertJav(works: currentWorks)
+            RSDBAVDatabase.shared.insertJav(tag: currentTag, input: currentKeyword, count: currentWorks.count)
+            RSDBAVDatabase.shared.insertJav(works: currentWorks)
             
             // 抓取下一个标签
             start(isFirstTag: false)
@@ -176,7 +176,7 @@ class RSJavLibraryActorFetcher {
                 continue
             }
             
-            let work = RSJavLibraryWork()
+            let work = RSAVJavLibraryWork()
             work.tagName = currentTag
             work.name = workName
             work.URL = workURL

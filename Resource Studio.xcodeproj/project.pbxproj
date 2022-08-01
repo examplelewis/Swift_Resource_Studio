@@ -24,15 +24,15 @@
 		A8FBB9DD2897CC6100BB7751 /* RSMenuItemSiteDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FBB9DC2897CC6100BB7751 /* RSMenuItemSiteDispatcher.swift */; };
 		A8FBB9DF2897D37900BB7751 /* GYBase+RSExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FBB9DE2897D37900BB7751 /* GYBase+RSExtensions.swift */; };
 		AC0167E328328D4F000E4C61 /* Array+GYSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0167E228328D4F000E4C61 /* Array+GYSubscript.swift */; };
-		AC03B4D528388C0F00409AB3 /* RSJavLibraryActorReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4D428388C0F00409AB3 /* RSJavLibraryActorReq.swift */; };
-		AC03B4D728388C2100409AB3 /* RSJavLibraryActorRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4D628388C2100409AB3 /* RSJavLibraryActorRsp.swift */; };
-		AC03B4D928388C3100409AB3 /* RSJavLibraryTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4D828388C3100409AB3 /* RSJavLibraryTasks.swift */; };
-		AC03B4DB28388C5100409AB3 /* RSJavLibraryActorFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4DA28388C5100409AB3 /* RSJavLibraryActorFetcher.swift */; };
-		AC03B4DD28388C5E00409AB3 /* RSJavLibraryTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4DC28388C5E00409AB3 /* RSJavLibraryTool.swift */; };
-		AC0722A7283A0ED8008D8034 /* RSNyaaTagFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0722A6283A0ED8008D8034 /* RSNyaaTagFetcher.swift */; };
-		AC0722AA283A0F07008D8034 /* RSNyaaTagRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0722A9283A0F07008D8034 /* RSNyaaTagRsp.swift */; };
-		AC0722AC283A0F15008D8034 /* RSNyaaTagReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0722AB283A0F15008D8034 /* RSNyaaTagReq.swift */; };
-		AC0722AE283A0F22008D8034 /* RSNyaaTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0722AD283A0F22008D8034 /* RSNyaaTasks.swift */; };
+		AC03B4D528388C0F00409AB3 /* RSAVJavLibraryActorReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4D428388C0F00409AB3 /* RSAVJavLibraryActorReq.swift */; };
+		AC03B4D728388C2100409AB3 /* RSAVJavLibraryActorRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4D628388C2100409AB3 /* RSAVJavLibraryActorRsp.swift */; };
+		AC03B4D928388C3100409AB3 /* RSAVJavLibraryTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4D828388C3100409AB3 /* RSAVJavLibraryTasks.swift */; };
+		AC03B4DB28388C5100409AB3 /* RSAVJavLibraryActorFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4DA28388C5100409AB3 /* RSAVJavLibraryActorFetcher.swift */; };
+		AC03B4DD28388C5E00409AB3 /* RSAVJavLibraryTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4DC28388C5E00409AB3 /* RSAVJavLibraryTool.swift */; };
+		AC0722A7283A0ED8008D8034 /* RSAVNyaaTagFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0722A6283A0ED8008D8034 /* RSAVNyaaTagFetcher.swift */; };
+		AC0722AA283A0F07008D8034 /* RSAVNyaaTagRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0722A9283A0F07008D8034 /* RSAVNyaaTagRsp.swift */; };
+		AC0722AC283A0F15008D8034 /* RSAVNyaaTagReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0722AB283A0F15008D8034 /* RSAVNyaaTagReq.swift */; };
+		AC0722AE283A0F22008D8034 /* RSAVNyaaTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0722AD283A0F22008D8034 /* RSAVNyaaTasks.swift */; };
 		AC0C71532848E0A700C9985B /* RSSitesRule34Req.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0C71522848E0A700C9985B /* RSSitesRule34Req.swift */; };
 		AC0C71552848E0B400C9985B /* RSSitesRule34Rsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0C71542848E0B400C9985B /* RSSitesRule34Rsp.swift */; };
 		AC0C71572848E0C300C9985B /* RSSitesRule34Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0C71562848E0C300C9985B /* RSSitesRule34Tasks.swift */; };
@@ -70,27 +70,27 @@
 		ACD32896282FADAE008F6D7E /* RSMenuItemDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32895282FADAE008F6D7E /* RSMenuItemDispatcher.swift */; };
 		ACD32898282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32897282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift */; };
 		ACD3289A282FB33F008F6D7E /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD32899282FB33F008F6D7E /* WindowController.swift */; };
-		ACD3289C282FCA2A008F6D7E /* RSGigaTagFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3289B282FCA2A008F6D7E /* RSGigaTagFetcher.swift */; };
+		ACD3289C282FCA2A008F6D7E /* RSAVGigaTagFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3289B282FCA2A008F6D7E /* RSAVGigaTagFetcher.swift */; };
 		ACD3289E282FF025008F6D7E /* GYBase+macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3289D282FF025008F6D7E /* GYBase+macOS.swift */; };
 		ACD328A1282FF049008F6D7E /* GYOpenPanelConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD328A0282FF049008F6D7E /* GYOpenPanelConfigure.swift */; };
 		ACD328A3282FF1B3008F6D7E /* GYOpenPanelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD328A2282FF1B3008F6D7E /* GYOpenPanelManager.swift */; };
 		ACD328A5282FF6C4008F6D7E /* GYDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD328A4282FF6C4008F6D7E /* GYDownloadManager.swift */; };
 		ACD328A7282FFDE1008F6D7E /* GYDownloadHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD328A6282FFDE1008F6D7E /* GYDownloadHolder.swift */; };
-		ACD328A928300109008F6D7E /* RSGigaTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD328A828300109008F6D7E /* RSGigaTool.swift */; };
+		ACD328A928300109008F6D7E /* RSAVGigaTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD328A828300109008F6D7E /* RSAVGigaTool.swift */; };
 		ACDAE639282D49CE0042F54E /* GYHTTPRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */; };
 		ACDAE63B282D4ED20042F54E /* GYBaseMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE63A282D4ED20042F54E /* GYBaseMacro.swift */; };
-		ACDDE654282E9EB600EDA877 /* RSGigaTagRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE653282E9EB600EDA877 /* RSGigaTagRsp.swift */; };
-		ACDDE656282E9EC800EDA877 /* RSGigaTagReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE655282E9EC800EDA877 /* RSGigaTagReq.swift */; };
-		ACDDE658282E9ED900EDA877 /* RSGigaTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE657282E9ED900EDA877 /* RSGigaTasks.swift */; };
+		ACDDE654282E9EB600EDA877 /* RSAVGigaTagRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE653282E9EB600EDA877 /* RSAVGigaTagRsp.swift */; };
+		ACDDE656282E9EC800EDA877 /* RSAVGigaTagReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE655282E9EC800EDA877 /* RSAVGigaTagReq.swift */; };
+		ACDDE658282E9ED900EDA877 /* RSAVGigaTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE657282E9ED900EDA877 /* RSAVGigaTasks.swift */; };
 		ACDDE65A282EA45A00EDA877 /* GYHTTPBaseHTMLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE659282EA45A00EDA877 /* GYHTTPBaseHTMLResponse.swift */; };
 		ACDDE65C282EB4EC00EDA877 /* RSAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE65B282EB4EC00EDA877 /* RSAppManager.swift */; };
 		ACDDE660282EC1E300EDA877 /* GYHTTPCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDDE65F282EC1E300EDA877 /* GYHTTPCookie.swift */; };
 		ACDE1A722837DCE500CE0C26 /* GYURLMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE1A712837DCE500CE0C26 /* GYURLMacro.swift */; };
 		ACDE1A742837DE1200CE0C26 /* GYOpenPanelDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE1A732837DE1200CE0C26 /* GYOpenPanelDefinition.swift */; };
-		ACDF6099283A187600B59FDC /* RSGigaWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF6098283A187600B59FDC /* RSGigaWork.swift */; };
-		ACDF609C283A1D5F00B59FDC /* RSSitesDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF609B283A1D5F00B59FDC /* RSSitesDatabaseManager.swift */; };
-		ACDF609E283A377800B59FDC /* RSJavLibraryWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF609D283A377800B59FDC /* RSJavLibraryWork.swift */; };
-		ACDF60A0283A443900B59FDC /* RSNyaaWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF609F283A443900B59FDC /* RSNyaaWork.swift */; };
+		ACDF6099283A187600B59FDC /* RSAVGigaWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF6098283A187600B59FDC /* RSAVGigaWork.swift */; };
+		ACDF609C283A1D5F00B59FDC /* RSDBAVDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF609B283A1D5F00B59FDC /* RSDBAVDatabase.swift */; };
+		ACDF609E283A377800B59FDC /* RSAVJavLibraryWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF609D283A377800B59FDC /* RSAVJavLibraryWork.swift */; };
+		ACDF60A0283A443900B59FDC /* RSAVNyaaWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF609F283A443900B59FDC /* RSAVNyaaWork.swift */; };
 		ACDFA306282BDB5500B0D010 /* GYHTTPDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0607DB2829406600E642AF /* GYHTTPDataRequest.swift */; };
 		ACECED40283529B900547508 /* GYErrorDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECED3D283529B900547508 /* GYErrorDefinition.swift */; };
 		ACECED41283529B900547508 /* GYLogDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECED3E283529B900547508 /* GYLogDefinition.swift */; };
@@ -151,16 +151,16 @@
 		A8FBB9DC2897CC6100BB7751 /* RSMenuItemSiteDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMenuItemSiteDispatcher.swift; sourceTree = "<group>"; };
 		A8FBB9DE2897D37900BB7751 /* GYBase+RSExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GYBase+RSExtensions.swift"; sourceTree = "<group>"; };
 		AC0167E228328D4F000E4C61 /* Array+GYSubscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+GYSubscript.swift"; sourceTree = "<group>"; };
-		AC03B4D428388C0F00409AB3 /* RSJavLibraryActorReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSJavLibraryActorReq.swift; sourceTree = "<group>"; };
-		AC03B4D628388C2100409AB3 /* RSJavLibraryActorRsp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSJavLibraryActorRsp.swift; sourceTree = "<group>"; };
-		AC03B4D828388C3100409AB3 /* RSJavLibraryTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSJavLibraryTasks.swift; sourceTree = "<group>"; };
-		AC03B4DA28388C5100409AB3 /* RSJavLibraryActorFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSJavLibraryActorFetcher.swift; sourceTree = "<group>"; };
-		AC03B4DC28388C5E00409AB3 /* RSJavLibraryTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSJavLibraryTool.swift; sourceTree = "<group>"; };
+		AC03B4D428388C0F00409AB3 /* RSAVJavLibraryActorReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVJavLibraryActorReq.swift; sourceTree = "<group>"; };
+		AC03B4D628388C2100409AB3 /* RSAVJavLibraryActorRsp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVJavLibraryActorRsp.swift; sourceTree = "<group>"; };
+		AC03B4D828388C3100409AB3 /* RSAVJavLibraryTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVJavLibraryTasks.swift; sourceTree = "<group>"; };
+		AC03B4DA28388C5100409AB3 /* RSAVJavLibraryActorFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVJavLibraryActorFetcher.swift; sourceTree = "<group>"; };
+		AC03B4DC28388C5E00409AB3 /* RSAVJavLibraryTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVJavLibraryTool.swift; sourceTree = "<group>"; };
 		AC0607DB2829406600E642AF /* GYHTTPDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPDataRequest.swift; sourceTree = "<group>"; };
-		AC0722A6283A0ED8008D8034 /* RSNyaaTagFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNyaaTagFetcher.swift; sourceTree = "<group>"; };
-		AC0722A9283A0F07008D8034 /* RSNyaaTagRsp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNyaaTagRsp.swift; sourceTree = "<group>"; };
-		AC0722AB283A0F15008D8034 /* RSNyaaTagReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNyaaTagReq.swift; sourceTree = "<group>"; };
-		AC0722AD283A0F22008D8034 /* RSNyaaTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNyaaTasks.swift; sourceTree = "<group>"; };
+		AC0722A6283A0ED8008D8034 /* RSAVNyaaTagFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVNyaaTagFetcher.swift; sourceTree = "<group>"; };
+		AC0722A9283A0F07008D8034 /* RSAVNyaaTagRsp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVNyaaTagRsp.swift; sourceTree = "<group>"; };
+		AC0722AB283A0F15008D8034 /* RSAVNyaaTagReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVNyaaTagReq.swift; sourceTree = "<group>"; };
+		AC0722AD283A0F22008D8034 /* RSAVNyaaTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVNyaaTasks.swift; sourceTree = "<group>"; };
 		AC0C71522848E0A700C9985B /* RSSitesRule34Req.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSitesRule34Req.swift; sourceTree = "<group>"; };
 		AC0C71542848E0B400C9985B /* RSSitesRule34Rsp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSitesRule34Rsp.swift; sourceTree = "<group>"; };
 		AC0C71562848E0C300C9985B /* RSSitesRule34Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSitesRule34Tasks.swift; sourceTree = "<group>"; };
@@ -204,28 +204,28 @@
 		ACD32895282FADAE008F6D7E /* RSMenuItemDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMenuItemDispatcher.swift; sourceTree = "<group>"; };
 		ACD32897282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMenuItemDownloadDispatcher.swift; sourceTree = "<group>"; };
 		ACD32899282FB33F008F6D7E /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
-		ACD3289B282FCA2A008F6D7E /* RSGigaTagFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSGigaTagFetcher.swift; sourceTree = "<group>"; };
+		ACD3289B282FCA2A008F6D7E /* RSAVGigaTagFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVGigaTagFetcher.swift; sourceTree = "<group>"; };
 		ACD3289D282FF025008F6D7E /* GYBase+macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GYBase+macOS.swift"; sourceTree = "<group>"; };
 		ACD328A0282FF049008F6D7E /* GYOpenPanelConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYOpenPanelConfigure.swift; sourceTree = "<group>"; };
 		ACD328A2282FF1B3008F6D7E /* GYOpenPanelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYOpenPanelManager.swift; sourceTree = "<group>"; };
 		ACD328A4282FF6C4008F6D7E /* GYDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYDownloadManager.swift; sourceTree = "<group>"; };
 		ACD328A6282FFDE1008F6D7E /* GYDownloadHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYDownloadHolder.swift; sourceTree = "<group>"; };
-		ACD328A828300109008F6D7E /* RSGigaTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSGigaTool.swift; sourceTree = "<group>"; };
+		ACD328A828300109008F6D7E /* RSAVGigaTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVGigaTool.swift; sourceTree = "<group>"; };
 		ACDAE638282D49CE0042F54E /* GYHTTPRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPRequestRetrier.swift; sourceTree = "<group>"; };
 		ACDAE63A282D4ED20042F54E /* GYBaseMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYBaseMacro.swift; sourceTree = "<group>"; };
 		ACDDE652282E9D3A00EDA877 /* Resource-Studio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Resource-Studio-Info.plist"; sourceTree = SOURCE_ROOT; };
-		ACDDE653282E9EB600EDA877 /* RSGigaTagRsp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSGigaTagRsp.swift; sourceTree = "<group>"; };
-		ACDDE655282E9EC800EDA877 /* RSGigaTagReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSGigaTagReq.swift; sourceTree = "<group>"; };
-		ACDDE657282E9ED900EDA877 /* RSGigaTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSGigaTasks.swift; sourceTree = "<group>"; };
+		ACDDE653282E9EB600EDA877 /* RSAVGigaTagRsp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVGigaTagRsp.swift; sourceTree = "<group>"; };
+		ACDDE655282E9EC800EDA877 /* RSAVGigaTagReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVGigaTagReq.swift; sourceTree = "<group>"; };
+		ACDDE657282E9ED900EDA877 /* RSAVGigaTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVGigaTasks.swift; sourceTree = "<group>"; };
 		ACDDE659282EA45A00EDA877 /* GYHTTPBaseHTMLResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPBaseHTMLResponse.swift; sourceTree = "<group>"; };
 		ACDDE65B282EB4EC00EDA877 /* RSAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAppManager.swift; sourceTree = "<group>"; };
 		ACDDE65F282EC1E300EDA877 /* GYHTTPCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYHTTPCookie.swift; sourceTree = "<group>"; };
 		ACDE1A712837DCE500CE0C26 /* GYURLMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYURLMacro.swift; sourceTree = "<group>"; };
 		ACDE1A732837DE1200CE0C26 /* GYOpenPanelDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYOpenPanelDefinition.swift; sourceTree = "<group>"; };
-		ACDF6098283A187600B59FDC /* RSGigaWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSGigaWork.swift; sourceTree = "<group>"; };
-		ACDF609B283A1D5F00B59FDC /* RSSitesDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSitesDatabaseManager.swift; sourceTree = "<group>"; };
-		ACDF609D283A377800B59FDC /* RSJavLibraryWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSJavLibraryWork.swift; sourceTree = "<group>"; };
-		ACDF609F283A443900B59FDC /* RSNyaaWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNyaaWork.swift; sourceTree = "<group>"; };
+		ACDF6098283A187600B59FDC /* RSAVGigaWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVGigaWork.swift; sourceTree = "<group>"; };
+		ACDF609B283A1D5F00B59FDC /* RSDBAVDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSDBAVDatabase.swift; sourceTree = "<group>"; };
+		ACDF609D283A377800B59FDC /* RSAVJavLibraryWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVJavLibraryWork.swift; sourceTree = "<group>"; };
+		ACDF609F283A443900B59FDC /* RSAVNyaaWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVNyaaWork.swift; sourceTree = "<group>"; };
 		ACECED3D283529B900547508 /* GYErrorDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYErrorDefinition.swift; sourceTree = "<group>"; };
 		ACECED3E283529B900547508 /* GYLogDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYLogDefinition.swift; sourceTree = "<group>"; };
 		ACECED3F283529B900547508 /* GYFileDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GYFileDefinition.swift; sourceTree = "<group>"; };
@@ -295,8 +295,8 @@
 		AC03B4D328388AA200409AB3 /* JavLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				AC03B4DA28388C5100409AB3 /* RSJavLibraryActorFetcher.swift */,
-				AC03B4DC28388C5E00409AB3 /* RSJavLibraryTool.swift */,
+				AC03B4DA28388C5100409AB3 /* RSAVJavLibraryActorFetcher.swift */,
+				AC03B4DC28388C5E00409AB3 /* RSAVJavLibraryTool.swift */,
 				AC03B4DE28388C6300409AB3 /* API */,
 			);
 			path = JavLibrary;
@@ -305,10 +305,10 @@
 		AC03B4DE28388C6300409AB3 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				AC03B4D828388C3100409AB3 /* RSJavLibraryTasks.swift */,
-				AC03B4D428388C0F00409AB3 /* RSJavLibraryActorReq.swift */,
-				AC03B4D628388C2100409AB3 /* RSJavLibraryActorRsp.swift */,
-				ACDF609D283A377800B59FDC /* RSJavLibraryWork.swift */,
+				AC03B4D828388C3100409AB3 /* RSAVJavLibraryTasks.swift */,
+				AC03B4D428388C0F00409AB3 /* RSAVJavLibraryActorReq.swift */,
+				AC03B4D628388C2100409AB3 /* RSAVJavLibraryActorRsp.swift */,
+				ACDF609D283A377800B59FDC /* RSAVJavLibraryWork.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -322,10 +322,20 @@
 			path = Bridging;
 			sourceTree = "<group>";
 		};
+		AC06CC222897FF7E00A0B80A /* AV */ = {
+			isa = PBXGroup;
+			children = (
+				AC0722A5283A0EB1008D8034 /* Nyaa */,
+				AC03B4D328388AA200409AB3 /* JavLibrary */,
+				ACDDE64B282E9B0100EDA877 /* GIGA */,
+			);
+			path = AV;
+			sourceTree = "<group>";
+		};
 		AC0722A5283A0EB1008D8034 /* Nyaa */ = {
 			isa = PBXGroup;
 			children = (
-				AC0722A6283A0ED8008D8034 /* RSNyaaTagFetcher.swift */,
+				AC0722A6283A0ED8008D8034 /* RSAVNyaaTagFetcher.swift */,
 				AC0722A8283A0EF5008D8034 /* API */,
 			);
 			path = Nyaa;
@@ -334,10 +344,10 @@
 		AC0722A8283A0EF5008D8034 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				AC0722AD283A0F22008D8034 /* RSNyaaTasks.swift */,
-				AC0722AB283A0F15008D8034 /* RSNyaaTagReq.swift */,
-				AC0722A9283A0F07008D8034 /* RSNyaaTagRsp.swift */,
-				ACDF609F283A443900B59FDC /* RSNyaaWork.swift */,
+				AC0722AD283A0F22008D8034 /* RSAVNyaaTasks.swift */,
+				AC0722AB283A0F15008D8034 /* RSAVNyaaTagReq.swift */,
+				AC0722A9283A0F07008D8034 /* RSAVNyaaTagRsp.swift */,
+				ACDF609F283A443900B59FDC /* RSAVNyaaWork.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -578,9 +588,7 @@
 			isa = PBXGroup;
 			children = (
 				AC0C71512848E08500C9985B /* Sites */,
-				AC0722A5283A0EB1008D8034 /* Nyaa */,
-				AC03B4D328388AA200409AB3 /* JavLibrary */,
-				ACDDE64B282E9B0100EDA877 /* GIGA */,
+				AC06CC222897FF7E00A0B80A /* AV */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -588,8 +596,8 @@
 		ACDDE64B282E9B0100EDA877 /* GIGA */ = {
 			isa = PBXGroup;
 			children = (
-				ACD3289B282FCA2A008F6D7E /* RSGigaTagFetcher.swift */,
-				ACD328A828300109008F6D7E /* RSGigaTool.swift */,
+				ACD3289B282FCA2A008F6D7E /* RSAVGigaTagFetcher.swift */,
+				ACD328A828300109008F6D7E /* RSAVGigaTool.swift */,
 				ACDF6095283A182F00B59FDC /* API */,
 			);
 			path = GIGA;
@@ -598,10 +606,10 @@
 		ACDF6095283A182F00B59FDC /* API */ = {
 			isa = PBXGroup;
 			children = (
-				ACDDE657282E9ED900EDA877 /* RSGigaTasks.swift */,
-				ACDDE655282E9EC800EDA877 /* RSGigaTagReq.swift */,
-				ACDDE653282E9EB600EDA877 /* RSGigaTagRsp.swift */,
-				ACDF6098283A187600B59FDC /* RSGigaWork.swift */,
+				ACDDE657282E9ED900EDA877 /* RSAVGigaTasks.swift */,
+				ACDDE655282E9EC800EDA877 /* RSAVGigaTagReq.swift */,
+				ACDDE653282E9EB600EDA877 /* RSAVGigaTagRsp.swift */,
+				ACDF6098283A187600B59FDC /* RSAVGigaWork.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -609,7 +617,7 @@
 		ACDF609A283A1D2D00B59FDC /* Databases */ = {
 			isa = PBXGroup;
 			children = (
-				ACDF609B283A1D5F00B59FDC /* RSSitesDatabaseManager.swift */,
+				ACDF609B283A1D5F00B59FDC /* RSDBAVDatabase.swift */,
 			);
 			path = Databases;
 			sourceTree = "<group>";
@@ -893,18 +901,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC03B4DD28388C5E00409AB3 /* RSJavLibraryTool.swift in Sources */,
+				AC03B4DD28388C5E00409AB3 /* RSAVJavLibraryTool.swift in Sources */,
 				ACDFA306282BDB5500B0D010 /* GYHTTPDataRequest.swift in Sources */,
 				AC0CA21528225F2100C1268F /* GYHTTPBaseModel.swift in Sources */,
 				ACD328A3282FF1B3008F6D7E /* GYOpenPanelManager.swift in Sources */,
 				A8FBB9D12897826F00BB7751 /* RSConsts.swift in Sources */,
 				ACDDE660282EC1E300EDA877 /* GYHTTPCookie.swift in Sources */,
 				ACDDE65A282EA45A00EDA877 /* GYHTTPBaseHTMLResponse.swift in Sources */,
-				AC0722A7283A0ED8008D8034 /* RSNyaaTagFetcher.swift in Sources */,
+				AC0722A7283A0ED8008D8034 /* RSAVNyaaTagFetcher.swift in Sources */,
 				ACD32880282F4947008F6D7E /* GYBase.swift in Sources */,
 				ACDAE63B282D4ED20042F54E /* GYBaseMacro.swift in Sources */,
 				A8A700432888F03B00276414 /* GYModalWindowController.swift in Sources */,
-				ACDDE658282E9ED900EDA877 /* RSGigaTasks.swift in Sources */,
+				ACDDE658282E9ED900EDA877 /* RSAVGigaTasks.swift in Sources */,
 				A8FBB9D72897CC2300BB7751 /* RSMenuItemPixivDispatcher.swift in Sources */,
 				AC0CA21228225F2100C1268F /* GYHTTPBaseTasks.swift in Sources */,
 				ACFD9C8B2833F1C400306D98 /* GYConsts+macOS.swift in Sources */,
@@ -926,27 +934,27 @@
 				ACFD9C802833EBCB00306D98 /* GYStringMacro.swift in Sources */,
 				ACECED8A28352CB000547508 /* NSError+GYExtension.swift in Sources */,
 				A8FBB9D32897CBFB00BB7751 /* RSMenuItemExHentaiDispatcher.swift in Sources */,
-				AC03B4D528388C0F00409AB3 /* RSJavLibraryActorReq.swift in Sources */,
+				AC03B4D528388C0F00409AB3 /* RSAVJavLibraryActorReq.swift in Sources */,
 				ACDAE639282D49CE0042F54E /* GYHTTPRequestRetrier.swift in Sources */,
 				ACF137A8285C791C001706A8 /* GYColorMacros+macOS.swift in Sources */,
-				ACDDE656282E9EC800EDA877 /* RSGigaTagReq.swift in Sources */,
-				AC0722AE283A0F22008D8034 /* RSNyaaTasks.swift in Sources */,
+				ACDDE656282E9EC800EDA877 /* RSAVGigaTagReq.swift in Sources */,
+				AC0722AE283A0F22008D8034 /* RSAVNyaaTasks.swift in Sources */,
 				A8A70056288901F800276414 /* GYDeviceManager.swift in Sources */,
 				ACD32898282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift in Sources */,
 				AC0CA20828225F2100C1268F /* GYLog.swift in Sources */,
 				ACD3289A282FB33F008F6D7E /* WindowController.swift in Sources */,
 				AC0CA20A28225F2100C1268F /* GYFileManager.swift in Sources */,
-				ACDDE654282E9EB600EDA877 /* RSGigaTagRsp.swift in Sources */,
+				ACDDE654282E9EB600EDA877 /* RSAVGigaTagRsp.swift in Sources */,
 				AC0C71532848E0A700C9985B /* RSSitesRule34Req.swift in Sources */,
 				ACFD9C7E2833EA6800306D98 /* GYJSONMacro.swift in Sources */,
-				AC0722AC283A0F15008D8034 /* RSNyaaTagReq.swift in Sources */,
-				AC03B4D928388C3100409AB3 /* RSJavLibraryTasks.swift in Sources */,
+				AC0722AC283A0F15008D8034 /* RSAVNyaaTagReq.swift in Sources */,
+				AC03B4D928388C3100409AB3 /* RSAVJavLibraryTasks.swift in Sources */,
 				A8FBB9D52897CC1600BB7751 /* RSMenuItemGelbooruDispatcher.swift in Sources */,
 				AC0CA20B28225F2100C1268F /* GYAlamofire.swift in Sources */,
-				ACDF609E283A377800B59FDC /* RSJavLibraryWork.swift in Sources */,
+				ACDF609E283A377800B59FDC /* RSAVJavLibraryWork.swift in Sources */,
 				ACECED42283529B900547508 /* GYFileDefinition.swift in Sources */,
 				ACDDE65C282EB4EC00EDA877 /* RSAppManager.swift in Sources */,
-				ACDF60A0283A443900B59FDC /* RSNyaaWork.swift in Sources */,
+				ACDF60A0283A443900B59FDC /* RSAVNyaaWork.swift in Sources */,
 				AC0CA20728225F2100C1268F /* GYLogFormatters.swift in Sources */,
 				ACFD9C872833EC6C00306D98 /* GYLocalizationConst.swift in Sources */,
 				ACDE1A742837DE1200CE0C26 /* GYOpenPanelDefinition.swift in Sources */,
@@ -955,16 +963,16 @@
 				AC0CA21028225F2100C1268F /* GYHTTPProtocols.swift in Sources */,
 				A8E8F5CF2887D715008A0C00 /* GYAlert.swift in Sources */,
 				ACECED8B28352CB000547508 /* Dictionary+GYExtension.swift in Sources */,
-				ACD3289C282FCA2A008F6D7E /* RSGigaTagFetcher.swift in Sources */,
+				ACD3289C282FCA2A008F6D7E /* RSAVGigaTagFetcher.swift in Sources */,
 				ACD3288C282F5B08008F6D7E /* RSUIManager.swift in Sources */,
 				ACD328A1282FF049008F6D7E /* GYOpenPanelConfigure.swift in Sources */,
 				AC0CA20C28225F2100C1268F /* GYHTTPServerTrustManager.swift in Sources */,
-				ACDF609C283A1D5F00B59FDC /* RSSitesDatabaseManager.swift in Sources */,
-				AC0722AA283A0F07008D8034 /* RSNyaaTagRsp.swift in Sources */,
+				ACDF609C283A1D5F00B59FDC /* RSDBAVDatabase.swift in Sources */,
+				AC0722AA283A0F07008D8034 /* RSAVNyaaTagRsp.swift in Sources */,
 				A8A7003F2888DFD000276414 /* GYAlertConfigure.swift in Sources */,
 				AC0CA21828225F2100C1268F /* String+GYSubscript.swift in Sources */,
 				AC0CA21428225F2100C1268F /* GYHTTPBaseRequest.swift in Sources */,
-				ACDF6099283A187600B59FDC /* RSGigaWork.swift in Sources */,
+				ACDF6099283A187600B59FDC /* RSAVGigaWork.swift in Sources */,
 				ACECED40283529B900547508 /* GYErrorDefinition.swift in Sources */,
 				ACECED8E28352CB000547508 /* String+GYExtension.swift in Sources */,
 				AC0CA1BD28225D8500C1268F /* ViewController.swift in Sources */,
@@ -976,9 +984,9 @@
 				ACD3289E282FF025008F6D7E /* GYBase+macOS.swift in Sources */,
 				A8FBB9DD2897CC6100BB7751 /* RSMenuItemSiteDispatcher.swift in Sources */,
 				ACFC6CA0282C0AC400AC0EE8 /* GYOperators.swift in Sources */,
-				AC03B4D728388C2100409AB3 /* RSJavLibraryActorRsp.swift in Sources */,
+				AC03B4D728388C2100409AB3 /* RSAVJavLibraryActorRsp.swift in Sources */,
 				AC0CA20F28225F2100C1268F /* GYHTTPPrinter.swift in Sources */,
-				AC03B4DB28388C5100409AB3 /* RSJavLibraryActorFetcher.swift in Sources */,
+				AC03B4DB28388C5100409AB3 /* RSAVJavLibraryActorFetcher.swift in Sources */,
 				ACECED8C28352CB000547508 /* Character+GYExtension.swift in Sources */,
 				AC0167E328328D4F000E4C61 /* Array+GYSubscript.swift in Sources */,
 				ACD32888282F5756008F6D7E /* GYDownloader.swift in Sources */,
@@ -989,7 +997,7 @@
 				ACF1378E285C5EB5001706A8 /* GYUIManager.swift in Sources */,
 				ACF13790285C5ECB001706A8 /* GYUIManager+macOS.swift in Sources */,
 				ACDE1A722837DCE500CE0C26 /* GYURLMacro.swift in Sources */,
-				ACD328A928300109008F6D7E /* RSGigaTool.swift in Sources */,
+				ACD328A928300109008F6D7E /* RSAVGigaTool.swift in Sources */,
 				AC0CA20D28225F2100C1268F /* GYHTTPEventMonitor.swift in Sources */,
 				ACF1378C285C5D35001706A8 /* GYFileManager+macOS.swift in Sources */,
 			);

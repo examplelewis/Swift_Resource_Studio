@@ -1,5 +1,5 @@
 //
-//  RSNyaaTagFetcher.swift
+//  RSAVNyaaTagFetcher.swift
 //  Resource Studio
 //
 //  Created by 龚宇 on 22/05/22.
@@ -8,26 +8,26 @@
 import Foundation
 import hpple
 
-protocol RSNyaaTagFetcherDelegate: AnyObject {
+protocol RSAVNyaaTagFetcherDelegate: AnyObject {
     func nyaaTagFetcherDidFinish()
 }
 
 // 使用方法
 /**
- private var fetcher: RSNyaaTagFetcher? = RSNyaaTagFetcher(tags: ["SWAG"])
+ private var fetcher: RSAVNyaaTagFetcher? = RSAVNyaaTagFetcher(tags: ["SWAG"])
  fetcher?.delegate = self
  fetcher?.start(isFirstTag: true)
  
- // MARK: RSNyaaTagFetcherDelegate
+ // MARK: RSAVNyaaTagFetcherDelegate
  func nyaaTagFetcherDidFinish() {
     fetcher = nil
  }
  */
 
-class RSNyaaTagFetcher {
-    weak var delegate: RSNyaaTagFetcherDelegate?
+class RSAVNyaaTagFetcher {
+    weak var delegate: RSAVNyaaTagFetcherDelegate?
     
-    private let tasks = RSNyaaTasks()
+    private let tasks = RSAVNyaaTasks()
     
     private var tags: [String] // 标签ID
     
@@ -35,7 +35,7 @@ class RSNyaaTagFetcher {
     private var currentTotalPages = 0 // 当前标签一共多少页
     private var currentPage = 1 // 当前标签的页码，从1开始
     private var currentMagnetURLs: [String] = [] // 当前标签下的作品磁力链接地址
-    private var currentWorks: [RSNyaaWork] = [] // 当前标签下的作品
+    private var currentWorks: [RSAVNyaaWork] = [] // 当前标签下的作品
     
     // MARK: Initial
     init(tags: [String]) {
@@ -70,8 +70,8 @@ class RSNyaaTagFetcher {
         // 如果不是第一页，那么 currentTotalPages 已经赋值了; 如果 currentPage > currentTotalPages，说明最后一页已经抓取完毕了
         if !isFirstPage && currentPage > currentTotalPages {
             // 往数据库里存当前标签的数据
-            RSSitesDatabaseManager.shared.insertNyaa(tag: currentTag, count: currentWorks.count)
-            RSSitesDatabaseManager.shared.insertNyaa(works: currentWorks)
+            RSDBAVDatabase.shared.insertNyaa(tag: currentTag, count: currentWorks.count)
+            RSDBAVDatabase.shared.insertNyaa(works: currentWorks)
             
             // 抓取下一个标签
             start(isFirstTag: false)
@@ -151,7 +151,7 @@ class RSNyaaTagFetcher {
                 continue
             }
             
-            let work = RSNyaaWork()
+            let work = RSAVNyaaWork()
             work.tagName = currentTag
             work.name = workName
             work.URL = workURL
