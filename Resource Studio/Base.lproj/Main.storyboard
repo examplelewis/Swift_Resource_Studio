@@ -581,13 +581,20 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="半次元" id="GCz-bc-UU3">
                                     <items>
-                                        <menuItem title="Item 1" enabled="NO" id="chY-5N-XEP">
+                                        <menuItem title="从输入框中获取图片" enabled="NO" id="chY-5N-XEP">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
-                                        <menuItem title="Item 2" enabled="NO" id="SB4-eZ-vc8">
+                                        <menuItem title="从输入框中获取图片 [不查重]" enabled="NO" id="SB4-eZ-vc8">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
-                                        <menuItem title="Item 3" enabled="NO" id="ldQ-i7-tVj">
+                                        <menuItem title="从书签文件中获取图片" enabled="NO" id="ldQ-i7-tVj">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="从输入框中解析HTML" enabled="NO" id="vCB-IV-IUn">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="7QQ-x6-fGg"/>
+                                        <menuItem title="整理下载好的图片" enabled="NO" id="gbJ-j9-xya">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
                                     </items>
@@ -600,6 +607,7 @@
                                         <menuItem title="下载多个页面的图片 [页面地址]" tag="1020001" hidden="YES" enabled="NO" id="Jz9-kb-UKW">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="bzi-AL-EHV"/>
                                         <menuItem title="整理下载好的图片" tag="1020099" hidden="YES" enabled="NO" id="YAv-8U-1sX">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
@@ -655,6 +663,10 @@
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="fRG-lf-jQw"/>
                                         <menuItem title="存储 未筛选 的用户" tag="1030501" hidden="YES" enabled="NO" id="PSe-zQ-4UN">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="fTI-wl-azf"/>
+                                        <menuItem title="整理下载好的图片" enabled="NO" id="kZ8-bx-qM6">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
                                     </items>
@@ -715,32 +727,73 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Gelbooru" id="rka-iI-y9a">
                                     <items>
-                                        <menuItem title="Item 1" id="zb2-s0-wtU">
+                                        <menuItem title="获取日常图片地址" id="zb2-s0-wtU">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
-                                        <menuItem title="Item 2" id="R95-60-cWI">
+                                        <menuItem title="下载并整理日常图片" id="R95-60-cWI">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
-                                        <menuItem title="Item 3" id="Ag5-A7-ocF">
+                                        <menuItem title="移动整理好的日常图片" id="Ag5-A7-ocF">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="IDl-OL-6Fv"/>
+                                        <menuItem title="下载 Fate 图片" id="umg-CH-iGb">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="下载 碧蓝航线 图片" id="hmY-cx-okG">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="下载 Overwatch 图片" id="TdQ-lY-VFv">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="下载 动漫 图片" id="ZPi-RN-D0C">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="下载 游戏 图片" id="aMn-DM-S0J">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="下载 18 图片" id="Jzr-hX-AZQ">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="下载 Webm 文件" id="3A7-Wt-1IG">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="下载 特定标签 图片" id="Gvy-pX-Kx3">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="3nc-Fm-2SX"/>
+                                        <menuItem title="整理下载的 动漫 图片" id="Y1q-B5-Yyk">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="整理下载的 游戏 图片" id="2eN-FY-eTf">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="整理下载的 18 图片" id="rNx-4A-TD5">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="整理下载的 Webm 文件" id="2tA-8e-xRO">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="整理下载的 特定标签 图片" id="NMO-3l-o91">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="Pixiv" tag="8000000" hidden="YES" enabled="NO" id="Mux-u6-heC">
+                            <menuItem title="Pixiv" tag="8000000" id="Mux-u6-heC">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Pixiv" id="Vpr-Wh-B4u">
                                     <items>
-                                        <menuItem title="更新一页已关注的用户(和黑名单一样解析页面复制的文字，不走接口) [关注页面复制的文字]" tag="1060001" hidden="YES" enabled="NO" id="YCb-j9-IYI">
+                                        <menuItem title="更新一页已关注的用户 [关注页面复制的文字]" tag="1060001" enabled="NO" id="YCb-j9-IYI">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
-                                        <menuItem title="更新一页已关注的用户 - 示例" tag="1060002" hidden="YES" enabled="NO" alternate="YES" id="Fsg-nc-vio">
+                                        <menuItem title="更新一页已关注的用户 - 示例" tag="1060002" enabled="NO" alternate="YES" id="Fsg-nc-vio">
                                             <modifierMask key="keyEquivalentModifierMask" option="YES"/>
                                         </menuItem>
-                                        <menuItem title="更新一页已拉黑的用户 [黑名单页面复制的文字]" tag="1060003" hidden="YES" enabled="NO" id="OPn-11-DWO">
+                                        <menuItem title="更新一页已拉黑的用户 [黑名单页面复制的文字]" tag="1060003" enabled="NO" id="OPn-11-DWO">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
-                                        <menuItem title="更新一页已拉黑的用户 - 示例" tag="1060004" hidden="YES" enabled="NO" alternate="YES" id="Lao-jC-oBU">
+                                        <menuItem title="更新一页已拉黑的用户 - 示例" tag="1060004" enabled="NO" alternate="YES" id="Lao-jC-oBU">
                                             <modifierMask key="keyEquivalentModifierMask" option="YES"/>
                                         </menuItem>
                                         <menuItem title="更新多个确定拉黑的用户 [用户ID / 用户页面地址]" tag="1060005" enabled="NO" id="NP0-OT-0I8">
@@ -780,7 +833,6 @@
                                                 <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="gYe-Y8-rDl"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="Vkc-kD-a8E"/>
                                         <menuItem title="查询多个用户的状态 [用户ID / 用户页面地址]" tag="1060201" enabled="NO" id="cfF-Ru-Jv4">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
@@ -807,7 +859,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="mts-K2-Ipb"/>
-                                        <menuItem title="删除多个用户PixivUtil的下载记录" tag="1060401" enabled="NO" id="yRI-YU-RzM">
+                                        <menuItem title="删除多个用户在PixivUtil数据库中的下载记录" tag="1060401" enabled="NO" id="yRI-YU-RzM">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="customMenuItemDidPress:" target="Voe-Tx-rLC" id="qIz-kn-fVt"/>
@@ -821,6 +873,10 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="dkA-ak-W0t"/>
+                                        <menuItem title="整理 ExHentai 导出的用户" enabled="NO" id="GG8-yU-daf">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="7Zt-qI-2Wc"/>
                                         <menuItem title="获取多个用户的图片地址" tag="1060601" enabled="NO" id="vx5-JY-VEd">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
@@ -837,13 +893,54 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Rule34" id="GFj-Vg-s29">
                                     <items>
-                                        <menuItem title="Item 1" id="fKI-Ic-hXf">
+                                        <menuItem title="下载 特定标签 图片" id="U8s-mC-Je0">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
-                                        <menuItem title="Item 2" id="Tle-6T-MRa">
+                                        <menuItem title="整理下载的 18 图片" id="K0T-8b-R1m">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
-                                        <menuItem title="Item 3" id="4ul-T9-qKQ">
+                                        <menuItem title="整理下载的 特定标签 图片" id="twK-3M-4I1">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="下载 Webm 文件" id="4IN-hX-LuM">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="下载 碧蓝航线 图片" id="j1a-bX-B06">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="下载并整理日常图片" id="dT9-m3-OIM">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="下载 动漫 图片" id="VrP-vT-pdg">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="下载 Overwatch 图片" id="GMn-dF-DoN">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="下载 18 图片" id="ufH-r3-OsT">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="uz1-p7-T0l"/>
+                                        <menuItem title="下载 游戏 图片" id="qFS-9I-BCC">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="移动整理好的日常图片" id="HrB-QX-l7V">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="整理下载的 动漫 图片" id="5XK-mc-1fs">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="获取日常图片地址" id="yAD-vW-z8n">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="整理下载的 Webm 文件" id="hC6-Nb-z7y">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="整理下载的 游戏 图片" id="1jL-gp-2u5">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="Icq-53-ouu"/>
+                                        <menuItem title="下载 Fate 图片" id="hyr-7a-nfz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
                                     </items>
@@ -853,13 +950,10 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="WorldCosplay" id="SSA-HG-VNN">
                                     <items>
-                                        <menuItem title="Item 1" enabled="NO" id="MZW-gP-FXV">
+                                        <menuItem title="解析输入的HTML" enabled="NO" id="MZW-gP-FXV">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
-                                        <menuItem title="Item 2" enabled="NO" id="JUN-PQ-1zP">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                        </menuItem>
-                                        <menuItem title="Item 3" enabled="NO" id="Rkz-KT-qrN">
+                                        <menuItem title="解析输入的网页地址" enabled="NO" id="JUN-PQ-1zP">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
                                     </items>
@@ -884,7 +978,33 @@
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="下载" tag="12000000" id="jZy-EV-mNH">
+                            <menuItem title="图站" tag="12000000" id="pI4-8v-a39">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="图站" id="LZ7-7W-iyH">
+                                    <items>
+                                        <menuItem title="从输入框中批量获取图片地址" id="Ah2-tY-ufS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="下载上一阶段获取到的图片" id="9oc-LD-xgc">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="重命名上一阶段下载的图片" id="XVZ-dO-FIP">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="CJC-2H-9qU"/>
+                                        <menuItem title="抓取 Gelbooru 的所有标签【未完成】" id="fYq-rl-rcP">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="提取 GelbooruDownloader 下载的标签" id="LPy-Ey-N3D">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="分离 GelbooruDownloader 下载的 gif 和 webm 文件" id="tof-VR-k5k">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="下载" tag="13000000" id="jZy-EV-mNH">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                             </menuItem>
                             <menuItem title="Help" id="wpr-3q-Mcd">
@@ -971,18 +1091,18 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="s9b-9b-yQh">
-                                <rect key="frame" x="18" y="604" width="30" height="16"/>
+                                <rect key="frame" x="18" y="604" width="31" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="输入" id="zt7-yS-th9">
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                    <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="svT-9z-9oZ">
-                                <rect key="frame" x="47" y="595" width="86" height="32"/>
+                                <rect key="frame" x="48" y="595" width="88" height="32"/>
                                 <buttonCell key="cell" type="push" title="导出输入" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OQ3-vf-F0p">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                    <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="exportButtonDidPress:" target="XfG-lQ-9wD" id="3JX-F8-0UL"/>
