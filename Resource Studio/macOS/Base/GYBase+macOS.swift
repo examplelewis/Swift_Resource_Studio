@@ -27,7 +27,7 @@ extension GYBase {
     func pathOfItemInMainFolder(_ component: String) -> String {
         return (mainFolderPath as NSString).appendingPathComponent(component)
     }
-    func sqliteFilePath(_ fileName: String) -> String {
+    func pathOfSqlite(_ fileName: String) -> String {
         var file = fileName
         if !fileName.hasSuffix(".sqlite") {
             file = fileName.appending(".sqlite")
@@ -35,7 +35,7 @@ extension GYBase {
         
         return (dbFolderPath as NSString).appendingPathComponent(file)
     }
-    func preferenceFilePath(_ fileName: String) -> String {
+    func pathOfPreference(_ fileName: String) -> String {
         var file = fileName
         if !fileName.hasSuffix(".plist") {
             file = fileName.appending(".plist")

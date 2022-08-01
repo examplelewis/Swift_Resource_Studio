@@ -22,6 +22,7 @@
 		A8FBB9D92897CC3700BB7751 /* RSMenuItemRule34Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FBB9D82897CC3700BB7751 /* RSMenuItemRule34Dispatcher.swift */; };
 		A8FBB9DB2897CC4F00BB7751 /* RSMenuItemTorrentDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FBB9DA2897CC4F00BB7751 /* RSMenuItemTorrentDispatcher.swift */; };
 		A8FBB9DD2897CC6100BB7751 /* RSMenuItemSiteDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FBB9DC2897CC6100BB7751 /* RSMenuItemSiteDispatcher.swift */; };
+		A8FBB9DF2897D37900BB7751 /* GYBase+RSExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FBB9DE2897D37900BB7751 /* GYBase+RSExtensions.swift */; };
 		AC0167E328328D4F000E4C61 /* Array+GYSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0167E228328D4F000E4C61 /* Array+GYSubscript.swift */; };
 		AC03B4D528388C0F00409AB3 /* RSJavLibraryActorReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4D428388C0F00409AB3 /* RSJavLibraryActorReq.swift */; };
 		AC03B4D728388C2100409AB3 /* RSJavLibraryActorRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4D628388C2100409AB3 /* RSJavLibraryActorRsp.swift */; };
@@ -148,6 +149,7 @@
 		A8FBB9D82897CC3700BB7751 /* RSMenuItemRule34Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMenuItemRule34Dispatcher.swift; sourceTree = "<group>"; };
 		A8FBB9DA2897CC4F00BB7751 /* RSMenuItemTorrentDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMenuItemTorrentDispatcher.swift; sourceTree = "<group>"; };
 		A8FBB9DC2897CC6100BB7751 /* RSMenuItemSiteDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMenuItemSiteDispatcher.swift; sourceTree = "<group>"; };
+		A8FBB9DE2897D37900BB7751 /* GYBase+RSExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GYBase+RSExtensions.swift"; sourceTree = "<group>"; };
 		AC0167E228328D4F000E4C61 /* Array+GYSubscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+GYSubscript.swift"; sourceTree = "<group>"; };
 		AC03B4D428388C0F00409AB3 /* RSJavLibraryActorReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSJavLibraryActorReq.swift; sourceTree = "<group>"; };
 		AC03B4D628388C2100409AB3 /* RSJavLibraryActorRsp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSJavLibraryActorRsp.swift; sourceTree = "<group>"; };
@@ -520,6 +522,7 @@
 				A8FBB9D02897826F00BB7751 /* RSConsts.swift */,
 				ACDDE65B282EB4EC00EDA877 /* RSAppManager.swift */,
 				ACD3288B282F5B08008F6D7E /* RSUIManager.swift */,
+				A8FBB9DE2897D37900BB7751 /* GYBase+RSExtensions.swift */,
 				ACD32894282FABE6008F6D7E /* MenuItem */,
 				ACDF609A283A1D2D00B59FDC /* Databases */,
 			);
@@ -915,6 +918,7 @@
 				A8A700412888E27900276414 /* GYAlertManager.swift in Sources */,
 				ACECED41283529B900547508 /* GYLogDefinition.swift in Sources */,
 				AC0CA20628225F2100C1268F /* GYLogManager.swift in Sources */,
+				A8FBB9DF2897D37900BB7751 /* GYBase+RSExtensions.swift in Sources */,
 				A8A700522888FC7F00276414 /* GYWindowController.swift in Sources */,
 				AC0CA20E28225F2100C1268F /* GYHTTPRequestAdapter.swift in Sources */,
 				AC0C71552848E0B400C9985B /* RSSitesRule34Rsp.swift in Sources */,

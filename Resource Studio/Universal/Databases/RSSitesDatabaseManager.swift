@@ -15,7 +15,7 @@ class RSSitesDatabaseManager {
     
     // MARK: Init
     init() {
-        queue = FMDatabaseQueue(path: GYBase.shared.sqliteFilePath("Resources"))!
+        queue = FMDatabaseQueue(path: GYBase.shared.pathOfSqlite("Resources"))!
     }
     
     // MARK: GIGA tags
