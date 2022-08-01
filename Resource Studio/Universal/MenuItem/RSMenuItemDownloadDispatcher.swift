@@ -11,13 +11,12 @@ import AppKit
 func RSDispatchDownloadMenuItem(_ menuItem: NSMenuItem) {
     GYLogManager.shared.reset()
     
-    let setting = GYDownloadSettings.shared.settingFrom(menuItemTag: menuItem.tag)
-    if setting == nil {
+    guard let setting = GYDownloadSettings.shared.settingFrom(menuItemTag: menuItem.tag - RSDownloadMenuItemBaseTag) else {
         GYLogManager.shared.addErrorLog(format: "未找到匹配的配置文件，下载流程结束")
         return
     }
     
-    switch setting!.source {
+    switch setting.source {
     case .input:
         
         break
@@ -27,7 +26,7 @@ func RSDispatchDownloadMenuItem(_ menuItem: NSMenuItem) {
         
         GYOpenPanelManager.showOpenPanelWith(configure: configure) { itemPaths in
             DispatchQueue.main.async {
-                _dispatchBy(setting: setting!, itemPaths: itemPaths)
+                _dispatchBy(setting: setting, itemPaths: itemPaths)
             }
         }
         

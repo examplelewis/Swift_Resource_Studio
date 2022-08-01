@@ -13,12 +13,26 @@ func RSDispatchMenuItem(_ menuItem: NSMenuItem) {
     case 1:
         
         break
-    case 4:
-        RSDispatchDownloadMenuItem(menuItem)
-        
+    case 6:
+        RSDispatchExHentaiMenuItem(menuItem)
         break
-    case 5:
-        
+    case 7:
+        RSDispatchGelbooruMenuItem(menuItem)
+        break
+    case 8:
+        RSDispatchPixivMenuItem(menuItem)
+        break
+    case 9:
+        RSDispatchRule34MenuItem(menuItem)
+        break
+    case 11:
+        RSDispatchTorrentMenuItem(menuItem)
+        break
+    case 12:
+        RSDispatchSiteMenuItem(menuItem)
+        break
+    case 13:
+        RSDispatchDownloadMenuItem(menuItem)
         break
     default:
         break

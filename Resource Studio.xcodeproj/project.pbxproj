@@ -15,6 +15,12 @@
 		A8A700522888FC7F00276414 /* GYWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A700512888FC7F00276414 /* GYWindowController.swift */; };
 		A8A70056288901F800276414 /* GYDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A70055288901F800276414 /* GYDeviceManager.swift */; };
 		A8E8F5CF2887D715008A0C00 /* GYAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E8F5CE2887D715008A0C00 /* GYAlert.swift */; };
+		A8FBB9D32897CBFB00BB7751 /* RSMenuItemExHentaiDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FBB9D22897CBFB00BB7751 /* RSMenuItemExHentaiDispatcher.swift */; };
+		A8FBB9D52897CC1600BB7751 /* RSMenuItemGelbooruDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FBB9D42897CC1600BB7751 /* RSMenuItemGelbooruDispatcher.swift */; };
+		A8FBB9D72897CC2300BB7751 /* RSMenuItemPixivDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FBB9D62897CC2300BB7751 /* RSMenuItemPixivDispatcher.swift */; };
+		A8FBB9D92897CC3700BB7751 /* RSMenuItemRule34Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FBB9D82897CC3700BB7751 /* RSMenuItemRule34Dispatcher.swift */; };
+		A8FBB9DB2897CC4F00BB7751 /* RSMenuItemTorrentDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FBB9DA2897CC4F00BB7751 /* RSMenuItemTorrentDispatcher.swift */; };
+		A8FBB9DD2897CC6100BB7751 /* RSMenuItemSiteDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FBB9DC2897CC6100BB7751 /* RSMenuItemSiteDispatcher.swift */; };
 		AC0167E328328D4F000E4C61 /* Array+GYSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0167E228328D4F000E4C61 /* Array+GYSubscript.swift */; };
 		AC03B4D528388C0F00409AB3 /* RSJavLibraryActorReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4D428388C0F00409AB3 /* RSJavLibraryActorReq.swift */; };
 		AC03B4D728388C2100409AB3 /* RSJavLibraryActorRsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03B4D628388C2100409AB3 /* RSJavLibraryActorRsp.swift */; };
@@ -134,6 +140,12 @@
 		A8A700512888FC7F00276414 /* GYWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYWindowController.swift; sourceTree = "<group>"; };
 		A8A70055288901F800276414 /* GYDeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYDeviceManager.swift; sourceTree = "<group>"; };
 		A8E8F5CE2887D715008A0C00 /* GYAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYAlert.swift; sourceTree = "<group>"; };
+		A8FBB9D22897CBFB00BB7751 /* RSMenuItemExHentaiDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMenuItemExHentaiDispatcher.swift; sourceTree = "<group>"; };
+		A8FBB9D42897CC1600BB7751 /* RSMenuItemGelbooruDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMenuItemGelbooruDispatcher.swift; sourceTree = "<group>"; };
+		A8FBB9D62897CC2300BB7751 /* RSMenuItemPixivDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMenuItemPixivDispatcher.swift; sourceTree = "<group>"; };
+		A8FBB9D82897CC3700BB7751 /* RSMenuItemRule34Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMenuItemRule34Dispatcher.swift; sourceTree = "<group>"; };
+		A8FBB9DA2897CC4F00BB7751 /* RSMenuItemTorrentDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMenuItemTorrentDispatcher.swift; sourceTree = "<group>"; };
+		A8FBB9DC2897CC6100BB7751 /* RSMenuItemSiteDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMenuItemSiteDispatcher.swift; sourceTree = "<group>"; };
 		AC0167E228328D4F000E4C61 /* Array+GYSubscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+GYSubscript.swift"; sourceTree = "<group>"; };
 		AC03B4D428388C0F00409AB3 /* RSJavLibraryActorReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSJavLibraryActorReq.swift; sourceTree = "<group>"; };
 		AC03B4D628388C2100409AB3 /* RSJavLibraryActorRsp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSJavLibraryActorRsp.swift; sourceTree = "<group>"; };
@@ -536,6 +548,12 @@
 			isa = PBXGroup;
 			children = (
 				ACD32895282FADAE008F6D7E /* RSMenuItemDispatcher.swift */,
+				A8FBB9D22897CBFB00BB7751 /* RSMenuItemExHentaiDispatcher.swift */,
+				A8FBB9D42897CC1600BB7751 /* RSMenuItemGelbooruDispatcher.swift */,
+				A8FBB9D62897CC2300BB7751 /* RSMenuItemPixivDispatcher.swift */,
+				A8FBB9D82897CC3700BB7751 /* RSMenuItemRule34Dispatcher.swift */,
+				A8FBB9DA2897CC4F00BB7751 /* RSMenuItemTorrentDispatcher.swift */,
+				A8FBB9DC2897CC6100BB7751 /* RSMenuItemSiteDispatcher.swift */,
 				ACD32897282FADBC008F6D7E /* RSMenuItemDownloadDispatcher.swift */,
 			);
 			path = MenuItem;
@@ -880,13 +898,16 @@
 				ACDAE63B282D4ED20042F54E /* GYBaseMacro.swift in Sources */,
 				A8A700432888F03B00276414 /* GYModalWindowController.swift in Sources */,
 				ACDDE658282E9ED900EDA877 /* RSGigaTasks.swift in Sources */,
+				A8FBB9D72897CC2300BB7751 /* RSMenuItemPixivDispatcher.swift in Sources */,
 				AC0CA21228225F2100C1268F /* GYHTTPBaseTasks.swift in Sources */,
 				ACFD9C8B2833F1C400306D98 /* GYConsts+macOS.swift in Sources */,
+				A8FBB9DB2897CC4F00BB7751 /* RSMenuItemTorrentDispatcher.swift in Sources */,
 				ACFD9C822833EC2800306D98 /* GYTimeMacro.swift in Sources */,
 				AC0CA21628225F2100C1268F /* GYConsts.swift in Sources */,
 				ACD3288A282F577A008F6D7E /* GYDownloadSetting.swift in Sources */,
 				ACECED8D28352CB000547508 /* Array+GYExtension.swift in Sources */,
 				ACD32892282FA629008F6D7E /* GYBaseBridging.m in Sources */,
+				A8FBB9D92897CC3700BB7751 /* RSMenuItemRule34Dispatcher.swift in Sources */,
 				A8A700412888E27900276414 /* GYAlertManager.swift in Sources */,
 				ACECED41283529B900547508 /* GYLogDefinition.swift in Sources */,
 				AC0CA20628225F2100C1268F /* GYLogManager.swift in Sources */,
@@ -896,6 +917,7 @@
 				AC0C71572848E0C300C9985B /* RSSitesRule34Tasks.swift in Sources */,
 				ACFD9C802833EBCB00306D98 /* GYStringMacro.swift in Sources */,
 				ACECED8A28352CB000547508 /* NSError+GYExtension.swift in Sources */,
+				A8FBB9D32897CBFB00BB7751 /* RSMenuItemExHentaiDispatcher.swift in Sources */,
 				AC03B4D528388C0F00409AB3 /* RSJavLibraryActorReq.swift in Sources */,
 				ACDAE639282D49CE0042F54E /* GYHTTPRequestRetrier.swift in Sources */,
 				ACF137A8285C791C001706A8 /* GYColorMacros+macOS.swift in Sources */,
@@ -911,6 +933,7 @@
 				ACFD9C7E2833EA6800306D98 /* GYJSONMacro.swift in Sources */,
 				AC0722AC283A0F15008D8034 /* RSNyaaTagReq.swift in Sources */,
 				AC03B4D928388C3100409AB3 /* RSJavLibraryTasks.swift in Sources */,
+				A8FBB9D52897CC1600BB7751 /* RSMenuItemGelbooruDispatcher.swift in Sources */,
 				AC0CA20B28225F2100C1268F /* GYAlamofire.swift in Sources */,
 				ACDF609E283A377800B59FDC /* RSJavLibraryWork.swift in Sources */,
 				ACECED42283529B900547508 /* GYFileDefinition.swift in Sources */,
@@ -943,6 +966,7 @@
 				A8A7004C2888FBFD00276414 /* GYWindowManager.swift in Sources */,
 				AC0CA1BB28225D8500C1268F /* AppDelegate.swift in Sources */,
 				ACD3289E282FF025008F6D7E /* GYBase+macOS.swift in Sources */,
+				A8FBB9DD2897CC6100BB7751 /* RSMenuItemSiteDispatcher.swift in Sources */,
 				ACFC6CA0282C0AC400AC0EE8 /* GYOperators.swift in Sources */,
 				AC03B4D728388C2100409AB3 /* RSJavLibraryActorRsp.swift in Sources */,
 				AC0CA20F28225F2100C1268F /* GYHTTPPrinter.swift in Sources */,
